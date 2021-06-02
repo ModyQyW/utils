@@ -1,0 +1,12 @@
+coverage
+node_modules
+src
+tests
+.editorconfig
+.gitattributes
+.*.json
+.*.js
+.*ignore
+*.config.js
+*.sh
+CONTRIBUTING.md
