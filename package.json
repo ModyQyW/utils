@@ -46,7 +46,6 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "futil": "^1.67.3",
     "lodash-es": "~4.17.21"
   },
   "devDependencies": {
