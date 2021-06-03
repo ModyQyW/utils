@@ -5,4 +5,5 @@ export * from './isRangeError';
 export * from './isReferenceError';
 export * from './isSyntaxError';
 export * from './isTypeError';
+export * from './isURIError';
 export * from './isValidDate';
