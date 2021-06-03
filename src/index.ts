@@ -4,4 +4,5 @@ export * from './isFloat';
 export * from './isRangeError';
 export * from './isReferenceError';
 export * from './isSyntaxError';
+export * from './isTypeError';
 export * from './isValidDate';
