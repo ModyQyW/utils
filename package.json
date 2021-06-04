@@ -50,15 +50,15 @@
   },
   "devDependencies": {
     "@babel/core": "~7.14.3",
-    "@babel/eslint-parser": "~7.14.3",
+    "@babel/eslint-parser": "~7.14.4",
     "@commitlint/cli": "~12.1.4",
-    "@modyqyw/fabric": "~2.1.0",
+    "@modyqyw/fabric": "~2.2.0",
     "@rollup/plugin-node-resolve": "~13.0.0",
     "@types/jest": "~26.0.23",
     "@types/lodash-es": "~4.17.4",
     "@types/node": "~15.6.1",
-    "@typescript-eslint/eslint-plugin": "~4.24.0",
-    "@typescript-eslint/parser": "~4.24.0",
+    "@typescript-eslint/eslint-plugin": "~4.26.0",
+    "@typescript-eslint/parser": "~4.26.0",
     "eslint": "~7.27.0",
     "husky": "~6.0.0",
     "is-ci": "~3.0.0",
@@ -74,7 +74,7 @@
     "rollup-plugin-typescript2": "~0.30.0",
     "ts-jest": "~27.0.2",
     "tslib": "~2.2.0",
-    "typescript": "~4.2.4"
+    "typescript": "~4.3.2"
   },
   "config": {
     "commitizen": {
