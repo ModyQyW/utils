@@ -44,7 +44,7 @@
     "prepare": "is-ci || husky install",
     "release": "np --no-release-draft --message=chore(release): v%s",
     "test": "yarn run lint && jest --coverage",
-    "version": "node generate-readme.js && git add README.md"
+    "version": "yarn build"
   },
   "dependencies": {
     "change-case": "~4.1.2",
