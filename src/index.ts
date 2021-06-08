@@ -4,6 +4,7 @@ export * from './gcoord';
 export * from './lodashEs';
 export * from './uaParser';
 export * from './uuid';
+export * from './validator';
 
 export * from './isEvalError';
 export * from './isFloat';
