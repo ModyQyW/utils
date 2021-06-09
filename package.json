@@ -44,7 +44,7 @@
     "commit": "cz",
     "prepare": "is-ci || husky install",
     "release": "np --no-release-draft --message='chore(release): v%s'",
-    "test": "yarn run lint && jest --coverage",
+    "test": "yarn run lint && jest --coverage --passWithNoTests",
     "version": "yarn build"
   },
   "dependencies": {
