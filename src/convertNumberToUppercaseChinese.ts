@@ -4,4 +4,8 @@ import formatRMB from 'format-rmb';
 export const convertNumberToUppercaseChinese = (
   num: number,
   prefix: string | undefined = '',
-) => formatRMB(num, prefix);
+): {
+  errCode: number;
+  msg: string;
+  value: string;
+} => formatRMB(num, prefix);
