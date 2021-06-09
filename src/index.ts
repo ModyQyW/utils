@@ -1,5 +1,4 @@
 export * from './changeCase';
-export * from './faker';
 export * from './gcoord';
 export * from './lodashEs';
 export * from './numbro';
