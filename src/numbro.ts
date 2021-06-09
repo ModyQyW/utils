@@ -1,4 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import numbro from 'numbro';
+import * as numbro from 'numbro';
 
 export { numbro };
