@@ -13,6 +13,7 @@
     "strict": true,
     "baseUrl": ".",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "Node",
     "paths": {
       "@/*": ["./src/*"],
@@ -20,6 +21,6 @@
     },
     "types": ["jest", "node"],
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   }
 }
