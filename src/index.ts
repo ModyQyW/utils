@@ -3,6 +3,7 @@ export * from './convert';
 export * from './faker';
 export * from './gcoord';
 export * from './lodashEs';
+export * from './numbro';
 export * from './uaParser';
 export * from './uuid';
 export * from './validator';
