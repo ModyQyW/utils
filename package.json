@@ -43,7 +43,7 @@
     "lint:script": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --fix",
     "commit": "cz",
     "prepare": "is-ci || husky install",
-    "release": "np --no-release-draft --message=chore(release): v%s",
+    "release": "np --no-release-draft --message='chore(release): v%s'",
     "test": "yarn run lint && jest --coverage",
     "version": "yarn build"
   },
