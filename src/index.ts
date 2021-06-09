@@ -4,6 +4,7 @@ export * from './faker';
 export * from './gcoord';
 export * from './lodashEs';
 export * from './numbro';
+export * from './pathToRegexp';
 export * from './uaParser';
 export * from './uuid';
 export * from './validator';
