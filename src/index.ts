@@ -11,4 +11,6 @@ export * from './isSyntaxError';
 export * from './isTypeError';
 export * from './isURIError';
 export * from './isValidDate';
+export * from './parseQuerystring';
 export * from './sleep';
+export * from './stringifyQueryString';
