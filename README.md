@@ -27,7 +27,7 @@ npm i @modyqyw/utils
 
 Then use `window.UTILS` directly.
 
-### Usage
+## Usage
 
 ```javascript
 // esm
@@ -40,7 +40,11 @@ const { ... } = require('@modyqyw/utils');
 
 More usage are coming...
 
-### Acknowledge
+## More
+
+...
+
+## Acknowledge
 
 - [change-case](https://github.com/blakeembrey/change-case#readme)
 - [convert](https://github.com/jonahsnider/convert#readme)
