@@ -22,7 +22,7 @@
       "import": "./dist/index.esm.min.js",
       "require": "./dist/index.cjs.min.js"
     },
-    "./": "./"
+    "./*": "./*"
   },
   "publishConfig": {
     "access": "public"
