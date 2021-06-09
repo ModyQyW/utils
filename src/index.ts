@@ -1,6 +1,4 @@
 export * from './changeCase';
-export * from './convert';
-export * from './dayjs';
 export * from './faker';
 export * from './gcoord';
 export * from './lodashEs';
