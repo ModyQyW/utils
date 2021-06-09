@@ -46,6 +46,7 @@ More usage are coming...
 - [convert](https://github.com/jonahsnider/convert#readme)
 - [dayjs](https://github.com/iamkun/dayjs#readme)
 - [faker](https://github.com/Marak/faker.js#readme)
+- [format-rmb](https://github.com/bazingaedward/ChinaCurrency#readme)
 - [gcoord](https://github.com/hujiulong/gcoord#readme)
 - [lodash-es](https://github.com/lodash/lodash#readme)
 - [numbro](https://github.com/BenjaminVanRyseghem/numbro#readme)
