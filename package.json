@@ -2,6 +2,13 @@
   "name": "@modyqyw/utils",
   "version": "0.1.0",
   "description": "Shareable utils for different JavaScript/TypeScript projects.",
+  "keywords": [
+    "front-end, frontend, javascript, typescript, js, ts, utils"
+  ],
+  "homepage": "https://github.com/ModyQyW/utils#readme",
+  "bugs": {
+    "url": "https://github.com/ModyQyW/utils/issues"
+  },
   "author": {
     "email": "wurui7@mail3.sysu.edu.cn",
     "name": "ModyQyW",
@@ -27,9 +34,6 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
-  },
-  "bugs": {
-    "url": "https://github.com/ModyQyW/utils/issues"
   },
   "repository": {
     "type": "git",
@@ -101,5 +105,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
   }
 }
