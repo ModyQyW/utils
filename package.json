@@ -48,7 +48,10 @@
   },
   "dependencies": {
     "change-case": "~4.1.2",
+    "convert": "~1.9.1",
+    "dayjs": "~1.10.5",
     "faker": "~5.5.3",
+    "format-rmb": "~1.2.3",
     "gcoord": "~0.3.2",
     "lodash-es": "~4.17.21",
     "numbro": "~2.3.2",
