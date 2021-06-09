@@ -1,4 +1,5 @@
 export {
+  camelCase,
   capitalCase,
   constantCase,
   dotCase,
@@ -8,4 +9,5 @@ export {
   pascalCase,
   pathCase,
   sentenceCase,
+  snakeCase,
 } from 'change-case';

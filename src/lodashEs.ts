@@ -264,7 +264,6 @@ export {
 
 // String
 export {
-  camelCase,
   capitalize,
   deburr,
   endsWith,
@@ -279,7 +278,6 @@ export {
   parseInt,
   repeat,
   replace,
-  snakeCase,
   split,
   startCase,
   startsWith,
