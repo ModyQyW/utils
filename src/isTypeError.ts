@@ -6,6 +6,5 @@ import { isError } from 'lodash-es';
  * @param value - The value to check.
  * @return — Returns true if value is an error object, else false.
  */
-export function isTypeError(value: any) {
-  return isError(value) && value.constructor === TypeError;
-}
+export const isTypeError = (value: any) =>
+  isError(value) && value.constructor === TypeError;

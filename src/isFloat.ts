@@ -6,8 +6,5 @@ import { isNumber, isNaN, isFinite, isInteger } from 'lodash-es';
  * @param value - The value to check
  * @return - Returns true if value is correctly classified, else false.
  */
-export function isFloat(value?: any) {
-  return (
-    isNumber(value) && !isNaN(value) && isFinite(value) && !isInteger(value)
-  );
-}
+export const isFloat = (value?: any) =>
+  isNumber(value) && !isNaN(value) && isFinite(value) && !isInteger(value);

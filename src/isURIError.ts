@@ -6,6 +6,5 @@ import { isError } from 'lodash-es';
  * @param value - The value to check.
  * @return — Returns true if value is an error object, else false.
  */
-export function isURIError(value: any) {
-  return isError(value) && value.constructor === URIError;
-}
+export const isURIError = (value: any) =>
+  isError(value) && value.constructor === URIError;

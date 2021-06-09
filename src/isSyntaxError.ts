@@ -6,6 +6,5 @@ import { isError } from 'lodash-es';
  * @param value - The value to check.
  * @return — Returns true if value is an error object, else false.
  */
-export function isSyntaxError(value: any) {
-  return isError(value) && value.constructor === SyntaxError;
-}
+export const isSyntaxError = (value: any) =>
+  isError(value) && value.constructor === SyntaxError;
