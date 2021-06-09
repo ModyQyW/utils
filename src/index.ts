@@ -1,9 +1,5 @@
 export * from './changeCase';
 export * from './lodashEs';
-export * from './numbro';
-export * from './qs';
-export * from './uaParser';
-export * from './uuid';
 export * from './validator';
 
 export * from './convertNumberToUppercaseChinese';
