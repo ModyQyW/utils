@@ -11,6 +11,7 @@ export * from './uaParser';
 export * from './uuid';
 export * from './validator';
 
+export * from './convertNumberToUppercaseChinese';
 export * from './isEvalError';
 export * from './isFloat';
 export * from './isRangeError';
