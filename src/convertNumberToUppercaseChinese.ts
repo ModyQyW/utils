@@ -1,11 +1,24 @@
 /* eslint-disable import/prefer-default-export */
 import formatRMB from 'format-rmb';
 
+/**
+ * Convert number to uppercase Chinese.
+ * @param number - The value to convert.
+ * @param prefix - The prefix to add.
+ * @returns - Returns a object.
+ */
 export const convertNumberToUppercaseChinese = (
-  num: number,
-  prefix: string | undefined = '',
+  number: number,
+  prefix: string = '',
 ): {
-  errCode: number;
-  msg: string;
+  code: number;
+  message: string;
   value: string;
-} => formatRMB(num, prefix);
+} => {
+  const result = formatRMB(number, prefix);
+  return {
+    code: result.errCode,
+    message: result.msg,
+    value: result.value,
+  };
+};
