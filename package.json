@@ -65,7 +65,6 @@
     "qs": "~6.10.1",
     "short-uuid": "~4.2.0",
     "ua-parser-js": "~0.7.28",
-    "uuid": "~8.3.2",
     "validator": "~13.6.0"
   },
   "devDependencies": {
