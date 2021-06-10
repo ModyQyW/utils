@@ -17,5 +17,4 @@ export * from './nanoid';
 export * from './parseQueryString';
 export * from './sleep';
 export * from './stringifyQueryString';
-export * from './uuidNIL';
 export * from './uuidV4';
