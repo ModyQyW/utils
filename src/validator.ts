@@ -63,8 +63,12 @@ export const {
   isSlug,
   isStrongPassword,
   isURL,
-  isUUID,
   isVariableWidth,
   normalizeEmail,
   stripLow,
 } = validator;
+
+const { isUUID } = validator;
+const isUuid = isUUID;
+
+export { isUuid, isUUID };
