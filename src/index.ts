@@ -17,4 +17,5 @@ export * from './isURIError';
 export * from './isValidDate';
 export * from './nanoid';
 export * from './sleep';
+export * from './toLocaleLower';
 export * from './uuidV4';
