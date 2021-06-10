@@ -1,5 +1,6 @@
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
@@ -34,7 +35,14 @@ configs.push(
         },
       }),
       nodePolyfills(),
-      nodeResolve(),
+      nodeResolve({
+        browser: true,
+      }),
+      replace({
+        'process.env.NODE_ENV': JSON.stringify(
+          process.env.NODE_ENV ?? 'production',
+        ),
+      }),
       commonjs({
         include: /node_modules/,
       }),
