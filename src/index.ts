@@ -18,4 +18,5 @@ export * from './isValidDate';
 export * from './nanoid';
 export * from './sleep';
 export * from './toLocaleLower';
+export * from './toLocaleUpper';
 export * from './uuidV4';
