@@ -1,4 +1,9 @@
 /* eslint-disable import/prefer-default-export */
-import { v4, V4Options } from 'uuid';
+import short from 'short-uuid';
 
-export const uuidV4 = (options?: V4Options | undefined) => v4(options);
+/**
+ * Get uuid(v4).
+ * @returns - Returns a uuid(v4).
+ */
+export const uuidV4 = () =>
+  short.uuid() as string & { _guidBrand: 'short-uuid' };

@@ -7,4 +7,4 @@ import { nanoid as nano } from 'nanoid';
  * @param size — Size of the ID. The default size is 21.
  * @returns — A random string.
  */
-export const nanoid = (size?: number) => nano(size);
+export const nanoid = (size = 21) => nano(size);

@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
-import shortUuid from 'short-uuid';
-
-const translator = shortUuid();
+import short from 'short-uuid';
 
 /**
- * Generate a new short UUID using this translator's alphabet.
+ * Get short uuid(v4).
+ * @returns - Returns a short uuid(v4).
  */
-export const shortUuidV4 = () => translator.new();
+export const shortUuidV4 = () =>
+  short.generate() as string & { _guidBrand: 'uuid' };
