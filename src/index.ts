@@ -2,11 +2,13 @@ export * from './changeCase';
 export * from './lodashEs';
 export * from './validator';
 
+export * from './convertFenToYuan';
 export * from './convertNumberToUppercaseChinese';
 export * from './convertObjectToQueryString';
 export * from './convertQueryStringToObject';
 export * from './convertShortUuidV4ToUuidV4';
 export * from './convertUuidV4ToShortUuidV4';
+export * from './convertYuanToFen';
 export * from './isEvalError';
 export * from './isFloat';
 export * from './isRangeError';

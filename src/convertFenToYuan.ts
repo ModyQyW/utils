@@ -1,0 +1,13 @@
+/* eslint-disable import/prefer-default-export */
+import { toString } from 'lodash-es';
+
+/**
+ * Convert Fen to Yuan.
+ * @param fen - Fen to convert.
+ * @param digits - Int digits to fixed. If negative, return number.
+ * @returns - Returns Yuan.
+ */
+export const convertFenToYuan = (fen: number | string, digits = 2) => {
+  const yuan = parseFloat(toString(fen)) / 100;
+  return digits >= 0 ? yuan.toFixed(digits) : yuan;
+};
