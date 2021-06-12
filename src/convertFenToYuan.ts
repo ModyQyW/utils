@@ -4,8 +4,8 @@ import { toString } from 'lodash-es';
 /**
  * Convert Fen to Yuan.
  * @param fen - Fen to convert.
- * @param digits - Int digits to fixed. If negative, return number.
- * @returns - Returns Yuan.
+ * @param digits - Digits to fixed. If negative, return number.
+ * @returns - Returns a yuan string or number.
  */
 export const convertFenToYuan = (fen: number | string, digits = 2) => {
   const yuan = parseFloat(toString(fen)) / 100;

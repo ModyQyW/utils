@@ -6,7 +6,7 @@ const translator = short();
 /**
  * Convert short uuid(v4) to uuid(v4).
  * @param shortUuidV4 - The short uuid(v4) to convert.
- * @returns - Returns a uuid(v4).
+ * @returns - Returns a uuid(v4) string.
  */
 export const convertShortUuidV4ToUuidV4 = (
   shortUuidV4: string | (string & { _guidBrand: 'uuid' }),

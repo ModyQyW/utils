@@ -3,9 +3,9 @@ import formatRMB from 'format-rmb';
 
 /**
  * Convert number to uppercase Chinese.
- * @param number - The value to convert.
+ * @param number - The value to convert, should be Yuan.
  * @param prefix - The prefix to add.
- * @returns - Returns a object.
+ * @returns - Returns a object. Read object.value when object.code === 0.
  */
 export const convertNumberToUppercaseChinese = (
   number: number,
