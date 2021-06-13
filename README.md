@@ -63,6 +63,7 @@ This library is not intended to aggregate a large number of utils libs. Instead,
 - [change-case](https://github.com/blakeembrey/change-case#readme)
 - [faker](https://github.com/Marak/faker.js#readme)
 - [format-rmb](https://github.com/bazingaedward/ChinaCurrency#readme)
+- [gcoord](https://github.com/hujiulong/gcoord#readme)
 - [lodash-es](https://github.com/lodash/lodash#readme)
 - [nanoid](https://github.com/ai/nanoid#readme)
 - [qs](https://github.com/ljharb/qs#readme)
@@ -74,7 +75,6 @@ The lib can't solve 100% of the problems in development, but aggregating all the
 
 - [convert](https://github.com/jonahsnider/convert#readme)
 - [dayjs](https://github.com/iamkun/dayjs#readme)
-- [gcoord](https://github.com/hujiulong/gcoord#readme)
 - [numbro](https://github.com/BenjaminVanRyseghem/numbro#readme)
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp#readme)
 - [xe-utils](https://github.com/x-extends/xe-utils#readme)
