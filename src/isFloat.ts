@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { isNumber, isNaN, isFinite, isInteger } from 'lodash-es';
 
 /**

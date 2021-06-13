@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { isDate, isNaN } from 'lodash-es';
 
 /**

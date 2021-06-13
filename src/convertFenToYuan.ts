@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { toString } from 'lodash-es';
 
 /**
@@ -8,6 +7,6 @@ import { toString } from 'lodash-es';
  * @returns - Returns a yuan string or number.
  */
 export const convertFenToYuan = (fen: number | string, digits = 2) => {
-  const yuan = parseFloat(toString(fen)) / 100;
+  const yuan = Number.parseFloat(toString(fen)) / 100;
   return digits >= 0 ? yuan.toFixed(digits) : yuan;
 };

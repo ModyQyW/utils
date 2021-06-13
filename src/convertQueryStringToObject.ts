@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import QueryString, { parse } from 'qs';
 
 /**

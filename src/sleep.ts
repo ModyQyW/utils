@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 /**
  * Sleep for a while :D
  * @param delay - Milliseconds to delay.
