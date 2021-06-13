@@ -2,12 +2,18 @@ export * from './changeCase';
 export * from './lodashEs';
 export * from './validator';
 
+export * from './convertBD09ToGCJ02';
+export * from './convertBD09ToWGS84';
 export * from './convertFenToYuan';
+export * from './convertGCJ02ToBD09';
+export * from './convertGCJ02ToWGS84';
 export * from './convertNumberToUppercaseChinese';
 export * from './convertObjectToQueryString';
 export * from './convertQueryStringToObject';
 export * from './convertShortUuidV4ToUuidV4';
 export * from './convertUuidV4ToShortUuidV4';
+export * from './convertWGS84ToBD09';
+export * from './convertWGS84ToGCJ02';
 export * from './convertYuanToFen';
 export * from './fakeAvatar';
 export * from './fakeEmail';
