@@ -48,9 +48,9 @@ Convert the value to different units/representations/...
 
 Get fake data for testing.
 
-### UA
+### UA Parser
 
-Get user-agent for analyzing.
+Parse user-agent for analyzing.
 
 ### Validator
 
