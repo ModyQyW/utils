@@ -5,7 +5,7 @@ import nodePolyfills from 'rollup-plugin-node-polyfills';
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
 import dts from 'rollup-plugin-dts';
-import path from 'node:path';
+import path from 'path';
 
 const configs = [];
 
