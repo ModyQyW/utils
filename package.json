@@ -1,6 +1,6 @@
 {
   "name": "@modyqyw/utils",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Shareable utils for different JavaScript/TypeScript projects.",
   "keywords": [
     "front-end, frontend, javascript, typescript, js, ts, utils"
