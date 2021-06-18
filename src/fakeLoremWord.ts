@@ -1,3 +1,9 @@
-import faker from 'faker';
+import { fakeLoremParagraph } from './fakeLoremParagraph';
 
-export const fakeLoremWord = () => faker.lorem.word();
+const words = fakeLoremParagraph()
+  .replace(/[,.]/g, '')
+  .split(' ')
+  .map((word) => word.toLowerCase());
+
+export const fakeLoremWord = () =>
+  words[Math.floor(Math.random() * words.length)];
