@@ -1,5 +1,3 @@
-import { toString } from 'lodash-es';
-
 /**
  * Convert Yuan to Fen.
  * @param yuan - Yuan to convert.
@@ -10,6 +8,6 @@ export const convertYuanToFen = (
   yuan: number | string,
   returnNumber = true,
 ) => {
-  const fen = (Number.parseFloat(toString(yuan)) * 100).toFixed(0);
+  const fen = (Number.parseFloat(yuan.toString()) * 100).toFixed(0);
   return returnNumber ? Number.parseInt(fen, 10) : fen;
 };
