@@ -61,7 +61,6 @@ Validate if the value is base64/email/mobile phone/strong password/...
 This library is not intended to aggregate a large number of utils libs. Instead, it only aggregates the following libs.
 
 - [change-case](https://github.com/blakeembrey/change-case#readme)
-- [faker](https://github.com/Marak/faker.js#readme)
 - [format-rmb](https://github.com/bazingaedward/ChinaCurrency#readme)
 - [gcoord](https://github.com/hujiulong/gcoord#readme)
 - [lodash-es](https://github.com/lodash/lodash#readme)
@@ -75,6 +74,7 @@ The lib can't solve 100% of the problems in development, but aggregating all the
 
 - [convert](https://github.com/jonahsnider/convert#readme)
 - [dayjs](https://github.com/iamkun/dayjs#readme)
+- [faker](https://github.com/Marak/faker.js#readme)
 - [numbro](https://github.com/BenjaminVanRyseghem/numbro#readme)
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp#readme)
 - [xe-utils](https://github.com/x-extends/xe-utils#readme)
