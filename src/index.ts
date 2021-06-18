@@ -9,6 +9,7 @@ export * from './convertBD09ToWGS84';
 export * from './convertFenToYuan';
 export * from './convertGCJ02ToBD09';
 export * from './convertGCJ02ToWGS84';
+export * from './convertNumberToPercentage';
 export * from './convertNumberToUppercaseChinese';
 export * from './convertObjectToQueryString';
 export * from './convertQueryStringToObject';
