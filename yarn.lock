@@ -3026,11 +3026,6 @@ form-data@^3.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
-format-rmb@~1.2.3:
-  version "1.2.3"
-  resolved "https://registry.npmjs.org/format-rmb/-/format-rmb-1.2.3.tgz#a69f3caaff38699371167af579d53072453ff229"
-  integrity sha512-SB+ZgxBAoCJrr0xpZXlFfdzTSNwCFKsGNP1lKZ3SdEihF3SptzuFC7+HwubeLU1+VRZDHhZhQ5/h7Zlo1AgXEQ==
-
 fs-extra@8.1.0:
   version "8.1.0"
   resolved "https://registry.npmjs.org/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
