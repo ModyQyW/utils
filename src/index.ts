@@ -6,7 +6,6 @@ export * from './capitalCase';
 export * from './constantCase';
 export * from './convertFenToYuan';
 export * from './convertNumberToPercentage';
-export * from './convertNumberToUppercaseChinese';
 export * from './convertShortUuidV4ToUuidV4';
 export * from './convertUuidV4ToShortUuidV4';
 export * from './convertYuanToFen';
