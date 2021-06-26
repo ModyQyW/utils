@@ -1,1 +1,2 @@
-export const isEvenNumber = (number: number) => number % 2 === 0;
+export const isEvenNumber = (number?: any) =>
+  Number.isFinite(number) && number % 2 === 0;
