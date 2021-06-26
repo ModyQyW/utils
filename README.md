@@ -40,45 +40,30 @@ const { ... } = require('@modyqyw/utils');
 
 More usage are coming...
 
-### Converter
-
-Convert the value to different units/representations/...
-
-### Faker
-
-Get fake data for testing.
-
-### UA Parser
-
-Parse user-agent for analyzing.
-
-### Validator
-
-Validate if the value is base64/email/mobile phone/strong password/...
-
 ## More
 
-This library is not intended to aggregate a large number of utils libs. Instead, it only aggregates the following libs.
+This library is implemented using the following libraries and will hopefully solve many development problems.
 
 - [change-case](https://github.com/blakeembrey/change-case#readme)
-- [format-rmb](https://github.com/bazingaedward/ChinaCurrency#readme)
-- [gcoord](https://github.com/hujiulong/gcoord#readme)
 - [lodash-es](https://github.com/lodash/lodash#readme)
 - [nanoid](https://github.com/ai/nanoid#readme)
-- [qs](https://github.com/ljharb/qs#readme)
 - [short-uuid](https://github.com/oculus42/short-uuid#readme)
-- [ua-parser-js](https://github.com/faisalman/ua-parser-js#readme)
 - [validator](https://github.com/validatorjs/validator.js#readme)
 
-The lib can't solve 100% of the problems in development, but aggregating all the relevant libraries is quite complicated. I recommend to use the following libs separately.
+If this library does not solve your problems, I suggest you look up the solution in ES6+ before using the following libraries.
 
 - [convert](https://github.com/jonahsnider/convert#readme)
 - [dayjs](https://github.com/iamkun/dayjs#readme)
 - [faker](https://github.com/Marak/faker.js#readme)
+- [format-rmb](https://github.com/bazingaedward/ChinaCurrency#readme)
+- [gcoord](https://github.com/hujiulong/gcoord#readme)
+- [lodash-es](https://github.com/lodash/lodash#readme)
+- [mitt](https://github.com/developit/mitt#readme)
 - [numbro](https://github.com/BenjaminVanRyseghem/numbro#readme)
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp#readme)
+- [qs](https://github.com/ljharb/qs#readme)
+- [ua-parser-js](https://github.com/faisalman/ua-parser-js#readme)
+- [validator](https://github.com/validatorjs/validator.js#readme)
 - [xe-utils](https://github.com/x-extends/xe-utils#readme)
 
-If possible, they may also be aggregated in the future, but not now.
-
-Great thanks to the authors of all these libs. :D
+Great thanks to the authors of all these libraries. :D
