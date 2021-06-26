@@ -42,7 +42,7 @@ More usage are coming...
 
 ## More
 
-This library is implemented using the following libraries and will hopefully solve many development problems.
+This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
 
 - [change-case](https://github.com/blakeembrey/change-case#readme)
 - [lodash-es](https://github.com/lodash/lodash#readme)
@@ -50,7 +50,7 @@ This library is implemented using the following libraries and will hopefully sol
 - [short-uuid](https://github.com/oculus42/short-uuid#readme)
 - [validator](https://github.com/validatorjs/validator.js#readme)
 
-If this library does not solve your problems, I suggest you look up the solution in ES6+ before using the following libraries.
+If this library does not solve your problems, I suggest you look up the solution in [standard built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) before using the following libraries.
 
 - [convert](https://github.com/jonahsnider/convert#readme)
 - [dayjs](https://github.com/iamkun/dayjs#readme)
