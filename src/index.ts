@@ -89,6 +89,7 @@ export * from './paramCase';
 export * from './pascalCase';
 export * from './pathCase';
 export * from './random';
+export * from './retry';
 export * from './round';
 export * from './sentenceCase';
 export * from './shortUuidV4';
