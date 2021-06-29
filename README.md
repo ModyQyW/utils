@@ -17,7 +17,7 @@ npm install @modyqyw/utils
 ```javascript
 // esm
 import { ... } from '@modyqyw/utils';
-// cjs
+// umd
 const { ... } = require('@modyqyw/utils');
 // do something with them
 ...
