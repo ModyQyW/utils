@@ -3,6 +3,7 @@ module.exports = {
     commitMessage: 'chore(release): v${version}',
   },
   hooks: {
-    'before:init': 'pnpm run test',
+    'before:init': 'yarn run test',
+    'after:bump': 'yarn run build',
   },
 };
