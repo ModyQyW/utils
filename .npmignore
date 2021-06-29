@@ -8,5 +8,8 @@ tests
 .*.js
 .*ignore
 *.config.js
+*.config.ts
 *.sh
 CONTRIBUTING.md
+.github
+.husky
