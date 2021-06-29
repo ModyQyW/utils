@@ -1,4 +1,4 @@
-import { isDate, isNaN } from 'lodash-es';
+import { isDate } from './isDate';
 
 /**
  * Checks if value is classified as a valid Date object.
@@ -6,4 +6,4 @@ import { isDate, isNaN } from 'lodash-es';
  * @return - Returns true if value is correctly classified, else false.
  */
 export const isValidDate = (value: any) =>
-  isDate(value) && !isNaN(value.getTime());
+  isDate(value) && !Number.isNaN(value.getTime());
