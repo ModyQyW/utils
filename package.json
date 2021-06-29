@@ -19,17 +19,16 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.cjs.min.js",
   "types": "./dist/index.d.ts",
-  "module": "./dist/index.esm.min.js",
-  "unpkg": "./dist/index.iife.min.js",
-  "jsdelivr": "./dist/index.iife.min.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "unpkg": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
   "exports": {
     ".": {
-      "import": "./dist/index.esm.min.js",
-      "require": "./dist/index.cjs.min.js"
-    },
-    "./*": "./*"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
