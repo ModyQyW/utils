@@ -43,6 +43,7 @@ export * from './isJWT';
 export * from './isLength';
 export * from './isMap';
 export * from './isMatch';
+export * from './isMatchWith';
 export * from './isMobilePhone';
 export * from './isNil';
 export * from './isNull';
