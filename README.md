@@ -6,44 +6,43 @@ Shareable utils for different JavaScript/TypeScript projects.
 
 [Github](https://github.com/ModyQyW/utils#readme) | [Gitee](https://github.com/ModyQyW/utils#readme)
 
-**Developing.**
-
-## Installation
+## Usage
 
 ### NPM
 
 ```shell
-npm i @modyqyw/utils
-# yarn add @modyqyw/utils
+npm install @modyqyw/utils
 ```
-
-### CDN
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/@modyqyw/dsa/dist/index.iife.min.js"></script>
-<!-- or unpkg if you prefer -->
-<!-- <script src="https://unpkg.com/@modyqyw/dsa/dist/index.iife.min.js"></script> -->
-```
-
-Then use `window.UTILS` directly.
-
-## Usage
 
 ```javascript
 // esm
-import {...} from '@modyqyw/utils';
+import { ... } from '@modyqyw/utils';
 // cjs
 const { ... } = require('@modyqyw/utils');
 // do something with them
 ...
 ```
 
-More usage are coming...
+### CDN
+
+```html
+<!-- jsdelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@modyqyw/utils"></script>
+<!-- unpkg -->
+<script src="https://unpkg.com/@modyqyw/utils"></script>
+```
+
+Then use `window.UTILS` directly.
+
+### API
+
+// TODO
 
 ## More
 
 This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
 
+- [async-retry](https://github.com/vercel/async-retry#readme)
 - [change-case](https://github.com/blakeembrey/change-case#readme)
 - [lodash-es](https://github.com/lodash/lodash#readme)
 - [nanoid](https://github.com/ai/nanoid#readme)
