@@ -15,7 +15,8 @@
     "rootDir": ".",
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "include": ["src", "types", "tests", "vite.config.ts"],
   "exclude": ["dist", "node_modules"]

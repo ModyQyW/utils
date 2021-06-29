@@ -39,7 +39,7 @@
     "url": "git@github.com:ModyQyW/utils.git"
   },
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint:json": "prettier ./**/*.json --write --ignore-path=.gitignore",
     "lint:script": "eslint . --fix --ext=.js,.jsx,.ts,.tsx,.vue --ignore-path=.gitignore",
     "lint:markdown": "markdownlint . --fix --ignore-path=.gitignore",
