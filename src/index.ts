@@ -129,7 +129,6 @@ export * from './uniqueId';
 export * from './uniqWith';
 export * from './upperCase';
 export * from './uuidV4';
-export * from './without';
 export * from './words';
 export * from './xor';
 export * from './xorBy';
