@@ -75,6 +75,7 @@ export * from './max';
 export * from './maxBy';
 export * from './mean';
 export * from './meanBy';
+export * from './memoize';
 export * from './merge';
 export * from './mergeWith';
 export * from './min';
