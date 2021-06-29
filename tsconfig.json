@@ -1,26 +1,22 @@
 {
-  "exclude": ["dist", "node_modules"],
-  "include": ["src", "types", "tests"],
   "compilerOptions": {
-    "allowJs": true,
-    "lib": ["ESNext"],
+    "target": "ESNext",
     "module": "ESNext",
-    "outDir": "dist",
-    "rootDir": ".",
-    "target": "ES5",
-    "alwaysStrict": true,
-    "noImplicitAny": false,
-    "strict": true,
-    "baseUrl": ".",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "lib": ["ESNext"],
     "moduleResolution": "Node",
-    "paths": {
-      "@/*": ["./src/*"],
-      "tslib": ["node_modules/tslib.d.ts"]
-    },
-    "types": ["jest", "node"],
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
-  }
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "allowJs": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src", "types", "tests", "vite.config.ts"],
+  "exclude": ["dist", "node_modules"]
 }
