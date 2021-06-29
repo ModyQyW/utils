@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "skipLibCheck": true
   },
   "include": ["src", "types", "tests", "vite.config.ts"],
