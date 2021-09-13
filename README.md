@@ -1029,7 +1029,7 @@ sentenceCase('PascalCase'); // => 'Pascal case'
 sentenceCase('version 1.2.10'); // => 'Version 1 2 10'
 ```
 
-- [shortUuidV4](./src/shortUuidV4.ts)
+- [shortUuid](./src/shortUuid.ts)
 - [sleep](./src/sleep.ts)
 
 ```typescript
@@ -1229,7 +1229,7 @@ toSafeInteger(Infinity); // => 9007199254740991
 toSafeInteger('3.2'); // => 3
 ```
 
-- [toShortUuidV4](./src/toShortUuidV4.ts)
+- [toShortUuid](./src/toShortUuid.ts)
 - [toString](https://lodash.com/docs/#toString)
 
 ```typescript
@@ -1240,7 +1240,7 @@ toString(-0); // => '-0'
 toString([1, 2, 3]); // => '1,2,3'
 ```
 
-- [toUuidV4](./src/toUuidV4.ts)
+- [toUuid](./src/toUuid.ts)
 - [trim](https://lodash.com/docs/#trim)
 
 ```typescript
@@ -1362,7 +1362,7 @@ upperCase('fooBar'); // => 'FOO BAR'
 upperCase('__foo_bar__'); // => 'FOO BAR'
 ```
 
-- [uuidV4](./src/uuidV4.ts)
+- [uuid](./src/uuid.ts)
 - [words](https://lodash.com/docs/#words)
 
 ```typescript
