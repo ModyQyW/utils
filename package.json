@@ -1,6 +1,7 @@
 {
   "name": "@modyqyw/utils",
   "version": "0.7.0",
+  "private": false,
   "description": "Shareable utils for different JavaScript/TypeScript projects.",
   "keywords": [
     "front-end, frontend, javascript, typescript, js, ts, utils"
@@ -9,35 +10,30 @@
   "bugs": {
     "url": "https://github.com/ModyQyW/utils/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ModyQyW/utils.git"
+  },
+  "license": "MIT",
   "author": {
-    "email": "wurui7@mail3.sysu.edu.cn",
     "name": "ModyQyW",
+    "email": "wurui7@mail3.sysu.edu.cn",
     "url": "https://modyqyw.github.io"
   },
-  "private": false,
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
-  "unpkg": "./dist/index.umd.js",
-  "jsdelivr": "./dist/index.umd.js",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     }
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ModyQyW/utils.git"
-  },
+  "main": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc && vite build && rollup -i ./src/index.ts -o ./dist/index.d.ts -f es -p dts",
     "commit": "cz",
@@ -48,47 +44,50 @@
     "prepare": "is-ci || husky install",
     "release": "release-it"
   },
-  "dependencies": {
-    "@types/async-retry": "~1.4.3",
-    "@types/lodash-es": "~4.17.4",
-    "@types/node": "~16.4.4",
-    "@types/uuid": "~8.3.1",
-    "@types/validator": "~13.6.3",
-    "async-retry": "~1.3.1",
-    "change-case": "~4.1.2",
-    "lodash-es": "~4.17.21",
-    "nanoid": "~3.1.23",
-    "short-uuid": "~4.2.0",
-    "validator": "~13.6.0"
-  },
-  "devDependencies": {
-    "@babel/core": "~7.14.8",
-    "@babel/eslint-parser": "~7.14.7",
-    "@commitlint/cli": "~13.1.0",
-    "@modyqyw/fabric": "~2.9.0-3",
-    "@typescript-eslint/eslint-plugin": "~4.28.5",
-    "@typescript-eslint/parser": "~4.28.5",
-    "eslint": "~7.31.0",
-    "husky": "~7.0.1",
-    "is-ci": "~3.0.0",
-    "lint-md-cli": "~0.1.2",
-    "lint-staged": "~11.1.1",
-    "markdownlint-cli": "~0.28.1",
-    "prettier": "~2.3.2",
-    "release-it": "~14.10.1",
-    "rollup": "~2.55.0",
-    "rollup-plugin-dts": "~3.0.2",
-    "typescript": "~4.3.5",
-    "vite": "~2.4.4",
-    "vite-plugin-dts": "~0.5.3"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "dependencies": {
+    "@types/async-retry": "~1.4.3",
+    "@types/lodash-es": "~4.17.5",
+    "@types/node": "~16.9.1",
+    "@types/uuid": "~8.3.1",
+    "@types/validator": "~13.6.3",
+    "async-retry": "~1.3.3",
+    "change-case": "~4.1.2",
+    "lodash-es": "~4.17.21",
+    "nanoid": "~3.1.25",
+    "short-uuid": "~4.2.0",
+    "validator": "~13.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.15.5",
+    "@babel/eslint-parser": "~7.15.4",
+    "@commitlint/cli": "~13.1.0",
+    "@modyqyw/fabric": "~3.4.3",
+    "@typescript-eslint/eslint-plugin": "~4.31.0",
+    "@typescript-eslint/parser": "~4.31.0",
+    "eslint": "~7.32.0",
+    "husky": "~7.0.2",
+    "is-ci": "~3.0.0",
+    "lint-md-cli": "~0.1.2",
+    "lint-staged": "~11.1.2",
+    "markdownlint-cli": "~0.28.1",
+    "prettier": "~2.4.0",
+    "release-it": "~14.11.5",
+    "rollup": "~2.56.3",
+    "rollup-plugin-dts": "~4.0.0",
+    "typescript": "~4.4.3",
+    "vite": "~2.5.6"
+  },
   "engines": {
-    "node": "^12 || ^14 || ^16",
-    "npm": "^6 || ^7"
+    "node": "^12.22.6 || ^14.17.6 || ^16.6.2",
+    "npm": "^6.14.15 || ^7.20.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
