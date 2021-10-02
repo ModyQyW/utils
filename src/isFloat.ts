@@ -3,5 +3,4 @@
  * @param value - The value to check.
  * @return - Returns true if value is correctly classified, else false.
  */
-export const isFloat = (value?: any) =>
-  Number.isFinite(value) && !Number.isInteger(value);
+export const isFloat = (value?: any) => Number.isFinite(value) && !Number.isInteger(value);

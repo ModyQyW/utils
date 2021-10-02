@@ -1,2 +1,1 @@
-export const isOddNumber = (number?: any) =>
-  Number.isFinite(number) && number % 2 !== 0;
+export const isOddNumber = (number?: any) => Number.isFinite(number) && number % 2 !== 0;

@@ -5,5 +5,4 @@ import { isError } from 'lodash-es';
  * @param value - The value to check.
  * @return — Returns true if value is an error object, else false.
  */
-export const isEvalError = (value: any) =>
-  isError(value) && value.constructor === EvalError;
+export const isEvalError = (value: any) => isError(value) && value.constructor === EvalError;

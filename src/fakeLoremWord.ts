@@ -5,5 +5,4 @@ const words = fakeLoremParagraph()
   .split(' ')
   .map((word) => word.toLowerCase());
 
-export const fakeLoremWord = () =>
-  words[Math.floor(Math.random() * words.length)];
+export const fakeLoremWord = () => words[Math.floor(Math.random() * words.length)];

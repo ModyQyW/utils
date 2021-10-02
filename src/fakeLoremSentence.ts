@@ -7,5 +7,4 @@ const sentences = fakeLoremParagraph()
   .filter((sentence) => sentence !== '')
   .map((sentence) => `${sentence[0].toUpperCase() + sentence.slice(1)}.`);
 
-export const fakeLoremSentence = () =>
-  sentences[Math.floor(Math.random() * sentences.length)];
+export const fakeLoremSentence = () => sentences[Math.floor(Math.random() * sentences.length)];
