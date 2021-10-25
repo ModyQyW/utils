@@ -648,7 +648,7 @@ function Foo() {
 Foo.prototype.c = 3;
 forInRight(new Foo(), function (value, key) {
   console.log(key);
-}); // => Logs 'c', 'b', then 'a' assuming `_.forIn` logs 'a', 'b', then 'c'.
+}); // => Logs 'c', 'b', then 'a' assuming `forIn` logs 'a', 'b', then 'c'.
 ```
 
 - [forOwn](https://lodash.com/docs/#forOwn)
@@ -674,7 +674,7 @@ function Foo() {
 Foo.prototype.c = 3;
 forOwnRight(new Foo(), function (value, key) {
   console.log(key);
-}); // => Logs 'b' then 'a' assuming `_.forOwn` logs 'a' then 'b'.
+}); // => Logs 'b' then 'a' assuming `forOwn` logs 'a' then 'b'.
 ```
 
 - [fromPairs](https://lodash.com/docs/#fromPairs)
@@ -690,10 +690,10 @@ fromPairs([
 
 ```typescript
 function Foo() {
-  this.a = _.constant('a');
-  this.b = _.constant('b');
+  this.a = constant('a');
+  this.b = constant('b');
 }
-Foo.prototype.c = _.constant('c');
+Foo.prototype.c = constant('c');
 functions(new Foo()); // => ['a', 'b']
 ```
 
@@ -701,10 +701,10 @@ functions(new Foo()); // => ['a', 'b']
 
 ```typescript
 function Foo() {
-  this.a = _.constant('a');
-  this.b = _.constant('b');
+  this.a = constant('a');
+  this.b = constant('b');
 }
-Foo.prototype.c = _.constant('c');
+Foo.prototype.c = constant('c');
 functionsIn(new Foo()); // => ['a', 'b', 'c']
 ```
 
