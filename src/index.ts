@@ -88,6 +88,7 @@ export * from './isWeakMap';
 export * from './isWeakSet';
 export * from './join';
 export * from './kebabCase';
+export * from './last';
 export * from './lowerCase';
 export * from './max';
 export * from './maxBy';

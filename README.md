@@ -1001,6 +1001,14 @@ kebabCase('fooBar'); // => 'foo-bar'
 kebabCase('__FOO_BAR__'); // => 'foo-bar'
 ```
 
+- [last](https://lodash.com/docs/#last)
+
+```typescript
+import { last } from '@modyqyw/utils';
+
+last([1, 2, 3]); // => 3
+```
+
 - [lowerCase](https://lodash.com/docs/#lowerCase)
 
 ```typescript
