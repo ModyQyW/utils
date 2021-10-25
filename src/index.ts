@@ -122,6 +122,7 @@ export * from './retry';
 export * from './reverse';
 export * from './round';
 export * from './sentenceCase';
+export * from './slice';
 export * from './shortUuid';
 export * from './sleep';
 export * from './snakeCase';
