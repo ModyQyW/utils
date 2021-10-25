@@ -211,6 +211,28 @@ dropRightWhile(users, ['active', false]); // => objects for ['barney']
 dropRightWhile(users, 'active'); // => objects for ['barney', 'fred', 'pebbles']
 ```
 
+- [dropWhile](https://lodash.com/docs/#dropWhile)
+
+```typescript
+import { dropWhile } from '@modyqyw/utils';
+
+const users = [
+  { user: 'barney', active: false },
+  { user: 'fred', active: false },
+  { user: 'pebbles', active: true },
+];
+
+dropWhile(users, function (o) {
+  return !o.active;
+}); // => objects for ['pebbles']
+
+dropWhile(users, { user: 'barney', active: false }); // => objects for ['fred', 'pebbles']
+
+dropWhile(users, ['active', false]); // => objects for ['pebbles']
+
+dropWhile(users, 'active'); // => objects for ['barney', 'fred', 'pebbles']
+```
+
 - [fakeAvatar](./src/fakeAvatar.ts)
 
 ```typescript
