@@ -131,6 +131,7 @@ export * from './last';
 export * from './lastIndexOf';
 export * from './lowerCase';
 export * from './lt';
+export * from './lte';
 export * from './map';
 export * from './max';
 export * from './maxBy';

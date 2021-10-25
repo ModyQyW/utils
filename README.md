@@ -1173,6 +1173,14 @@ lt(3, 3); // => false
 lt(3, 1); // => false
 ```
 
+- [lte](https://lodash.com/docs/#lte)
+
+```typescript
+lte(1, 3); // => true
+lte(3, 3); // => true
+lte(3, 1); // => false
+```
+
 - [map](https://lodash.com/docs/#map)
 
 ```typescript
