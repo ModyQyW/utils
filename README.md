@@ -664,6 +664,19 @@ forOwn(new Foo(), function (value, key) {
 }); // => Logs 'a' then 'b' (iteration order is not guaranteed).
 ```
 
+- [forOwnRight](https://lodash.com/docs/#forOwnRight)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+forOwnRight(new Foo(), function (value, key) {
+  console.log(key);
+}); // => Logs 'b' then 'a' assuming `_.forOwn` logs 'a' then 'b'.
+```
+
 - [fromPairs](https://lodash.com/docs/#fromPairs)
 
 ```typescript

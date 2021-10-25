@@ -69,6 +69,7 @@ export * from './forEachRight';
 export * from './forIn';
 export * from './forInRight';
 export * from './forOwn';
+export * from './forOwnRight';
 export * from './fromPairs';
 export * from './groupBy';
 export * from './gt';
