@@ -1518,6 +1518,17 @@ take([1, 2, 3], 5); // => [1, 2, 3]
 take([1, 2, 3], 0); // => []
 ```
 
+- [takeRight](https://lodash.com/docs/#takeRight)
+
+```typescript
+import { takeRight } from '@modyqyw/utils';
+
+takeRight([1, 2, 3]); // => [3]
+takeRight([1, 2, 3], 2); // => [2, 3]
+takeRight([1, 2, 3], 5); // => [1, 2, 3]
+takeRight([1, 2, 3], 0); // => []
+```
+
 - [throttle](https://lodash.com/docs/#throttle)
 - [toArray](https://lodash.com/docs/#toArray)
 
