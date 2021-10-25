@@ -55,6 +55,7 @@ export * from './forEach';
 export * from './forEachRight';
 export * from './fromPairs';
 export * from './groupBy';
+export * from './gt';
 export * from './head';
 export * from './headerCase';
 export * from './includes';

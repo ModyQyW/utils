@@ -507,6 +507,14 @@ groupBy([6.1, 4.2, 6.3], Math.floor); // => { '4': [4.2], '6': [6.1, 6.3] }
 groupBy(['one', 'two', 'three'], 'length'); // => { '3': ['one', 'two'], '5': ['three'] }
 ```
 
+- [gt](https://lodash.com/docs/#gt)
+
+```typescript
+gt(3, 1); // => true
+gt(3, 3); // => false
+gt(1, 3); // => false
+```
+
 - [head](https://lodash.com/docs/#head)
 
 ```typescript
