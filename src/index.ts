@@ -115,6 +115,7 @@ export * from './pull';
 export * from './pullAll';
 export * from './pullAllBy';
 export * from './pullAllWith';
+export * from './pullAt';
 export * from './random';
 export * from './retry';
 export * from './round';

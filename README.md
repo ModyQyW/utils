@@ -1288,6 +1288,17 @@ pullAllWith(array, [{ x: 3, y: 4 }], isEqual);
 console.log(array); // => [{ 'x': 1, 'y': 2 }, { 'x': 5, 'y': 6 }]
 ```
 
+- [pullAt](https://lodash.com/docs/#pullAt)
+
+```typescript
+import { pullAt } from '@modyqyw/utils';
+
+const array = ['a', 'b', 'c', 'd'];
+const pulled = pullAt(array, [1, 3]);
+console.log(array); // => ['a', 'c']
+console.log(pulled); // => ['b', 'd']
+```
+
 - [random](https://lodash.com/docs/#random)
 
 ```typescript
