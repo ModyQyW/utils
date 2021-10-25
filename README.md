@@ -1547,6 +1547,24 @@ takeRightWhile(users, ['active', false]); // => objects for ['fred', 'pebbles']
 takeRightWhile(users, 'active'); // => []
 ```
 
+- [takeWhile](https://lodash.com/docs/#takeWhile)
+
+```typescript
+import { takeWhile } from '@modyqyw/utils';
+
+const users = [
+  { user: 'barney', active: false },
+  { user: 'fred', active: false },
+  { user: 'pebbles', active: true },
+];
+takeWhile(users, function (o) {
+  return !o.active;
+}); // => objects for ['barney', 'fred']
+takeWhile(users, { user: 'barney', active: false }); // => objects for ['barney']
+takeWhile(users, ['active', false]); // => objects for ['barney', 'fred']
+takeWhile(users, 'active'); // => []
+```
+
 - [throttle](https://lodash.com/docs/#throttle)
 - [toArray](https://lodash.com/docs/#toArray)
 

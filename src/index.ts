@@ -140,6 +140,7 @@ export * from './tail';
 export * from './take';
 export * from './takeRight';
 export * from './takeRightWhile';
+export * from './takeWhile';
 export * from './throttle';
 export * from './toArray';
 export * from './toFinite';
