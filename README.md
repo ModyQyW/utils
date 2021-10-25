@@ -1369,6 +1369,12 @@ sentenceCase('version 1.2.10'); // => 'Version 1 2 10'
 ```
 
 - [shortUuid](./src/shortUuid.ts)
+- [shuffle](https://lodash.com/docs/#shuffle)
+
+```typescript
+shuffle([1, 2, 3, 4]); // => [4, 1, 3, 2]
+```
+
 - [sleep](./src/sleep.ts)
 
 ```typescript

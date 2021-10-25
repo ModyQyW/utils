@@ -145,6 +145,8 @@ export * from './sampleSize';
 export * from './sentenceCase';
 export * from './slice';
 export * from './shortUuid';
+export * from './shuffle';
+export * from './size';
 export * from './sleep';
 export * from './snakeCase';
 export * from './sortBy';
