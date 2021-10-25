@@ -86,6 +86,16 @@ const defaults = partialRight(assignInWith, customizer);
 defaults({ a: 1 }, { b: 2 }, { a: 3 }); // => { 'a': 1, 'b': 2 }
 ```
 
+- [assignWith](https://lodash.com/docs/#assignIn)
+
+```typescript
+function customizer(objValue, srcValue) {
+  return isUndefined(objValue) ? srcValue : objValue;
+}
+const defaults = partialRight(assignWith, customizer);
+defaults({ a: 1 }, { b: 2 }, { a: 3 }); // => { 'a': 1, 'b': 2 }
+```
+
 - [before](https://lodash.com/docs/#before)
 - [bind](https://lodash.com/docs/#bind)
 - [bindKey](https://lodash.com/docs/#bindKey)
