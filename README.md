@@ -306,11 +306,8 @@ const users = [
 findIndex(users, function (o) {
   return o.user == 'barney';
 }); // => 0
-
 findIndex(users, { user: 'fred', active: false }); // => 1
-
 findIndex(users, ['active', false]); // => 0
-
 findIndex(users, 'active'); // => 2
 ```
 
@@ -334,11 +331,8 @@ const users = [
 findLastIndex(users, function (o) {
   return o.user == 'pebbles';
 }); // => 2
-
 findLastIndex(users, { user: 'barney', active: true }); // => 0
-
 findLastIndex(users, ['active', false]); // => 2
-
 findLastIndex(users, 'active'); // => 0
 ```
 
