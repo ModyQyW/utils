@@ -153,9 +153,17 @@ console.log(array); // => [1]
 - [conformsTo](https://lodash.com/docs/#conformsTo)
 
 ```typescript
-const object = { 'a': 1, 'b': 2 };
-conformsTo(object, { 'b': function(n) { return n > 1; } }); // => true
-conformsTo(object, { 'b': function(n) { return n > 2; } }); // => false
+const object = { a: 1, b: 2 };
+conformsTo(object, {
+  b: function (n) {
+    return n > 1;
+  },
+}); // => true
+conformsTo(object, {
+  b: function (n) {
+    return n > 2;
+  },
+}); // => false
 ```
 
 - [constantCase](https://github.com/blakeembrey/change-case#constantcase)
