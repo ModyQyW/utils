@@ -5,6 +5,7 @@ export * from './bind';
 export * from './bindKey';
 export * from './camelCase';
 export * from './capitalCase';
+export * from './castArray';
 export * from './ceil';
 export * from './chunk';
 export * from './clone';

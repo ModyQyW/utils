@@ -63,6 +63,19 @@ capitalCase('PascalCase'); // => 'Pascal Case'
 capitalCase('version 1.2.10'); // => 'Version 1 2 10'
 ```
 
+- [castArray](https://lodash.com/docs/#castArray)
+
+```typescript
+castArray(1); // => [1]
+castArray({ a: 1 }); // => [{ 'a': 1 }]
+castArray('abc'); // => ['abc']
+castArray(null); // => [null]
+castArray(undefined); // => [undefined]
+castArray(); // => []
+const array = [1, 2, 3];
+console.log(castArray(array) === array); // => true
+```
+
 - [ceil](https://lodash.com/docs/#ceil)
 
 ```typescript
