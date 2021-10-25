@@ -110,6 +110,7 @@ export * from './isRangeError';
 export * from './isReferenceError';
 export * from './isRegExp';
 export * from './isRgbColor';
+export * from './isSafeInteger';
 export * from './isSemver';
 export * from './isSet';
 export * from './isString';

@@ -999,6 +999,15 @@ isRgbColor('rgb(101%,101%,101%)'); // => false
 isRgbColor('rgba(3%,3%,101%,0.3)'); // => false
 ```
 
+- [isSafeInteger](https://lodash.com/docs/#isSafeInteger)
+
+```typescript
+isSafeInteger(3); // => true
+isSafeInteger(Number.MIN_VALUE); // => false
+isSafeInteger(Infinity); // => false
+isSafeInteger('3'); // => false
+```
+
 - [isSemver](https://github.com/validatorjs/validator.js#validators)
 
 ```typescript
