@@ -751,6 +751,16 @@ has(object, ['a', 'b']); // => true
 has(other, 'a'); // => false
 ```
 
+- [hasIn](https://lodash.com/docs/#hasIn)
+
+```typescript
+const object = create({ 'a': create({ 'b': 2 }) });
+hasIn(object, 'a'); // => true
+hasIn(object, 'a.b'); // => true
+hasIn(object, ['a', 'b']); // => true
+hasIn(object, 'b'); // => false
+```
+
 - [head](https://lodash.com/docs/#head)
 
 ```typescript
