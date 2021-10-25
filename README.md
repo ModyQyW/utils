@@ -70,6 +70,15 @@ ceil(6.004, 2); // => 6.01
 ceil(6040, -2); // => 6100
 ```
 
+- [chunk](https://lodash.com/docs/#chunk)
+
+```typescript
+import { chunk } from '@modyqyw/utils';
+
+chunk(['a', 'b', 'c', 'd'], 2); // => [['a', 'b'], ['c', 'd']]
+chunk(['a', 'b', 'c', 'd'], 3); // => [['a', 'b', 'c'], ['d']]
+```
+
 - [clone](https://lodash.com/docs/#clone)
 
 ```typescript

@@ -1,6 +1,7 @@
 export * from './camelCase';
 export * from './capitalCase';
 export * from './ceil';
+export * from './chunk';
 export * from './clone';
 export * from './cloneDeep';
 export * from './constantCase';
