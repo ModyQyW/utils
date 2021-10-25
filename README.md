@@ -277,6 +277,12 @@ circle instanceof Shape; // => true
 defaults({ a: 1 }, { b: 2 }, { a: 3 }); // => { 'a': 1, 'b': 2 }
 ```
 
+- [defaultsDeep](https://lodash.com/docs/#defaultsDeep)
+
+```typescript
+defaultsDeep({ a: { b: 2 } }, { a: { b: 1, c: 3 } }); // => { 'a': { 'b': 2, 'c': 3 } }
+```
+
 - [defer](https://lodash.com/docs/#defer)
 - [delay](https://lodash.com/docs/#delay)
 - [difference](https://lodash.com/docs/#difference)
