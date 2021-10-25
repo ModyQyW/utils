@@ -107,6 +107,20 @@ const shallow = clone(objects);
 console.log(shallow[0] === objects[0]); // => false
 ```
 
+- [cloneDeepWith](https://lodash.com/docs/#cloneDeepWith)
+
+```typescript
+function customizer(value) {
+  if (isElement(value)) {
+    return value.cloneNode(true);
+  }
+}
+const el = cloneDeepWith(document.body, customizer);
+console.log(el === document.body); // => false
+console.log(el.nodeName); // => 'BODY'
+console.log(el.childNodes.length); // => 20
+```
+
 - [compact](https://lodash.com/docs/#compact)
 
 ```typescript

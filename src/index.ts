@@ -10,6 +10,7 @@ export * from './ceil';
 export * from './chunk';
 export * from './clone';
 export * from './cloneDeep';
+export * from './cloneDeepWith';
 export * from './compact';
 export * from './concat';
 export * from './constantCase';
