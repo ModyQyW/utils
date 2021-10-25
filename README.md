@@ -412,6 +412,14 @@ indexOf([1, 2, 1, 2], 2); // => 1
 indexOf([1, 2, 1, 2], 2, 2); // => 3
 ```
 
+- [initial](https://lodash.com/docs/#initial)
+
+```typescript
+import { initial } from '@modyqyw/utils';
+
+initial([1, 2, 3]); // => [1, 2]
+```
+
 - [intersection](https://lodash.com/docs/#intersection)
 
 ```typescript

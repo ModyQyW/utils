@@ -32,6 +32,7 @@ export * from './fromPairs';
 export * from './head';
 export * from './headerCase';
 export * from './indexOf';
+export * from './initial';
 export * from './intersection';
 export * from './intersectionBy';
 export * from './intersectionWith';
