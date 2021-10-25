@@ -41,23 +41,7 @@ Please see [MDN docs](https://developer.mozilla.org/) for native API support. So
 Please see links for more infos.
 
 - [after](https://lodash.com/docs/#after)
-
-```typescript
-const saves = ['profile', 'settings'];
-const done = after(saves.length, function () {
-  console.log('done saving!');
-});
-forEach(saves, function (type) {
-  asyncSave({ type: type, complete: done });
-}); // => Logs 'done saving!' after the two async saves have completed.
-```
-
 - [ary](https://lodash.com/docs/#ary)
-
-```typescript
-map(['6', '8', '10'], ary(parseInt, 1)); // => [6, 8, 10]
-```
-
 - [before](https://lodash.com/docs/#before)
 - [bind](https://lodash.com/docs/#bind)
 - [bindKey](https://lodash.com/docs/#bindKey)
