@@ -1724,6 +1724,16 @@ subtract(6, 4); // => 2
 sum([4, 2, 8, 6]); // => 20
 ```
 
+- [sumBy](https://lodash.com/docs/#sumBy)
+
+```typescript
+const objects = [{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }];
+sumBy(objects, function (o) {
+  return o.n;
+}); // => 20
+sumBy(objects, 'n'); // => 20
+```
+
 - [tail](https://lodash.com/docs/#tail)
 
 ```typescript
