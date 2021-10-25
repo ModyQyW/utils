@@ -86,6 +86,7 @@ export * from './isURIError';
 export * from './isValidDate';
 export * from './isWeakMap';
 export * from './isWeakSet';
+export * from './join';
 export * from './kebabCase';
 export * from './lowerCase';
 export * from './max';

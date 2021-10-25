@@ -983,6 +983,14 @@ isWeakSet(new WeakSet()); // => true
 isWeakSet(new Set()); // => false
 ```
 
+- [join](https://lodash.com/docs/#join)
+
+```typescript
+import { join } from '@modyqyw/utils';
+
+join(['a', 'b', 'c'], '~'); // => 'a~b~c'
+```
+
 - [kebabCase](https://lodash.com/docs/#kebabCase)
 
 ```typescript
