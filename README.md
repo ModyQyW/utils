@@ -1310,6 +1310,19 @@ random(5, true); // => a floating-point number between 0 and 5
 random(1.2, 5.2); // => a floating-point number between 1.2 and 5.2
 ```
 
+- [remove](https://lodash.com/docs/#remove)
+
+```typescript
+import { remove } from '@modyqyw/utils';
+
+const array = [1, 2, 3, 4];
+const evens = remove(array, function (n) {
+  return n % 2 == 0;
+});
+console.log(array); // => [1, 3]
+console.log(evens); // => [2, 4]
+```
+
 - [retry](https://github.com/vercel/async-retry)
 
 ```typescript
