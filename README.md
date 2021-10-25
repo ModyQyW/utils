@@ -1259,6 +1259,7 @@ random(5, true); // => a floating-point number between 0 and 5
 random(1.2, 5.2); // => a floating-point number between 1.2 and 5.2
 ```
 
+- [rearg](https://lodash.com/docs/#rearg)
 - [reduce](https://lodash.com/docs/#reduce)
 
 ```typescript

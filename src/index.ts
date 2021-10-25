@@ -149,6 +149,7 @@ export * from './pullAllBy';
 export * from './pullAllWith';
 export * from './pullAt';
 export * from './random';
+export * from './rearg';
 export * from './reduce';
 export * from './reduceRight';
 export * from './reject';
