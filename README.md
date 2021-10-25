@@ -1529,6 +1529,24 @@ takeRight([1, 2, 3], 5); // => [1, 2, 3]
 takeRight([1, 2, 3], 0); // => []
 ```
 
+- [takeRightWhile](https://lodash.com/docs/#takeRightWhile)
+
+```typescript
+import { takeRightWhile } from '@modyqyw/utils';
+
+const users = [
+  { user: 'barney', active: true },
+  { user: 'fred', active: false },
+  { user: 'pebbles', active: false },
+];
+takeRightWhile(users, function (o) {
+  return !o.active;
+}); // => objects for ['fred', 'pebbles']
+takeRightWhile(users, { user: 'pebbles', active: false }); // => objects for ['pebbles']
+takeRightWhile(users, ['active', false]); // => objects for ['fred', 'pebbles']
+takeRightWhile(users, 'active'); // => []
+```
+
 - [throttle](https://lodash.com/docs/#throttle)
 - [toArray](https://lodash.com/docs/#toArray)
 
