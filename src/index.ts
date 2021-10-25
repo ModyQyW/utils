@@ -105,6 +105,7 @@ export * from './keyBy';
 export * from './last';
 export * from './lastIndexOf';
 export * from './lowerCase';
+export * from './map';
 export * from './max';
 export * from './maxBy';
 export * from './mean';

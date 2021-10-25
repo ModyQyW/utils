@@ -993,6 +993,18 @@ lowerCase('fooBar'); // => 'foo bar'
 lowerCase('__FOO_BAR__'); // => 'foo bar'
 ```
 
+- [map](https://lodash.com/docs/#map)
+
+```typescript
+function square(n) {
+  return n * n;
+}
+map([4, 8], square); // => [16, 64]
+map({ a: 4, b: 8 }, square); // => [16, 64] (iteration order is not guaranteed)
+const users = [{ user: 'barney' }, { user: 'fred' }];
+map(users, 'user'); // => ['barney', 'fred']
+```
+
 - [max](https://lodash.com/docs/#max)
 
 ```typescript
