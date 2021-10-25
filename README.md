@@ -1286,6 +1286,12 @@ minBy(objects, function (o) {
 minBy(objects, 'n'); // => { 'n': 1 }
 ```
 
+- [multiply](https://lodash.com/docs/#multiply)
+
+```typescript
+multiply(6, 4); // => 24
+```
+
 - [nanoid](https://github.com/ai/nanoid)
 
 ```typescript

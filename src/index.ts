@@ -144,6 +144,7 @@ export * from './merge';
 export * from './mergeWith';
 export * from './min';
 export * from './minBy';
+export * from './multiply';
 export * from './nanoid';
 export * from './negate';
 export * from './noCase';
