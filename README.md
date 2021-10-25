@@ -344,6 +344,14 @@ flatMap([1, 2], function (n) {
 }); // => [1, 1, 2, 2]
 ```
 
+- [flatMapDeep](https://lodash.com/docs/#flatMapDeep)
+
+```typescript
+flatMapDeep([1, 2], function duplicate(n) {
+  return [[[n, n]]];
+}); // => [1, 1, 2, 2]
+```
+
 - [flatten](https://lodash.com/docs/#flatten)
 
 ```typescript
