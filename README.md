@@ -336,6 +336,14 @@ findLastIndex(users, ['active', false]); // => 2
 findLastIndex(users, 'active'); // => 0
 ```
 
+- [flatMap](https://lodash.com/docs/#flatMap)
+
+```typescript
+flatMap([1, 2], function (n) {
+  return [n, n];
+}); // => [1, 1, 2, 2]
+```
+
 - [flatten](https://lodash.com/docs/#flatten)
 
 ```typescript
