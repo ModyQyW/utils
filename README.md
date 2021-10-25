@@ -344,6 +344,14 @@ import { flatten } from '@modyqyw/utils';
 flatten([1, [2, [3, [4]], 5]]); // => [1, 2, [3, [4]], 5]
 ```
 
+- [flattenDeep](https://lodash.com/docs/#flattenDeep)
+
+```typescript
+import { flattenDeep } from '@modyqyw/utils';
+
+flattenDeep([1, [2, [3, [4]], 5]]); // => [1, 2, 3, 4, 5]
+```
+
 - [floor](https://lodash.com/docs/#floor)
 
 ```typescript

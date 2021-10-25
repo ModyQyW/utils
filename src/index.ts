@@ -25,6 +25,7 @@ export * from './fill';
 export * from './findIndex';
 export * from './findLastIndex';
 export * from './flatten';
+export * from './flattenDeep';
 export * from './floor';
 export * from './headerCase';
 export * from './intersection';
