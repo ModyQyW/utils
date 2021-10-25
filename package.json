@@ -65,7 +65,7 @@
     "@babel/core": "~7.15.8",
     "@babel/eslint-parser": "~7.15.8",
     "@commitlint/cli": "~13.2.1",
-    "@modyqyw/fabric": "~4.0.0-3",
+    "@modyqyw/fabric": "~4.0.0-4",
     "@typescript-eslint/eslint-plugin": "~5.1.0",
     "@typescript-eslint/parser": "~5.1.0",
     "cnpm": "~7.1.0",
