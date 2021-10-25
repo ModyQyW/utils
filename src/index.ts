@@ -133,6 +133,7 @@ export * from './pullAllBy';
 export * from './pullAllWith';
 export * from './pullAt';
 export * from './random';
+export * from './reduce';
 export * from './remove';
 export * from './retry';
 export * from './reverse';
