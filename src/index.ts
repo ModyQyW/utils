@@ -26,6 +26,7 @@ export * from './delay';
 export * from './difference';
 export * from './differenceBy';
 export * from './differenceWith';
+export * from './divide';
 export * from './dotCase';
 export * from './drop';
 export * from './dropRight';

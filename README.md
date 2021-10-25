@@ -225,6 +225,12 @@ dotCase('PascalCase'); // => 'pascal.case'
 dotCase('version 1.2.10'); // => 'version.1.2.10'
 ```
 
+- [divide](https://lodash.com/docs/#divide)
+
+```typescript
+divide(6, 4); // => 1.5
+```
+
 - [drop](https://lodash.com/docs/#drop)
 
 ```typescript
