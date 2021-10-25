@@ -372,6 +372,17 @@ floor(0.046, 2); // => 0.04
 floor(4060, -2); // => 4000
 ```
 
+- [fromPairs](https://lodash.com/docs/#fromPairs)
+
+```typescript
+import { fromPairs } from '@modyqyw/utils';
+
+fromPairs([
+  ['a', 1],
+  ['b', 2],
+]); // => { 'a': 1, 'b': 2 }
+```
+
 - [headerCase](https://github.com/blakeembrey/change-case#headercase)
 
 ```typescript
