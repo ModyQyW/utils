@@ -101,6 +101,7 @@ export * from './isWeakMap';
 export * from './isWeakSet';
 export * from './join';
 export * from './kebabCase';
+export * from './keyBy';
 export * from './last';
 export * from './lastIndexOf';
 export * from './lowerCase';
