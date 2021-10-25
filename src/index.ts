@@ -17,6 +17,7 @@ export * from './drop';
 export * from './dropRight';
 export * from './dropRightWhile';
 export * from './dropWhile';
+export * from './every';
 export * from './fakeAvatar';
 export * from './fakeImage';
 export * from './fakeLoremParagraph';

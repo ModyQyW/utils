@@ -203,6 +203,19 @@ dropWhile(users, ['active', false]); // => objects for ['pebbles']
 dropWhile(users, 'active'); // => objects for ['barney', 'fred', 'pebbles']
 ```
 
+- [every](https://lodash.com/docs/#every)
+
+```typescript
+every([true, 1, null, 'yes'], Boolean); // => false
+const users = [
+  { user: 'barney', age: 36, active: false },
+  { user: 'fred', age: 40, active: false },
+];
+every(users, { user: 'barney', active: false }); // => false
+every(users, ['active', false]); // => true
+every(users, 'active'); // => false
+```
+
 - [fakeAvatar](./src/fakeAvatar.ts)
 
 ```typescript
