@@ -1778,6 +1778,15 @@ const objects = [
 uniqWith(objects, isEqual); // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
 ```
 
+- [unzip](https://lodash.com/docs/#unzip)
+
+```typescript
+import { zip, unzip } from '@modyqyw/utils';
+
+const zipped = zip(['a', 'b'], [1, 2], [true, false]); // => [['a', 1, true], ['b', 2, false]]
+unzip(zipped); // => [['a', 'b'], [1, 2], [true, false]]
+```
+
 - [upperCase](https://lodash.com/docs/#upperCase)
 
 ```typescript
