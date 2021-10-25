@@ -1254,6 +1254,16 @@ pull(array, 'a', 'c');
 console.log(array); // => ['b', 'b']
 ```
 
+- [pullAll](https://lodash.com/docs/#pullAll)
+
+```typescript
+import { pullAll } from '@modyqyw/utils';
+
+const array = ['a', 'b', 'c', 'a', 'b', 'c'];
+pullAll(array, ['a', 'c']);
+console.log(array); // => ['b', 'b']
+```
+
 - [random](https://lodash.com/docs/#random)
 
 ```typescript

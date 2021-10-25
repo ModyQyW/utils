@@ -112,6 +112,7 @@ export * from './paramCase';
 export * from './pascalCase';
 export * from './pathCase';
 export * from './pull';
+export * from './pullAll';
 export * from './random';
 export * from './retry';
 export * from './round';
