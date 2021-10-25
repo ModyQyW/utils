@@ -876,6 +876,14 @@ isMatchWith(object, source, customizer); // => true
 isMobilePhone('15323456787', 'zh-CN');
 ```
 
+- [isNaN](https://lodash.com/docs/#isNaN)
+
+```typescript
+isNaN(NaN); // => true
+isNaN(new Number(NaN)); // => true
+isNaN(undefined); // => false
+```
+
 - [isNil](https://lodash.com/docs/#isNil)
 
 ```typescript
