@@ -1855,6 +1855,7 @@ If this library does not solve your problems, I suggest you look up the solution
 - [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
 - [qs](https://github.com/ljharb/qs)
 - [query-string](https://github.com/sindresorhus/query-string)
+- [ramda](https://github.com/ramda/ramda)
 - [ua-parser-js](https://github.com/faisalman/ua-parser-js)
 - [validator](https://github.com/validatorjs/validator.js)
 - [xe-utils](https://github.com/x-extends/xe-utils)
