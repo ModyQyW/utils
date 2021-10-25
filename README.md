@@ -277,6 +277,21 @@ import { fakeLoremWord } from '@modyqyw/utils';
 fakeLoremWord(); // a word from lorem paragraph
 ```
 
+- [fill](https://lodash.com/docs/#fill)
+
+```typescript
+import { fill } from '@modyqyw/utils';
+
+const array = [1, 2, 3];
+
+fill(array, 'a');
+console.log(array); // => ['a', 'a', 'a']
+
+fill(Array(3), 2); // => [2, 2, 2]
+
+fill([4, 6, 8, 10], '*', 1, 3); // => [4, '*', '*', 10]
+```
+
 - [floor](https://lodash.com/docs/#floor)
 
 ```typescript
