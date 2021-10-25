@@ -7,6 +7,7 @@ export * from './cloneDeep';
 export * from './compact';
 export * from './concat';
 export * from './constantCase';
+export * from './countBy';
 export * from './debounce';
 export * from './difference';
 export * from './differenceBy';

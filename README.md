@@ -113,6 +113,13 @@ constantCase('PascalCase'); // => 'PASCAL_CASE'
 constantCase('version 1.2.10'); // => 'VERSION_1_2_10'
 ```
 
+- [countBy](https://lodash.com/docs/#counyBy)
+
+```typescript
+countBy([6.1, 4.2, 6.3], Math.floor); // => { '4': 1, '6': 2 }
+countBy(['one', 'two', 'three'], 'length'); // => { '3': 2, '5': 1 }
+```
+
 - [debounce](https://lodash.com/docs/#debounce)
 - [difference](https://lodash.com/docs/#difference)
 
