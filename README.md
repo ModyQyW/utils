@@ -1263,6 +1263,23 @@ reduce(
 ); // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
 ```
 
+- [reduceRight](https://lodash.com/docs/#reduceRight)
+
+```typescript
+const array = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+reduceRight(
+  array,
+  function (flattened, other) {
+    return flattened.concat(other);
+  },
+  [],
+); // => [4, 5, 2, 3, 0, 1]
+```
+
 - [remove](https://lodash.com/docs/#remove)
 
 ```typescript
