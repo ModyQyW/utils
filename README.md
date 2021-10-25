@@ -403,6 +403,15 @@ headerCase('PascalCase'); // => 'Pascal-Case'
 headerCase('version 1.2.10'); // => 'Version-1-2-10'
 ```
 
+- [indexOf](https://lodash.com/docs/#indexOf)
+
+```typescript
+import { indexOf } from '@modyqyw/utils';
+
+indexOf([1, 2, 1, 2], 2); // => 1
+indexOf([1, 2, 1, 2], 2, 2); // => 3
+```
+
 - [intersection](https://lodash.com/docs/#intersection)
 
 ```typescript
