@@ -1244,6 +1244,16 @@ pathCase('PascalCase'); // => 'pascal/case'
 pathCase('version 1.2.10'); // => 'version/1/2/10'
 ```
 
+- [pull](https://lodash.com/docs/#pull)
+
+```typescript
+import { pull } from '@modyqyw/utils';
+
+const array = ['a', 'b', 'c', 'a', 'b', 'c'];
+pull(array, 'a', 'c');
+console.log(array); // => ['b', 'b']
+```
+
 - [random](https://lodash.com/docs/#random)
 
 ```typescript

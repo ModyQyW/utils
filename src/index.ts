@@ -111,6 +111,7 @@ export * from './padStart';
 export * from './paramCase';
 export * from './pascalCase';
 export * from './pathCase';
+export * from './pull';
 export * from './random';
 export * from './retry';
 export * from './round';
