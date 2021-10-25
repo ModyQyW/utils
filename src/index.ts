@@ -14,6 +14,7 @@ export * from './cloneDeepWith';
 export * from './cloneWith';
 export * from './compact';
 export * from './concat';
+export * from './conformsTo';
 export * from './constantCase';
 export * from './countBy';
 export * from './curry';
