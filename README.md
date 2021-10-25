@@ -651,6 +651,19 @@ forInRight(new Foo(), function (value, key) {
 }); // => Logs 'c', 'b', then 'a' assuming `_.forIn` logs 'a', 'b', then 'c'.
 ```
 
+- [forOwn](https://lodash.com/docs/#forOwn)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+forOwn(new Foo(), function (value, key) {
+  console.log(key);
+}); // => Logs 'a' then 'b' (iteration order is not guaranteed).
+```
+
 - [fromPairs](https://lodash.com/docs/#fromPairs)
 
 ```typescript
