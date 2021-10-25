@@ -263,6 +263,21 @@ fill(Array(3), 2); // => [2, 2, 2]
 fill([4, 6, 8, 10], '*', 1, 3); // => [4, '*', '*', 10]
 ```
 
+- [filter](https://lodash.com/docs/#filter)
+
+```typescript
+const users = [
+  { user: 'barney', age: 36, active: true },
+  { user: 'fred', age: 40, active: false },
+];
+filter(users, function (o) {
+  return !o.active;
+}); // => objects for ['fred']
+filter(users, { age: 36, active: true }); // => objects for ['barney']
+filter(users, ['active', false]); // => objects for ['fred']
+filter(users, 'active'); // => objects for ['barney']
+```
+
 - [findIndex](https://lodash.com/docs/#findIndex)
 
 ```typescript
