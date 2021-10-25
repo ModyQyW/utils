@@ -336,6 +336,14 @@ findLastIndex(users, ['active', false]); // => 2
 findLastIndex(users, 'active'); // => 0
 ```
 
+- [flatten](https://lodash.com/docs/#flatten)
+
+```typescript
+import { flatten } from '@modyqyw/utils';
+
+flatten([1, [2, [3, [4]], 5]]); // => [1, 2, [3, [4]], 5]
+```
+
 - [floor](https://lodash.com/docs/#floor)
 
 ```typescript
