@@ -129,6 +129,7 @@ countBy(['one', 'two', 'three'], 'length'); // => { '3': 2, '5': 1 }
 - [curryRight](https://lodash.com/docs/#curryRight)
 - [debounce](https://lodash.com/docs/#debounce)
 - [defer](https://lodash.com/docs/#defer)
+- [delay](https://lodash.com/docs/#delay)
 - [difference](https://lodash.com/docs/#difference)
 
 ```typescript

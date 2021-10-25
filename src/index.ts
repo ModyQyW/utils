@@ -17,6 +17,7 @@ export * from './curry';
 export * from './curryRight';
 export * from './debounce';
 export * from './defer';
+export * from './delay';
 export * from './difference';
 export * from './differenceBy';
 export * from './differenceWith';
