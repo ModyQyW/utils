@@ -98,6 +98,7 @@ export * from './isMatch';
 export * from './isMatchWith';
 export * from './isMobilePhone';
 export * from './isNaN';
+export * from './isNative';
 export * from './isNil';
 export * from './isNull';
 export * from './isNumber';

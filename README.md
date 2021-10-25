@@ -884,6 +884,12 @@ isNaN(new Number(NaN)); // => true
 isNaN(undefined); // => false
 ```
 
+- [isNative](https://lodash.com/docs/#isNative)
+
+```typescript
+isNative(Array.prototype.push); // => true
+```
+
 - [isNil](https://lodash.com/docs/#isNil)
 
 ```typescript
