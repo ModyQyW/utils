@@ -1787,11 +1787,16 @@ const zipped = zip(['a', 'b'], [1, 2], [true, false]); // => [['a', 1, true], ['
 unzip(zipped); // => [['a', 'b'], [1, 2], [true, false]]
 ```
 
+- [unzipWith](https://lodash.com/docs/#unzipWith)
+
+```typescript
+const zipped = zip([1, 2], [10, 20], [100, 200]); // => [[1, 10, 100], [2, 20, 200]]
+unzipWith(zipped, add); // => [3, 30, 300]
+```
+
 - [upperCase](https://lodash.com/docs/#upperCase)
 
 ```typescript
-import { upperCase } from '@modyqyw/utils';
-
 upperCase('--foo-bar'); // => 'FOO BAR'
 upperCase('fooBar'); // => 'FOO BAR'
 upperCase('__foo_bar__'); // => 'FOO BAR'
