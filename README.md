@@ -1102,6 +1102,7 @@ noCase('version 1.2.10'); // => 'version 1 2 10'
 ```
 
 - [noop](https://lodash.com/docs/#noop)
+- [now](https://lodash.com/docs/#now)
 - [nth](https://lodash.com/docs/#nth)
 
 ```typescript
@@ -1423,7 +1424,6 @@ const users = [
   { user: 'fred', age: 40 },
   { user: 'barney', age: 34 },
 ];
-
 sortBy(users, [
   function (o) {
     return o.user;
