@@ -44,11 +44,11 @@ Please see links for more infos.
 
 ```typescript
 const saves = ['profile', 'settings'];
-const done = after(saves.length, function() {
+const done = after(saves.length, function () {
   console.log('done saving!');
 });
-forEach(saves, function(type) {
-  asyncSave({ 'type': type, 'complete': done });
+forEach(saves, function (type) {
+  asyncSave({ type: type, complete: done });
 }); // => Logs 'done saving!' after the two async saves have completed.
 ```
 
@@ -58,6 +58,7 @@ forEach(saves, function(type) {
 map(['6', '8', '10'], ary(parseInt, 1)); // => [6, 8, 10]
 ```
 
+- [before](https://lodash.com/docs/#before)
 - [camelCase](https://github.com/blakeembrey/change-case#camelcase)
 
 ```typescript
