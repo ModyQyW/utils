@@ -24,6 +24,7 @@ export * from './concat';
 export * from './conformsTo';
 export * from './constantCase';
 export * from './countBy';
+export * from './create';
 export * from './curry';
 export * from './curryRight';
 export * from './debounce';

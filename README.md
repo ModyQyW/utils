@@ -250,6 +250,24 @@ countBy([6.1, 4.2, 6.3], Math.floor); // => { '4': 1, '6': 2 }
 countBy(['one', 'two', 'three'], 'length'); // => { '3': 2, '5': 1 }
 ```
 
+- [create](https://lodash.com/docs/#create)
+
+```typescript
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+function Circle() {
+  Shape.call(this);
+}
+Circle.prototype = create(Shape.prototype, {
+  constructor: Circle,
+});
+const circle = new Circle();
+circle instanceof Circle; // => true
+circle instanceof Shape; // => true
+```
+
 - [curry](https://lodash.com/docs/#curry)
 - [curryRight](https://lodash.com/docs/#curryRight)
 - [debounce](https://lodash.com/docs/#debounce)
