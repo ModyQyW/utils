@@ -1688,6 +1688,7 @@ truncate('hi-diddly-ho there, neighborino', {
 }); // => 'hi-diddly-ho there, neig [...]'
 ```
 
+- [unary](https://lodash.com/docs/#unary)
 - [union](https://lodash.com/docs/#union)
 
 ```typescript
