@@ -121,6 +121,20 @@ console.log(el.nodeName); // => 'BODY'
 console.log(el.childNodes.length); // => 20
 ```
 
+- [cloneWith](https://lodash.com/docs/#cloneWith)
+
+```typescript
+function customizer(value) {
+  if (isElement(value)) {
+    return value.cloneNode(false);
+  }
+}
+const el = cloneWith(document.body, customizer);
+console.log(el === document.body); // => false
+console.log(el.nodeName); // => 'BODY'
+console.log(el.childNodes.length); // => 0
+```
+
 - [compact](https://lodash.com/docs/#compact)
 
 ```typescript
