@@ -40,6 +40,12 @@ Please see [MDN docs](https://developer.mozilla.org/) for native API support. So
 
 Please see links for more infos.
 
+- [add](https://lodash.com/docs/#add)
+
+```typescript
+add(6, 4); // => 10
+```
+
 - [after](https://lodash.com/docs/#after)
 - [ary](https://lodash.com/docs/#ary)
 - [before](https://lodash.com/docs/#before)

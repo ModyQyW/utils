@@ -1,3 +1,4 @@
+export * from './add';
 export * from './after';
 export * from './ary';
 export * from './before';
