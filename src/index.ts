@@ -223,6 +223,7 @@ export * from './toFinite';
 export * from './toInteger';
 export * from './toLength';
 export * from './toNumber';
+export * from './toPairs';
 export * from './toPlainObject';
 export * from './toSafeInteger';
 export * from './toShortUuid';

@@ -1940,6 +1940,17 @@ toNumber(Infinity); // => Infinity
 toNumber('3.2'); // => 3.2
 ```
 
+- [toPairs](https://lodash.com/docs/#toPairs)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+toPairs(new Foo()); // => [['a', 1], ['b', 2]] (iteration order is not guaranteed)
+```
+
 - [toPlainObject](https://lodash.com/docs/#toPlainObject)
 
 ```typescript
