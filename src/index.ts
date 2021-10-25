@@ -16,6 +16,7 @@ export * from './countBy';
 export * from './curry';
 export * from './curryRight';
 export * from './debounce';
+export * from './defer';
 export * from './difference';
 export * from './differenceBy';
 export * from './differenceWith';
