@@ -330,6 +330,14 @@ forEach({ a: 1, b: 2 }, function (value, key) {
 }); // => Logs 'a' then 'b' (iteration order is not guaranteed).
 ```
 
+- [forEachRight](https://lodash.com/docs/#forEachRight)
+
+```typescript
+forEachRight([1, 2], function (value) {
+  console.log(value);
+}); // => Logs `2` then `1`.
+```
+
 - [fromPairs](https://lodash.com/docs/#fromPairs)
 
 ```typescript

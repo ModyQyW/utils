@@ -30,6 +30,7 @@ export * from './flattenDeep';
 export * from './flattenDepth';
 export * from './floor';
 export * from './forEach';
+export * from './forEachRight';
 export * from './fromPairs';
 export * from './head';
 export * from './headerCase';
