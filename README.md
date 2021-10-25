@@ -1529,6 +1529,12 @@ const others = [
 xorWith(objects, others, isEqual); // => [{ 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
 ```
 
+- [zip](https://lodash.com/docs/#zip)
+
+```typescript
+zip(['a', 'b'], [1, 2], [true, false]); // => [['a', 1, true], ['b', 2, false]]
+```
+
 ## More
 
 This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
