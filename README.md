@@ -1165,6 +1165,14 @@ lowerCase('fooBar'); // => 'foo bar'
 lowerCase('__FOO_BAR__'); // => 'foo bar'
 ```
 
+- [lt](https://lodash.com/docs/#lt)
+
+```typescript
+lt(1, 3); // => true
+lt(3, 3); // => false
+lt(3, 1); // => false
+```
+
 - [map](https://lodash.com/docs/#map)
 
 ```typescript
