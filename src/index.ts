@@ -1,3 +1,4 @@
+export * from './after';
 export * from './camelCase';
 export * from './capitalCase';
 export * from './ceil';
