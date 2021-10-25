@@ -1009,6 +1009,15 @@ import { last } from '@modyqyw/utils';
 last([1, 2, 3]); // => 3
 ```
 
+- [lastIndexOf](https://lodash.com/docs/#lastIndexOf)
+
+```typescript
+import { lastIndexOf } from '@modyqyw/utils';
+
+lastIndexOf([1, 2, 1, 2], 2); // => 3
+lastIndexOf([1, 2, 1, 2], 2, 2); // => 1
+```
+
 - [lowerCase](https://lodash.com/docs/#lowerCase)
 
 ```typescript
