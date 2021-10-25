@@ -25,6 +25,7 @@ export * from './fakeLoremSentence';
 export * from './fakeLoremWord';
 export * from './fill';
 export * from './filter';
+export * from './find';
 export * from './findIndex';
 export * from './findLastIndex';
 export * from './flatten';

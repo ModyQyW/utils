@@ -278,6 +278,22 @@ filter(users, ['active', false]); // => objects for ['fred']
 filter(users, 'active'); // => objects for ['barney']
 ```
 
+- [find](https://lodash.com/docs/#find)
+
+```typescript
+const users = [
+  { user: 'barney', age: 36, active: true },
+  { user: 'fred', age: 40, active: false },
+  { user: 'pebbles', age: 1, active: true },
+];
+find(users, function (o) {
+  return o.age < 40;
+}); // => object for 'barney'
+find(users, { age: 1, active: true }); // => object for 'pebbles'
+find(users, ['active', false]); // => object for 'fred'
+find(users, 'active'); // => object for 'barney'
+```
+
 - [findIndex](https://lodash.com/docs/#findIndex)
 
 ```typescript
