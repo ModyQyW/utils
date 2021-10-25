@@ -22,6 +22,7 @@ export * from './fakeLoremParagraph';
 export * from './fakeLoremSentence';
 export * from './fakeLoremWord';
 export * from './fill';
+export * from './findIndex';
 export * from './floor';
 export * from './headerCase';
 export * from './intersection';

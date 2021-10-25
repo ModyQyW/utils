@@ -292,6 +292,28 @@ fill(Array(3), 2); // => [2, 2, 2]
 fill([4, 6, 8, 10], '*', 1, 3); // => [4, '*', '*', 10]
 ```
 
+- [findIndex](https://lodash.com/docs/#findIndex)
+
+```typescript
+import { findIndex } from '@modyqyw/utils';
+
+const users = [
+  { user: 'barney', active: false },
+  { user: 'fred', active: false },
+  { user: 'pebbles', active: true },
+];
+
+findIndex(users, function (o) {
+  return o.user == 'barney';
+}); // => 0
+
+findIndex(users, { user: 'fred', active: false }); // => 1
+
+findIndex(users, ['active', false]); // => 0
+
+findIndex(users, 'active'); // => 2
+```
+
 - [floor](https://lodash.com/docs/#floor)
 
 ```typescript
