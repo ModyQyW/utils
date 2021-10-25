@@ -173,3 +173,4 @@ export * from './xor';
 export * from './xorBy';
 export * from './xorWith';
 export * from './zip';
+export * from './zipObject';

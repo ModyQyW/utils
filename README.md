@@ -1535,6 +1535,12 @@ xorWith(objects, others, isEqual); // => [{ 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }
 zip(['a', 'b'], [1, 2], [true, false]); // => [['a', 1, true], ['b', 2, false]]
 ```
 
+- [zipObject](https://lodash.com/docs/#zipObject)
+
+```typescript
+zipObject(['a', 'b'], [1, 2]); // => { 'a': 1, 'b': 2 }
+```
+
 ## More
 
 This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
