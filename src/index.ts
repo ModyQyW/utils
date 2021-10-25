@@ -5,6 +5,7 @@ export * from './chunk';
 export * from './clone';
 export * from './cloneDeep';
 export * from './compact';
+export * from './concat';
 export * from './constantCase';
 export * from './debounce';
 export * from './difference';

@@ -107,6 +107,17 @@ import { compact } from '@modyqyw/utils';
 compact([0, 1, false, 2, '', 3]); // => [1, 2, 3]
 ```
 
+- [concat](https://lodash.com/docs/#concat)
+
+```typescript
+import { concat } from '@modyqyw/utils';
+
+const array = [1];
+const other = concat(array, 2, [3], [[4]]);
+console.log(other); // => [1, 2, 3, [4]]
+console.log(array); // => [1]
+```
+
 - [constantCase](https://github.com/blakeembrey/change-case#constantcase)
 
 ```typescript
