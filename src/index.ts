@@ -29,6 +29,7 @@ export * from './flattenDeep';
 export * from './flattenDepth';
 export * from './floor';
 export * from './fromPairs';
+export * from './head';
 export * from './headerCase';
 export * from './intersection';
 export * from './intersectionBy';

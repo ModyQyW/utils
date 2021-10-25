@@ -383,6 +383,15 @@ fromPairs([
 ]); // => { 'a': 1, 'b': 2 }
 ```
 
+- [head](https://lodash.com/docs/#head)
+
+```typescript
+import { head } from '@modyqyw/utils';
+
+head([1, 2, 3]); // => 1
+head([]); // => undefined
+```
+
 - [headerCase](https://github.com/blakeembrey/change-case#headercase)
 
 ```typescript
