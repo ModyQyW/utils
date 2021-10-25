@@ -601,6 +601,17 @@ invokeMap(
 invokeMap([123, 456], String.prototype.split, ''); // => [['1', '2', '3'], ['4', '5', '6']]
 ```
 
+- [isArguments](https://lodash.com/docs/#isArguments)
+
+```typescript
+isArguments(
+  (function () {
+    return arguments;
+  })(),
+); // => true
+isArguments([1, 2, 3]); // => false
+```
+
 - [isArrayBuffer](https://lodash.com/docs/#isArrayBuffer)
 
 ```typescript
