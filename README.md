@@ -1507,6 +1507,14 @@ startCase('fooBar'); // => 'Foo Bar'
 startCase('__FOO_BAR__'); // => 'FOO BAR'
 ```
 
+- [tail](https://lodash.com/docs/#tail)
+
+```typescript
+import { tail } from '@modyqyw/utils';
+
+tail([1, 2, 3]); // => [2, 3]
+```
+
 - [throttle](https://lodash.com/docs/#throttle)
 - [toArray](https://lodash.com/docs/#toArray)
 
