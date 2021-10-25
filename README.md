@@ -318,6 +318,18 @@ floor(0.046, 2); // => 0.04
 floor(4060, -2); // => 4000
 ```
 
+- [forEach](https://lodash.com/docs/#forEach)
+
+```typescript
+forEach([1, 2], function (value) {
+  console.log(value);
+}); // => Logs `1` then `2`.
+
+forEach({ a: 1, b: 2 }, function (value, key) {
+  console.log(key);
+}); // => Logs 'a' then 'b' (iteration order is not guaranteed).
+```
+
 - [fromPairs](https://lodash.com/docs/#fromPairs)
 
 ```typescript
