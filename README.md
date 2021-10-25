@@ -167,6 +167,17 @@ dotCase('PascalCase'); // => 'pascal.case'
 dotCase('version 1.2.10'); // => 'version.1.2.10'
 ```
 
+- [drop](https://lodash.com/docs/#drop)
+
+```typescript
+import { drop } from '@modyqyw/utils';
+
+drop([1, 2, 3]); // => [2, 3]
+drop([1, 2, 3], 2); // => [3]
+drop([1, 2, 3], 5); // => []
+drop([1, 2, 3], 0); // => [1, 2, 3]
+```
+
 - [fakeAvatar](./src/fakeAvatar.ts)
 
 ```typescript
