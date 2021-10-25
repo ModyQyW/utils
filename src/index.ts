@@ -5,6 +5,7 @@ export * from './assign';
 export * from './assignIn';
 export * from './assignInWith';
 export * from './assignWith';
+export * from './at';
 export * from './before';
 export * from './bind';
 export * from './bindKey';

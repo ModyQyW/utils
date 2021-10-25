@@ -96,6 +96,13 @@ const defaults = partialRight(assignWith, customizer);
 defaults({ a: 1 }, { b: 2 }, { a: 3 }); // => { 'a': 1, 'b': 2 }
 ```
 
+- [at](https://lodash.com/docs/#at)
+
+```typescript
+const object = { a: [{ b: { c: 3 } }, 4] };
+at(object, ['a[0].b.c', 'a[1]']); // => [3, 4]
+```
+
 - [before](https://lodash.com/docs/#before)
 - [bind](https://lodash.com/docs/#bind)
 - [bindKey](https://lodash.com/docs/#bindKey)
