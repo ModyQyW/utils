@@ -1274,6 +1274,20 @@ pullAllBy(array, [{ x: 1 }, { x: 3 }], 'x');
 console.log(array); // => [{ 'x': 2 }]
 ```
 
+- [pullAllWith](https://lodash.com/docs/#pullAllWith)
+
+```typescript
+import { pullAllWith, isEqual } from '@modyqyw/utils';
+
+const array = [
+  { x: 1, y: 2 },
+  { x: 3, y: 4 },
+  { x: 5, y: 6 },
+];
+pullAllWith(array, [{ x: 3, y: 4 }], isEqual);
+console.log(array); // => [{ 'x': 1, 'y': 2 }, { 'x': 5, 'y': 6 }]
+```
+
 - [random](https://lodash.com/docs/#random)
 
 ```typescript
