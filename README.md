@@ -1122,6 +1122,7 @@ nth(array, 1); // => 'b'
 nth(array, -2); // => 'c';
 ```
 
+- [once](https://lodash.com/docs/#once)
 - [orderBy](https://lodash.com/docs/#orderBy)
 
 ```typescript

@@ -131,6 +131,7 @@ export * from './noCase';
 export * from './noop';
 export * from './now';
 export * from './nth';
+export * from './once';
 export * from './orderBy';
 export * from './pad';
 export * from './padEnd';
