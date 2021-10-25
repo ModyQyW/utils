@@ -175,3 +175,4 @@ export * from './xorWith';
 export * from './zip';
 export * from './zipObject';
 export * from './zipObjectDeep';
+export * from './zipWith';

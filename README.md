@@ -1547,6 +1547,14 @@ zipObject(['a', 'b'], [1, 2]); // => { 'a': 1, 'b': 2 }
 zipObjectDeep(['a.b[0].c', 'a.b[1].d'], [1, 2]); // => { 'a': { 'b': [{ 'c': 1 }, { 'd': 2 }] } }
 ```
 
+- [zipWith](https://lodash.com/docs/#zipWith)
+
+```typescript
+zipWith([1, 2], [10, 20], [100, 200], function (a, b, c) {
+  return a + b + c;
+}); // => [111, 222]
+```
+
 ## More
 
 This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
