@@ -1784,6 +1784,7 @@ words('fred, barney, & pebbles'); // => ['fred', 'barney', 'pebbles']
 words('fred, barney, & pebbles', /[^, ]+/g); // => ['fred', 'barney', '&', 'pebbles']
 ```
 
+- [wrap](https://lodash.com/docs/#wrap)
 - [xor](https://lodash.com/docs/#xor)
 
 ```typescript
