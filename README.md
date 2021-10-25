@@ -393,6 +393,7 @@ flattenDepth(array, 1); // => [1, 2, [3, [4]], 5]
 flattenDepth(array, 2); // => [1, 2, 3, [4], 5]
 ```
 
+- [flip](https://lodash.com/docs/#flip)
 - [floor](https://lodash.com/docs/#floor)
 
 ```typescript

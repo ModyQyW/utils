@@ -44,6 +44,7 @@ export * from './flatMapDepth';
 export * from './flatten';
 export * from './flattenDeep';
 export * from './flattenDepth';
+export * from './flip';
 export * from './floor';
 export * from './forEach';
 export * from './forEachRight';
