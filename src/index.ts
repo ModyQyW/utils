@@ -1,4 +1,5 @@
 export * from './after';
+export * from './ary';
 export * from './camelCase';
 export * from './capitalCase';
 export * from './ceil';

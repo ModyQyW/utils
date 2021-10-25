@@ -52,6 +52,12 @@ forEach(saves, function(type) {
 }); // => Logs 'done saving!' after the two async saves have completed.
 ```
 
+- [ary](https://lodash.com/docs/#ary)
+
+```typescript
+map(['6', '8', '10'], ary(parseInt, 1)); // => [6, 8, 10]
+```
+
 - [camelCase](https://github.com/blakeembrey/change-case#camelcase)
 
 ```typescript
