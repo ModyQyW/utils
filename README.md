@@ -1351,6 +1351,13 @@ round(4060, -2); // => 4100
 sample([1, 2, 3, 4]); // => 2
 ```
 
+- [sampleSize](https://lodash.com/docs/#sampleSize)
+
+```typescript
+sampleSize([1, 2, 3], 2); // => [3, 1]
+sampleSize([1, 2, 3], 4); // => [2, 3, 1]
+```
+
 - [slice](https://lodash.com/docs/#slice)
 - [sentenceCase](https://github.com/blakeembrey/change-case#sentencecase)
 

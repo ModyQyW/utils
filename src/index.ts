@@ -141,6 +141,7 @@ export * from './retry';
 export * from './reverse';
 export * from './round';
 export * from './sample';
+export * from './sampleSize';
 export * from './sentenceCase';
 export * from './slice';
 export * from './shortUuid';
