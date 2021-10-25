@@ -484,7 +484,6 @@ const users = [
   { user: 'fred', active: false },
   { user: 'pebbles', active: true },
 ];
-
 findIndex(users, function (o) {
   return o.user == 'barney';
 }); // => 0
@@ -525,7 +524,6 @@ const users = [
   { user: 'fred', active: false },
   { user: 'pebbles', active: false },
 ];
-
 findLastIndex(users, function (o) {
   return o.user == 'pebbles';
 }); // => 2
