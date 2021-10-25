@@ -204,15 +204,11 @@ const users = [
   { user: 'fred', active: false },
   { user: 'pebbles', active: false },
 ];
-
 dropRightWhile(users, function (o) {
   return !o.active;
 }); // => objects for ['barney']
-
 dropRightWhile(users, { user: 'pebbles', active: false }); // => objects for ['barney', 'fred']
-
 dropRightWhile(users, ['active', false]); // => objects for ['barney']
-
 dropRightWhile(users, 'active'); // => objects for ['barney', 'fred', 'pebbles']
 ```
 
@@ -226,15 +222,11 @@ const users = [
   { user: 'fred', active: false },
   { user: 'pebbles', active: true },
 ];
-
 dropWhile(users, function (o) {
   return !o.active;
 }); // => objects for ['pebbles']
-
 dropWhile(users, { user: 'barney', active: false }); // => objects for ['fred', 'pebbles']
-
 dropWhile(users, ['active', false]); // => objects for ['pebbles']
-
 dropWhile(users, 'active'); // => objects for ['barney', 'fred', 'pebbles']
 ```
 
@@ -1736,7 +1728,6 @@ const objects = [
   { x: 2, y: 1 },
   { x: 1, y: 2 },
 ];
-
 uniqWith(objects, isEqual); // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
 ```
 
@@ -1790,7 +1781,6 @@ const others = [
   { x: 1, y: 1 },
   { x: 1, y: 2 },
 ];
-
 xorWith(objects, others, isEqual); // => [{ 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
 ```
 
