@@ -1345,6 +1345,12 @@ round(4.006, 2); // => 4.01
 round(4060, -2); // => 4100
 ```
 
+- [sample](https://lodash.com/docs/#sample)
+
+```typescript
+sample([1, 2, 3, 4]); // => 2
+```
+
 - [slice](https://lodash.com/docs/#slice)
 - [sentenceCase](https://github.com/blakeembrey/change-case#sentencecase)
 

@@ -140,6 +140,7 @@ export * from './remove';
 export * from './retry';
 export * from './reverse';
 export * from './round';
+export * from './sample';
 export * from './sentenceCase';
 export * from './slice';
 export * from './shortUuid';
