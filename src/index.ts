@@ -89,6 +89,7 @@ export * from './isHash';
 export * from './isHexColor';
 export * from './isHSL';
 export * from './isIdentityCard';
+export * from './isInteger';
 export * from './isJSON';
 export * from './isJWT';
 export * from './isLength';

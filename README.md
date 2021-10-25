@@ -800,6 +800,15 @@ isHSL('hsl(3000deg, 70%)'); // => false
 isIdentityCard('235407195106112745', 'zh-CN'); // => true
 ```
 
+- [isInteger](https://lodash.com/docs/#isInteger)
+
+```typescript
+isInteger(3); // => true
+isInteger(Number.MIN_VALUE); // => false
+isInteger(Infinity); // => false
+isInteger('3'); // => false
+```
+
 - [isJSON](https://github.com/validatorjs/validator.js#validators)
 
 ```typescript
