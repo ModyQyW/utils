@@ -4,7 +4,7 @@ Shareable utils for different JavaScript/TypeScript projects.
 
 [Plan](https://github.com/ModyQyW/utils/issues/1)
 
-[Github](https://github.com/ModyQyW/utils#readme) | [Gitee](https://github.com/ModyQyW/utils#readme)
+[Github](https://github.com/ModyQyW/utils) | [Gitee](https://github.com/ModyQyW/utils)
 
 ## Usage
 
@@ -35,6 +35,8 @@ const { ... } = require('@modyqyw/utils');
 Then use `window.UTILS` directly.
 
 ### API
+
+Please see [MDN docs](https://developer.mozilla.org/) for native API support. Some API in this library can be replaced by native API.
 
 Please see links for more infos.
 
@@ -84,7 +86,7 @@ chunk(['a', 'b', 'c', 'd'], 3); // => [['a', 'b', 'c'], ['d']]
 ```typescript
 import { clone } from '@modyqyw/utils';
 
-const objects = [{ 'a': 1 }, { 'b': 2 }];
+const objects = [{ a: 1 }, { b: 2 }];
 const shallow = clone(objects);
 console.log(shallow[0] === objects[0]); // => true
 ```
@@ -94,7 +96,7 @@ console.log(shallow[0] === objects[0]); // => true
 ```typescript
 import { cloneDeep } from '@modyqyw/utils';
 
-const objects = [{ 'a': 1 }, { 'b': 2 }];
+const objects = [{ a: 1 }, { b: 2 }];
 const shallow = clone(objects);
 console.log(shallow[0] === objects[0]); // => false
 ```
@@ -144,7 +146,7 @@ difference([2, 1], [2, 3]); // => [1]
 import { differenceBy } from '@modyqyw/utils';
 
 differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor); // => [1.2]
-differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x'); // => [{ 'x': 2 }]
+differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], 'x'); // => [{ 'x': 2 }]
 ```
 
 - [differenceWith](https://lodash.com/docs/#differenceWith)
@@ -152,8 +154,11 @@ differenceBy([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], 'x'); // => [{ 'x': 2 }]
 ```typescript
 import { differenceWith, isEqual } from '@modyqyw/utils';
 
-const objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
-differenceWith(objects, [{ 'x': 1, 'y': 2 }], isEqual); // => [{ 'x': 2, 'y': 1 }]
+const objects = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+];
+differenceWith(objects, [{ x: 1, y: 2 }], isEqual); // => [{ 'x': 2, 'y': 1 }]
 ```
 
 - [dotCase](https://github.com/blakeembrey/change-case#dotcase)
@@ -434,7 +439,7 @@ intersection([2, 1], [2, 3]); // => [2]
 import { intersectionBy } from '@modyqyw/utils';
 
 intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor); // => [2.1]
-intersectionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x'); // => [{ 'x': 1 }]
+intersectionBy([{ x: 1 }], [{ x: 2 }, { x: 1 }], 'x'); // => [{ 'x': 1 }]
 ```
 
 - [intersectionWith](https://lodash.com/docs/#intersectionWith)
@@ -442,8 +447,14 @@ intersectionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x'); // => [{ 'x': 1 }]
 ```typescript
 import { intersectionWith, isEqual } from '@modyqyw/utils';
 
-const objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
-const others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
+const objects = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+];
+const others = [
+  { x: 1, y: 1 },
+  { x: 1, y: 2 },
+];
 intersectionWith(objects, others, isEqual); // => [{ 'x': 1, 'y': 2 }]
 ```
 
@@ -531,7 +542,7 @@ isEmpty(null); // => true
 isEmpty(true); // => true
 isEmpty(1); // => true
 isEmpty([1, 2, 3]); // => false
-isEmpty({ 'a': 1 }); // => false
+isEmpty({ a: 1 }); // => false
 ```
 
 - [isEqual](https://lodash.com/docs/#isEqual)
@@ -539,11 +550,10 @@ isEmpty({ 'a': 1 }); // => false
 ```typescript
 import { isEqual } from '@modyqyw/utils';
 
-const object = { 'a': 1 };
-const other = { 'a': 1 };
+const object = { a: 1 };
+const other = { a: 1 };
 isEqual(object, other); // => true
 object === other; // => false
-
 ```
 
 - [isError](https://lodash.com/docs/#isError)
@@ -657,7 +667,9 @@ isJSON(''nope'') // => false
 ```typescript
 import { isJWT } from '@modyqyw/utils';
 
-isJWT('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI'); // => true
+isJWT(
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI',
+); // => true
 ```
 
 - [isLength](https://lodash.com/docs/#isLength)
@@ -685,9 +697,9 @@ isMap(new WeakMap()); // => false
 ```typescript
 import { isMatch } from '@modyqyw/utils';
 
-const object = { 'a': 1, 'b': 2 };
-isMatch(object, { 'b': 2 }); // => true
-isMatch(object, { 'b': 1 }); // => false
+const object = { a: 1, b: 2 };
+isMatch(object, { b: 2 }); // => true
+isMatch(object, { b: 1 }); // => false
 ```
 
 - [isMatchWith](https://lodash.com/docs/#isMatchWith)
@@ -703,8 +715,8 @@ function customizer(objValue, srcValue) {
   return isGreeting(objValue) && isGreeting(srcValue);
 }
 
-const object = { 'greeting': 'hello' };
-const source = { 'greeting': 'hi' };
+const object = { greeting: 'hello' };
+const source = { greeting: 'hi' };
 
 isMatchWith(object, source, customizer); // => true
 ```
@@ -787,9 +799,9 @@ function Foo() {
   this.a = 1;
 }
 
-isPlainObject(new Foo); // => false
+isPlainObject(new Foo()); // => false
 isPlainObject([1, 2, 3]); // => false
-isPlainObject({ 'x': 0, 'y': 0 }); // => true
+isPlainObject({ x: 0, y: 0 }); // => true
 isPlainObject(Object.create(null)); // => true
 ```
 
@@ -817,7 +829,7 @@ isReferenceError(ReferenceError); // => false
 import { isRegExp } from '@modyqyw/utils';
 
 isRegExp(/abc/); // => true
- isRegExp('/abc/'); // => false
+isRegExp('/abc/'); // => false
 ```
 
 - [isRgbColor](https://github.com/validatorjs/validator.js#validators)
@@ -870,8 +882,8 @@ isSemver('1.2'); // => false
 ```typescript
 import { isSet } from '@modyqyw/utils';
 
-isSet(new Set); // => true
-isSet(new WeakSet); // => false
+isSet(new Set()); // => true
+isSet(new WeakSet()); // => false
 ```
 
 - [isString](https://lodash.com/docs/#isString)
@@ -925,7 +937,7 @@ isSyntaxError(SyntaxError); // => false
 ```typescript
 import { isTypedArray } from '@modyqyw/utils';
 
-isTypedArray(new Uint8Array); // => true
+isTypedArray(new Uint8Array()); // => true
 isTypedArray([]); // => false
 ```
 
@@ -1042,8 +1054,10 @@ max([]); // => undefined
 ```typescript
 import { maxBy } from '@modyqyw/utils';
 
-const objects = [{ 'n': 1 }, { 'n': 2 }];
-maxBy(objects, function(o) { return o.n; }); // => { 'n': 2 }
+const objects = [{ n: 1 }, { n: 2 }];
+maxBy(objects, function (o) {
+  return o.n;
+}); // => { 'n': 2 }
 maxBy(objects, 'n'); // => { 'n': 2 }
 ```
 
@@ -1060,8 +1074,10 @@ mean([4, 2, 8, 6]); // => 5
 ```typescript
 import { meanBy } from '@modyqyw/utils';
 
-const objects = [{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }];
-meanBy(objects, function(o) { return o.n; }); // => 5
+const objects = [{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }];
+meanBy(objects, function (o) {
+  return o.n;
+}); // => 5
 meanBy(objects, 'n'); // => 5
 ```
 
@@ -1072,11 +1088,11 @@ meanBy(objects, 'n'); // => 5
 import { merge } from '@modyqyw/utils';
 
 const object = {
-  'a': [{ 'b': 2 }, { 'd': 4 }]
+  a: [{ b: 2 }, { d: 4 }],
 };
 
 const other = {
-  'a': [{ 'c': 3 }, { 'e': 5 }]
+  a: [{ c: 3 }, { e: 5 }],
 };
 
 merge(object, other); // => { 'a': [{ 'b': 2, 'c': 3 }, { 'd': 4, 'e': 5 }] }
@@ -1093,8 +1109,8 @@ function customizer(objValue, srcValue) {
   }
 }
 
-const object = { 'a': [1], 'b': [2] };
-const other = { 'a': [3], 'b': [4] };
+const object = { a: [1], b: [2] };
+const other = { a: [3], b: [4] };
 
 mergeWith(object, other, customizer); // => { 'a': [1, 3], 'b': [2, 4] }
 ```
@@ -1113,13 +1129,15 @@ min([]); // => undefined
 ```typescript
 import { minBy } from '@modyqyw/utils';
 
-const objects = [{ 'n': 1 }, { 'n': 2 }];
+const objects = [{ n: 1 }, { n: 2 }];
 
-minBy(objects, function(o) { return o.n; }); // => { 'n': 1 }
+minBy(objects, function (o) {
+  return o.n;
+}); // => { 'n': 1 }
 minBy(objects, 'n'); // => { 'n': 1 }
 ```
 
-- [nanoid](https://github.com/ai/nanoid#readme)
+- [nanoid](https://github.com/ai/nanoid)
 
 ```typescript
 import { nanoid } from '@modyqyw/utils';
@@ -1155,12 +1173,12 @@ nth(array, -2); // => 'c';
 import { orderBy } from '@modyqyw/utils';
 
 const users = [
-  { 'user': 'fred',   'age': 48 },
-  { 'user': 'barney', 'age': 34 },
-  { 'user': 'fred',   'age': 40 },
-  { 'user': 'barney', 'age': 36 }
+  { user: 'fred', age: 48 },
+  { user: 'barney', age: 34 },
+  { user: 'fred', age: 40 },
+  { user: 'barney', age: 36 },
 ];
-_.orderBy(users, ['user', 'age'], ['asc', 'desc']); // => [{ user: 'barney', age: 36 }, { user: 'barney', age: 34 }, { user: 'fred', age: 48 }, { user: 'fred', age: 40 }]
+orderBy(users, ['user', 'age'], ['asc', 'desc']); // => [{ user: 'barney', age: 36 }, { user: 'barney', age: 34 }, { user: 'fred', age: 48 }, { user: 'fred', age: 40 }]
 ```
 
 - [pad](https://lodash.com/docs/#pad)
@@ -1229,7 +1247,7 @@ pathCase('version 1.2.10'); // => 'version/1/2/10'
 - [random](https://lodash.com/docs/#random)
 
 ```typescript
-import {  } from '@modyqyw/utils';
+import { random } from '@modyqyw/utils';
 
 random(0, 5); // => an integer between 0 and 5
 random(5); // => also an integer between 0 and 5
@@ -1237,26 +1255,29 @@ random(5, true); // => a floating-point number between 0 and 5
 random(1.2, 5.2); // => a floating-point number between 1.2 and 5.2
 ```
 
-- [retry](https://github.com/vercel/async-retry#readme)
+- [retry](https://github.com/vercel/async-retry)
 
 ```typescript
 import { retry } from '@modyqyw/utils';
 
-await retry(async (bail) => {
-  // if anything throws, we retry
-  const res = await fetch('https://google.com');
+await retry(
+  async (bail) => {
+    // if anything throws, we retry
+    const res = await fetch('https://google.com');
 
-  if (403 === res.status) {
-    // don't retry upon 403
-    bail(new Error('Unauthorized'));
-    return ;
-  }
+    if (403 === res.status) {
+      // don't retry upon 403
+      bail(new Error('Unauthorized'));
+      return;
+    }
 
-  const data = await res.text();
-  return data.substr(0, 500);
-}, {
-  retries: 5,
-});
+    const data = await res.text();
+    return data.substr(0, 500);
+  },
+  {
+    retries: 5,
+  },
+);
 ```
 
 - [round](https://lodash.com/docs/#round)
@@ -1265,8 +1286,8 @@ await retry(async (bail) => {
 import { round } from '@modyqyw/utils';
 
 round(4.006); // => 4
-_.round(4.006, 2); // => 4.01
-_.round(4060, -2); // => 4100
+round(4.006, 2); // => 4.01
+round(4060, -2); // => 4100
 ```
 
 - [sentenceCase](https://github.com/blakeembrey/change-case#sentencecase)
@@ -1289,7 +1310,7 @@ import { sleep } from '@modyqyw/utils';
 async () => {
   await sleep(2000);
   console.log('Awake!'); // 2 s later
-}
+};
 ```
 
 - [snakeCase](https://github.com/blakeembrey/change-case#snakecase)
@@ -1309,13 +1330,17 @@ snakeCase('version 1.2.10'); // => 'version_1_2_10'
 import { sortBy } from '@modyqyw/utils';
 
 const users = [
-  { 'user': 'fred',   'age': 48 },
-  { 'user': 'barney', 'age': 36 },
-  { 'user': 'fred',   'age': 40 },
-  { 'user': 'barney', 'age': 34 }
+  { user: 'fred', age: 48 },
+  { user: 'barney', age: 36 },
+  { user: 'fred', age: 40 },
+  { user: 'barney', age: 34 },
 ];
 
-sortBy(users, [function(o) { return o.user; }]); // => [{ user: 'barney', age: 36 }, { user: 'barney', age: 34 }, { user: 'fred', age: 48 }, { user: 'fred', age: 40 }]
+sortBy(users, [
+  function (o) {
+    return o.user;
+  },
+]); // => [{ user: 'barney', age: 36 }, { user: 'barney', age: 34 }, { user: 'fred', age: 48 }, { user: 'fred', age: 40 }]
 sortBy(users, ['user', 'age']); // => [{ user: 'barney', age: 34 }, { user: 'barney', age: 36 }, { user: 'fred', age: 40 }, { user: 'fred', age: 48 }]
 ```
 
@@ -1332,10 +1357,12 @@ sortedIndex([30, 50], 40); // => 1
 ```typescript
 import { sortedIndexBy } from '@modyqyw/utils';
 
-const objects = [{ 'x': 4 }, { 'x': 5 }];
+const objects = [{ x: 4 }, { x: 5 }];
 
-_.sortedIndexBy(objects, { 'x': 4 }, function(o) { return o.x; }); // => 0
-_.sortedIndexBy(objects, { 'x': 4 }, 'x'); // => 0
+sortedIndexBy(objects, { x: 4 }, function (o) {
+  return o.x;
+}); // => 0
+sortedIndexBy(objects, { x: 4 }, 'x'); // => 0
 ```
 
 - [sortedIndexOf](https://lodash.com/docs/#sortedIndexOf)
@@ -1343,7 +1370,7 @@ _.sortedIndexBy(objects, { 'x': 4 }, 'x'); // => 0
 ```typescript
 import { sortedIndexOf } from '@modyqyw/utils';
 
-_.sortedIndexOf([4, 5, 5, 5, 6], 5); // => 1
+sortedIndexOf([4, 5, 5, 5, 6], 5); // => 1
 ```
 
 - [sortedLastIndex](https://lodash.com/docs/#sortedLastIndex)
@@ -1351,7 +1378,7 @@ _.sortedIndexOf([4, 5, 5, 5, 6], 5); // => 1
 ```typescript
 import { sortedLastIndex } from '@modyqyw/utils';
 
-_.sortedLastIndex([4, 5, 5, 5, 6], 5); // => 4
+sortedLastIndex([4, 5, 5, 5, 6], 5); // => 4
 ```
 
 - [sortedLastIndexBy](https://lodash.com/docs/#sortedLastIndexBy)
@@ -1359,10 +1386,12 @@ _.sortedLastIndex([4, 5, 5, 5, 6], 5); // => 4
 ```typescript
 import { sortedLastIndexBy } from '@modyqyw/utils';
 
-const objects = [{ 'x': 4 }, { 'x': 5 }];
+const objects = [{ x: 4 }, { x: 5 }];
 
-_.sortedLastIndexBy(objects, { 'x': 4 }, function(o) { return o.x; }); // => 1
-_.sortedLastIndexBy(objects, { 'x': 4 }, 'x'); // => 1
+sortedLastIndexBy(objects, { x: 4 }, function (o) {
+  return o.x;
+}); // => 1
+sortedLastIndexBy(objects, { x: 4 }, 'x'); // => 1
 ```
 
 - [sortedLastIndexOf](https://lodash.com/docs/#sortedLastIndexOf)
@@ -1370,7 +1399,7 @@ _.sortedLastIndexBy(objects, { 'x': 4 }, 'x'); // => 1
 ```typescript
 import { sortedLastIndexOf } from '@modyqyw/utils';
 
-_.sortedLastIndexOf([4, 5, 5, 5, 6], 5); // => 3
+sortedLastIndexOf([4, 5, 5, 5, 6], 5); // => 3
 ```
 
 - [sortedUniq](https://lodash.com/docs/#sortedUniq)
@@ -1378,7 +1407,7 @@ _.sortedLastIndexOf([4, 5, 5, 5, 6], 5); // => 3
 ```typescript
 import { sortedUniq } from '@modyqyw/utils';
 
-_.sortedUniq([1, 1, 2]); // => [1, 2]
+sortedUniq([1, 1, 2]); // => [1, 2]
 ```
 
 - [sortedUniqBy](https://lodash.com/docs/#sortedUniqBy)
@@ -1386,7 +1415,7 @@ _.sortedUniq([1, 1, 2]); // => [1, 2]
 ```typescript
 import { sortedUniqBy } from '@modyqyw/utils';
 
-_.sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor); // => [1.1, 2.3]
+sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor); // => [1.1, 2.3]
 ```
 
 - [startCase](https://lodash.com/docs/#startCase)
@@ -1394,9 +1423,9 @@ _.sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor); // => [1.1, 2.3]
 ```typescript
 import { startCase } from '@modyqyw/utils';
 
-_.startCase('--foo-bar--'); // => 'Foo Bar'
-_.startCase('fooBar'); // => 'Foo Bar'
-_.startCase('__FOO_BAR__'); // => 'FOO BAR'
+startCase('--foo-bar--'); // => 'Foo Bar'
+startCase('fooBar'); // => 'Foo Bar'
+startCase('__FOO_BAR__'); // => 'FOO BAR'
 ```
 
 - [throttle](https://lodash.com/docs/#throttle)
@@ -1405,10 +1434,10 @@ _.startCase('__FOO_BAR__'); // => 'FOO BAR'
 ```typescript
 import { toArray } from '@modyqyw/utils';
 
-_.toArray({ 'a': 1, 'b': 2 }); // => [1, 2]
-_.toArray('abc'); // => ['a', 'b', 'c']
-_.toArray(1); // => []
-_.toArray(null); // => []
+toArray({ a: 1, b: 2 }); // => [1, 2]
+toArray('abc'); // => ['a', 'b', 'c']
+toArray(1); // => []
+toArray(null); // => []
 ```
 
 - [toFinite](https://lodash.com/docs/#toFinite)
@@ -1416,10 +1445,10 @@ _.toArray(null); // => []
 ```typescript
 import { toFinite } from '@modyqyw/utils';
 
-_.toFinite(3.2); // => 3.2
-_.toFinite(Number.MIN_VALUE); // => 5e-324
-_.toFinite(Infinity); // => 1.7976931348623157e+308
-_.toFinite('3.2'); // => 3.2
+toFinite(3.2); // => 3.2
+toFinite(Number.MIN_VALUE); // => 5e-324
+toFinite(Infinity); // => 1.7976931348623157e+308
+toFinite('3.2'); // => 3.2
 ```
 
 - [toInteger](https://lodash.com/docs/#toInteger)
@@ -1427,10 +1456,10 @@ _.toFinite('3.2'); // => 3.2
 ```typescript
 import { toInteger } from '@modyqyw/utils';
 
-_.toInteger(3.2); // => 3
-_.toInteger(Number.MIN_VALUE); // => 0
-_.toInteger(Infinity); // => 1.7976931348623157e+308
-_.toInteger('3.2'); // => 3
+toInteger(3.2); // => 3
+toInteger(Number.MIN_VALUE); // => 0
+toInteger(Infinity); // => 1.7976931348623157e+308
+toInteger('3.2'); // => 3
 ```
 
 - [toLength](https://lodash.com/docs/#toLength)
@@ -1438,10 +1467,10 @@ _.toInteger('3.2'); // => 3
 ```typescript
 import { toLength } from '@modyqyw/utils';
 
-_.toLength(3.2); // => 3
-_.toLength(Number.MIN_VALUE); // => 0
-_.toLength(Infinity); // => 4294967295
-_.toLength('3.2'); // => 3
+toLength(3.2); // => 3
+toLength(Number.MIN_VALUE); // => 0
+toLength(Infinity); // => 4294967295
+toLength('3.2'); // => 3
 ```
 
 - [toNumber](https://lodash.com/docs/#toNumber)
@@ -1465,8 +1494,8 @@ function Foo() {
 }
 Foo.prototype.c = 3;
 
-Object.assign({ 'a': 1 }, new Foo); // => { 'a': 1, 'b': 2 }
-Object.assign({ 'a': 1 }, toPlainObject(new Foo)); // => { 'a': 1, 'b': 2, 'c': 3 }
+Object.assign({ a: 1 }, new Foo()); // => { 'a': 1, 'b': 2 }
+Object.assign({ a: 1 }, toPlainObject(new Foo())); // => { 'a': 1, 'b': 2, 'c': 3 }
 ```
 
 - [toSafeInteger](https://lodash.com/docs/#toSafeInteger)
@@ -1527,15 +1556,15 @@ import { truncate } from '@modyqyw/utils';
 
 truncate('hi-diddly-ho there, neighborino'); // => 'hi-diddly-ho there, neighbo...'
 truncate('hi-diddly-ho there, neighborino', {
-  'length': 24,
-  'separator': ' '
+  length: 24,
+  separator: ' ',
 }); // => 'hi-diddly-ho there,...'
 truncate('hi-diddly-ho there, neighborino', {
-  'length': 24,
-  'separator': /,? +/
+  length: 24,
+  separator: /,? +/,
 }); // => 'hi-diddly-ho there...'
 truncate('hi-diddly-ho there, neighborino', {
-  'omission': ' [...]'
+  omission: ' [...]',
 }); // => 'hi-diddly-ho there, neig [...]'
 ```
 
@@ -1553,7 +1582,7 @@ union([2], [1, 2]); // => [2, 1]
 import { unionBy } from '@modyqyw/utils';
 
 unionBy([2.1], [1.2, 2.3], Math.floor); // => [2.1, 1.2]
-unionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x'); // => [{ 'x': 1 }, { 'x': 2 }]
+unionBy([{ x: 1 }], [{ x: 2 }, { x: 1 }], 'x'); // => [{ 'x': 1 }, { 'x': 2 }]
 ```
 
 - [unionWith](https://lodash.com/docs/#unionWith)
@@ -1561,8 +1590,14 @@ unionBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x'); // => [{ 'x': 1 }, { 'x': 
 ```typescript
 import { unionWith, isEqual } from '@modyqyw/utils';
 
-const objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
-const others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
+const objects = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+];
+const others = [
+  { x: 1, y: 1 },
+  { x: 1, y: 2 },
+];
 
 unionWith(objects, others, isEqual); // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
 ```
@@ -1581,7 +1616,7 @@ uniq([2, 1, 2]); // => [2, 1]
 import { uniqBy } from '@modyqyw/utils';
 
 uniqBy([2.1, 1.2, 2.3], Math.floor); // => [2.1, 1.2]
-uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x'); // => [{ 'x': 1 }, { 'x': 2 }]
+uniqBy([{ x: 1 }, { x: 2 }, { x: 1 }], 'x'); // => [{ 'x': 1 }, { 'x': 2 }]
 ```
 
 - [uniqueId](https://lodash.com/docs/#uniqueId)
@@ -1598,7 +1633,11 @@ uniqueId(); // => '105'
 ```typescript
 import { uniqWith, isEqual } from '@modyqyw/utils';
 
-const objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }, { 'x': 1, 'y': 2 }];
+const objects = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+  { x: 1, y: 2 },
+];
 
 uniqWith(objects, isEqual); // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
 ```
@@ -1637,7 +1676,7 @@ xor([2, 1], [2, 3]); // => [1, 3]
 import { xorBy } from '@modyqyw/utils';
 
 xorBy([2.1, 1.2], [2.3, 3.4], Math.floor); // => [1.2, 3.4]
-xorBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x'); // => [{ 'x': 2 }]
+xorBy([{ x: 1 }], [{ x: 2 }, { x: 1 }], 'x'); // => [{ 'x': 2 }]
 ```
 
 - [xorWith](https://lodash.com/docs/#xorWith)
@@ -1645,8 +1684,14 @@ xorBy([{ 'x': 1 }], [{ 'x': 2 }, { 'x': 1 }], 'x'); // => [{ 'x': 2 }]
 ```typescript
 import { xorWith, isEqual } from '@modyqyw/utils';
 
-const objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
-const others = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
+const objects = [
+  { x: 1, y: 2 },
+  { x: 2, y: 1 },
+];
+const others = [
+  { x: 1, y: 1 },
+  { x: 1, y: 2 },
+];
 
 xorWith(objects, others, isEqual); // => [{ 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }]
 ```
@@ -1655,29 +1700,30 @@ xorWith(objects, others, isEqual); // => [{ 'x': 2, 'y': 1 }, { 'x': 1, 'y': 1 }
 
 This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
 
-- [async-retry](https://github.com/vercel/async-retry#readme)
-- [change-case](https://github.com/blakeembrey/change-case#readme)
-- [lodash-es](https://github.com/lodash/lodash#readme)
-- [nanoid](https://github.com/ai/nanoid#readme)
-- [short-uuid](https://github.com/oculus42/short-uuid#readme)
-- [validator](https://github.com/validatorjs/validator.js#readme)
+- [async-retry](https://github.com/vercel/async-retry)
+- [change-case](https://github.com/blakeembrey/change-case)
+- [lodash-es](https://github.com/lodash/lodash)
+- [nanoid](https://github.com/ai/nanoid)
+- [short-uuid](https://github.com/oculus42/short-uuid)
+- [validator](https://github.com/validatorjs/validator.js)
 
-If this library does not solve your problems, I suggest you look up the solution in [standard built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) before using the following libraries.
+If this library does not solve your problems, I suggest you look up the solution in the following libraries.
 
-- [convert](https://github.com/jonahsnider/convert#readme)
-- [dayjs](https://github.com/iamkun/dayjs#readme)
-- [faker](https://github.com/Marak/faker.js#readme)
-- [format-rmb](https://github.com/bazingaedward/ChinaCurrency#readme)
-- [gcoord](https://github.com/hujiulong/gcoord#readme)
-- [lodash-es](https://github.com/lodash/lodash#readme)
-- [mitt](https://github.com/developit/mitt#readme)
-- [mockjs](https://github.com/nuysoft/Mock#readme)
-- [mockjs-esm](https://gitee.com/dongzhongzhidong/Mock#readme)
-- [numbro](https://github.com/BenjaminVanRyseghem/numbro#readme)
-- [path-to-regexp](https://github.com/pillarjs/path-to-regexp#readme)
-- [qs](https://github.com/ljharb/qs#readme)
-- [ua-parser-js](https://github.com/faisalman/ua-parser-js#readme)
-- [validator](https://github.com/validatorjs/validator.js#readme)
-- [xe-utils](https://github.com/x-extends/xe-utils#readme)
+- [convert](https://github.com/jonahsnider/convert)
+- [dayjs](https://github.com/iamkun/dayjs)
+- [faker](https://github.com/Marak/faker.js)
+- [format-rmb](https://github.com/bazingaedward/ChinaCurrency)
+- [gcoord](https://github.com/hujiulong/gcoord)
+- [lodash-es](https://github.com/lodash/lodash)
+- [mitt](https://github.com/developit/mitt)
+- [mockjs](https://github.com/nuysoft/Mock)
+- [mockjs-esm](https://gitee.com/dongzhongzhidong/Mock)
+- [numbro](https://github.com/BenjaminVanRyseghem/numbro)
+- [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
+- [qs](https://github.com/ljharb/qs)
+- [query-string](https://github.com/sindresorhus/query-string)
+- [ua-parser-js](https://github.com/faisalman/ua-parser-js)
+- [validator](https://github.com/validatorjs/validator.js)
+- [xe-utils](https://github.com/x-extends/xe-utils)
 
 Great thanks to the authors and contributors of all these libraries. :D
