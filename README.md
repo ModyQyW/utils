@@ -1331,6 +1331,7 @@ reverse(array); // => [3, 2, 1]
 console.log(array); // => [3, 2, 1]
 ```
 
+- [rest](https://lodash.com/docs/#rest)
 - [retry](https://github.com/vercel/async-retry)
 
 ```typescript
