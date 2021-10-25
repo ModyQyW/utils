@@ -59,6 +59,7 @@ map(['6', '8', '10'], ary(parseInt, 1)); // => [6, 8, 10]
 ```
 
 - [before](https://lodash.com/docs/#before)
+- [bind](https://lodash.com/docs/#bind)
 - [camelCase](https://github.com/blakeembrey/change-case#camelcase)
 
 ```typescript

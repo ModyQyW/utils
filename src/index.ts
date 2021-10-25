@@ -1,6 +1,7 @@
 export * from './after';
 export * from './ary';
 export * from './before';
+export * from './bind';
 export * from './camelCase';
 export * from './capitalCase';
 export * from './ceil';
