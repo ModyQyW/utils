@@ -314,6 +314,14 @@ findIndex(users, ['active', false]); // => 0
 findIndex(users, 'active'); // => 2
 ```
 
+- [findLast](https://lodash.com/docs/#findLast)
+
+```typescript
+findLast([1, 2, 3, 4], function (n) {
+  return n % 2 == 1;
+}); // => 3
+```
+
 - [findLastIndex](https://lodash.com/docs/#findLastIndex)
 
 ```typescript

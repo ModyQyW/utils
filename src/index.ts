@@ -27,6 +27,7 @@ export * from './fill';
 export * from './filter';
 export * from './find';
 export * from './findIndex';
+export * from './findLast';
 export * from './findLastIndex';
 export * from './flatten';
 export * from './flattenDeep';
