@@ -1280,6 +1280,21 @@ reduceRight(
 ); // => [4, 5, 2, 3, 0, 1]
 ```
 
+- [reject](https://lodash.com/docs/#reject)
+
+```typescript
+const users = [
+  { user: 'barney', age: 36, active: false },
+  { user: 'fred', age: 40, active: true },
+];
+reject(users, function (o) {
+  return !o.active;
+}); // => objects for ['fred']
+reject(users, { age: 40, active: true }); // => objects for ['barney']
+reject(users, ['active', false]); // => objects for ['fred']
+reject(users, 'active'); // => objects for ['barney']
+```
+
 - [remove](https://lodash.com/docs/#remove)
 
 ```typescript

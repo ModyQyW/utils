@@ -135,6 +135,7 @@ export * from './pullAt';
 export * from './random';
 export * from './reduce';
 export * from './reduceRight';
+export * from './reject';
 export * from './remove';
 export * from './retry';
 export * from './reverse';
