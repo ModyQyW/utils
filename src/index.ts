@@ -137,6 +137,7 @@ export * from './sortedUniq';
 export * from './sortedUniqBy';
 export * from './startCase';
 export * from './tail';
+export * from './take';
 export * from './throttle';
 export * from './toArray';
 export * from './toFinite';

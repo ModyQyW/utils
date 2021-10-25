@@ -1515,6 +1515,17 @@ import { tail } from '@modyqyw/utils';
 tail([1, 2, 3]); // => [2, 3]
 ```
 
+- [take](https://lodash.com/docs/#take)
+
+```typescript
+import { take } from '@modyqyw/utils';
+
+take([1, 2, 3]); // => [1]
+take([1, 2, 3], 2); // => [1, 2]
+take([1, 2, 3], 5); // => [1, 2, 3]
+take([1, 2, 3], 0); // => []
+```
+
 - [throttle](https://lodash.com/docs/#throttle)
 - [toArray](https://lodash.com/docs/#toArray)
 
