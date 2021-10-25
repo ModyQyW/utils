@@ -580,6 +580,18 @@ indexOf([1, 2, 1, 2], 2, 2); // => 3
 initial([1, 2, 3]); // => [1, 2]
 ```
 
+- [inRange](https://lodash.com/docs/#inRange)
+
+```typescript
+inRange(3, 2, 4); // => true
+inRange(4, 8); // => true
+inRange(4, 2); // => false
+inRange(2, 2); // => false
+inRange(1.2, 2); // => true
+inRange(5.2, 4); // => false
+inRange(-3, -2, -6); // => true
+```
+
 - [intersection](https://lodash.com/docs/#intersection)
 
 ```typescript

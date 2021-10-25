@@ -65,6 +65,7 @@ export * from './headerCase';
 export * from './includes';
 export * from './indexOf';
 export * from './initial';
+export * from './inRange';
 export * from './intersection';
 export * from './intersectionBy';
 export * from './intersectionWith';
