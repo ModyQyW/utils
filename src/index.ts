@@ -103,6 +103,7 @@ export * from './minBy';
 export * from './nanoid';
 export * from './noCase';
 export * from './noop';
+export * from './nth';
 export * from './orderBy';
 export * from './pad';
 export * from './padEnd';

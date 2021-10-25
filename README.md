@@ -1139,6 +1139,16 @@ noCase('version 1.2.10'); // => 'version 1 2 10'
 ```
 
 - [noop](https://lodash.com/docs/#noop)
+- [nth](https://lodash.com/docs/#nth)
+
+```typescript
+import { nth } from '@modyqyw/utils';
+
+const array = ['a', 'b', 'c', 'd'];
+nth(array, 1); // => 'b'
+nth(array, -2); // => 'c';
+```
+
 - [orderBy](https://lodash.com/docs/#orderBy)
 
 ```typescript
