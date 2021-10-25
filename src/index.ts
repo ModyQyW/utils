@@ -119,6 +119,7 @@ export * from './pullAt';
 export * from './random';
 export * from './remove';
 export * from './retry';
+export * from './reverse';
 export * from './round';
 export * from './sentenceCase';
 export * from './shortUuid';

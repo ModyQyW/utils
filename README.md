@@ -1323,6 +1323,16 @@ console.log(array); // => [1, 3]
 console.log(evens); // => [2, 4]
 ```
 
+- [reverse](https://lodash.com/docs/#reverse)
+
+```typescript
+import { reverse } from '@modyqyw/utils';
+
+const array = [1, 2, 3];
+reverse(array); // => [3, 2, 1]
+console.log(array); // => [3, 2, 1]
+```
+
 - [retry](https://github.com/vercel/async-retry)
 
 ```typescript
