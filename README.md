@@ -178,6 +178,17 @@ drop([1, 2, 3], 5); // => []
 drop([1, 2, 3], 0); // => [1, 2, 3]
 ```
 
+- [dropRight](https://lodash.com/docs/#dropRight)
+
+```typescript
+import { dropRight } from '@modyqyw/utils';
+
+dropRight([1, 2, 3]); // => [1, 2]
+dropRight([1, 2, 3], 2); // => [1]
+dropRight([1, 2, 3], 5); // => []
+dropRight([1, 2, 3], 0); // => [1, 2, 3]
+```
+
 - [fakeAvatar](./src/fakeAvatar.ts)
 
 ```typescript

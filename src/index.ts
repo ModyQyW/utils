@@ -13,6 +13,7 @@ export * from './differenceBy';
 export * from './differenceWith';
 export * from './dotCase';
 export * from './drop';
+export * from './dropRight';
 export * from './fakeAvatar';
 export * from './fakeImage';
 export * from './fakeLoremParagraph';
