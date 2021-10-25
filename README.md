@@ -740,6 +740,17 @@ gte(3, 3); // => true
 gte(1, 3); // => false
 ```
 
+- [has](https://lodash.com/docs/#has)
+
+```typescript
+const object = { 'a': { 'b': 2 } };
+const other = create({ 'a': create({ 'b': 2 }) });
+has(object, 'a'); // => true
+has(object, 'a.b'); // => true
+has(object, ['a', 'b']); // => true
+has(other, 'a'); // => false
+```
+
 - [head](https://lodash.com/docs/#head)
 
 ```typescript

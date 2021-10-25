@@ -77,6 +77,7 @@ export * from './get';
 export * from './groupBy';
 export * from './gt';
 export * from './gte';
+export * from './has';
 export * from './head';
 export * from './headerCase';
 export * from './includes';
