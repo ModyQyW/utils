@@ -515,6 +515,14 @@ gt(3, 3); // => false
 gt(1, 3); // => false
 ```
 
+- [gte](https://lodash.com/docs/#gte)
+
+```typescript
+gte(3, 1); // => true
+gte(3, 3); // => true
+gte(1, 3); // => false
+```
+
 - [head](https://lodash.com/docs/#head)
 
 ```typescript
