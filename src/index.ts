@@ -73,6 +73,7 @@ export * from './forOwnRight';
 export * from './fromPairs';
 export * from './functions';
 export * from './functionsIn';
+export * from './get';
 export * from './groupBy';
 export * from './gt';
 export * from './gte';

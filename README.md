@@ -708,6 +708,15 @@ Foo.prototype.c = _.constant('c');
 functionsIn(new Foo()); // => ['a', 'b', 'c']
 ```
 
+- [get](https://lodash.com/docs/#get)
+
+```typescript
+const object = { a: [{ b: { c: 3 } }] };
+get(object, 'a[0].b.c'); // => 3
+get(object, ['a', '0', 'b', 'c']); // => 3
+get(object, 'a.b.c', 'default'); // => 'default'
+```
+
 - [groupBy](https://lodash.com/docs/#groupBy)
 
 ```typescript
