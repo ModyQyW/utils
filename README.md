@@ -352,6 +352,16 @@ import { flattenDeep } from '@modyqyw/utils';
 flattenDeep([1, [2, [3, [4]], 5]]); // => [1, 2, 3, 4, 5]
 ```
 
+- [flattenDepth](https://lodash.com/docs/#flattenDepth)
+
+```typescript
+import { flattenDeep } from '@modyqyw/utils';
+
+const array = [1, [2, [3, [4]], 5]];
+flattenDepth(array, 1); // => [1, 2, [3, [4]], 5]
+flattenDepth(array, 2); // => [1, 2, 3, [4], 5]
+```
+
 - [floor](https://lodash.com/docs/#floor)
 
 ```typescript
