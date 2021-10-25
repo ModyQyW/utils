@@ -1718,6 +1718,12 @@ startCase('__FOO_BAR__'); // => 'FOO BAR'
 subtract(6, 4); // => 2
 ```
 
+- [sum](https://lodash.com/docs/#sum)
+
+```typescript
+sum([4, 2, 8, 6]); // => 20
+```
+
 - [tail](https://lodash.com/docs/#tail)
 
 ```typescript
