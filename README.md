@@ -625,6 +625,19 @@ forEachRight([1, 2], function (value) {
 }); // => Logs `2` then `1`.
 ```
 
+- [forIn](https://lodash.com/docs/#forIn)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+forIn(new Foo(), function (value, key) {
+  console.log(key);
+}); // => Logs 'a', 'b', then 'c' (iteration order is not guaranteed).
+```
+
 - [fromPairs](https://lodash.com/docs/#fromPairs)
 
 ```typescript
