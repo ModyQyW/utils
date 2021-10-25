@@ -697,6 +697,17 @@ Foo.prototype.c = _.constant('c');
 functions(new Foo()); // => ['a', 'b']
 ```
 
+- [functionsIn](https://lodash.com/docs/#functionsIn)
+
+```typescript
+function Foo() {
+  this.a = _.constant('a');
+  this.b = _.constant('b');
+}
+Foo.prototype.c = _.constant('c');
+functionsIn(new Foo()); // => ['a', 'b', 'c']
+```
+
 - [groupBy](https://lodash.com/docs/#groupBy)
 
 ```typescript
