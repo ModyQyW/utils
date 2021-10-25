@@ -199,6 +199,7 @@ export * from './sortedUniq';
 export * from './sortedUniqBy';
 export * from './spread';
 export * from './startCase';
+export * from './subtract';
 export * from './tail';
 export * from './take';
 export * from './takeRight';

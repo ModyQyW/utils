@@ -1712,6 +1712,12 @@ startCase('fooBar'); // => 'Foo Bar'
 startCase('__FOO_BAR__'); // => 'FOO BAR'
 ```
 
+- [subtract](https://lodash.com/docs/#subtract)
+
+```typescript
+subtract(6, 4); // => 2
+```
+
 - [tail](https://lodash.com/docs/#tail)
 
 ```typescript
