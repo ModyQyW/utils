@@ -97,6 +97,13 @@ chunk(['a', 'b', 'c', 'd'], 2); // => [['a', 'b'], ['c', 'd']]
 chunk(['a', 'b', 'c', 'd'], 3); // => [['a', 'b', 'c'], ['d']]
 ```
 
+- [clamp](https://lodash.com/docs/#clamp)
+
+```typescript
+clamp(-10, -5, 5); // => -5
+clamp(10, -5, 5); // => 5
+```
+
 - [clone](https://lodash.com/docs/#clone)
 
 ```typescript
