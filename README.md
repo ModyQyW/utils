@@ -1507,6 +1507,7 @@ sortedUniq([1, 1, 2]); // => [1, 2]
 sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor); // => [1.1, 2.3]
 ```
 
+- [spread](https://lodash.com/docs/#spread)
 - [startCase](https://lodash.com/docs/#startCase)
 
 ```typescript

@@ -177,6 +177,7 @@ export * from './sortedLastIndexBy';
 export * from './sortedLastIndexOf';
 export * from './sortedUniq';
 export * from './sortedUniqBy';
+export * from './spread';
 export * from './startCase';
 export * from './tail';
 export * from './take';
