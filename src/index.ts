@@ -167,6 +167,7 @@ export * from './unzip';
 export * from './unzipWith';
 export * from './upperCase';
 export * from './uuid';
+export * from './without';
 export * from './words';
 export * from './xor';
 export * from './xorBy';

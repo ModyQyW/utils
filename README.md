@@ -1489,6 +1489,12 @@ upperCase('__foo_bar__'); // => 'FOO BAR'
 ```
 
 - [uuid](./src/uuid.ts)
+- [without](https://lodash.com/docs/#without)
+
+```typescript
+without([2, 1, 2, 3], 1, 2); // => [3]
+```
+
 - [words](https://lodash.com/docs/#words)
 
 ```typescript
