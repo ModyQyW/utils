@@ -2,6 +2,7 @@ export * from './add';
 export * from './after';
 export * from './ary';
 export * from './assign';
+export * from './assignIn';
 export * from './before';
 export * from './bind';
 export * from './bindKey';

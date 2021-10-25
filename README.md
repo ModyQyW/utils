@@ -62,6 +62,20 @@ Bar.prototype.d = 4;
 assign({ a: 0 }, new Foo(), new Bar()); // => { 'a': 1, 'c': 3 }
 ```
 
+- [assignIn](https://lodash.com/docs/#assignIn)
+
+```typescript
+function Foo() {
+  this.a = 1;
+}
+function Bar() {
+  this.c = 3;
+}
+Foo.prototype.b = 2;
+Bar.prototype.d = 4;
+assignIn({ a: 0 }, new Foo(), new Bar()); // => { 'a': 1, 'b': 2, 'c': 3, 'd': 4 }
+```
+
 - [before](https://lodash.com/docs/#before)
 - [bind](https://lodash.com/docs/#bind)
 - [bindKey](https://lodash.com/docs/#bindKey)
