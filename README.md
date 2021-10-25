@@ -1155,6 +1155,22 @@ paramCase('PascalCase'); // => 'pascal-case'
 paramCase('version 1.2.10'); // => 'version-1-2-10'
 ```
 
+- [partition](https://lodash.com/docs/#partition)
+
+```typescript
+const users = [
+  { user: 'barney', age: 36, active: false },
+  { user: 'fred', age: 40, active: true },
+  { user: 'pebbles', age: 1, active: false },
+];
+partition(users, function (o) {
+  return o.active;
+}); // => objects for [['fred'], ['barney', 'pebbles']]
+partition(users, { age: 1, active: false }); // => objects for [['pebbles'], ['barney', 'fred']]
+partition(users, ['active', false]); // => objects for [['barney', 'pebbles'], ['fred']]
+partition(users, 'active'); // => objects for [['fred'], ['barney', 'pebbles']]
+```
+
 - [pascalCase](https://github.com/blakeembrey/change-case#pascalcase)
 
 ```typescript

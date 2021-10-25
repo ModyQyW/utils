@@ -124,6 +124,7 @@ export * from './pad';
 export * from './padEnd';
 export * from './padStart';
 export * from './paramCase';
+export * from './partition';
 export * from './pascalCase';
 export * from './pathCase';
 export * from './pull';
