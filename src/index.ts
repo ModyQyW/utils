@@ -4,6 +4,7 @@ export * from './ceil';
 export * from './chunk';
 export * from './clone';
 export * from './cloneDeep';
+export * from './compact';
 export * from './constantCase';
 export * from './debounce';
 export * from './difference';

@@ -99,6 +99,14 @@ const shallow = clone(objects);
 console.log(shallow[0] === objects[0]); // => false
 ```
 
+- [compact](https://lodash.com/docs/#compact)
+
+```typescript
+import { compact } from '@modyqyw/utils';
+
+compact([0, 1, false, 2, '', 3]); // => [1, 2, 3]
+```
+
 - [constantCase](https://github.com/blakeembrey/change-case#constantcase)
 
 ```typescript
