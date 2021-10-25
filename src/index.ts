@@ -67,6 +67,7 @@ export * from './floor';
 export * from './forEach';
 export * from './forEachRight';
 export * from './forIn';
+export * from './forInRight';
 export * from './fromPairs';
 export * from './groupBy';
 export * from './gt';
