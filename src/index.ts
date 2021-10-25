@@ -30,6 +30,7 @@ export * from './drop';
 export * from './dropRight';
 export * from './dropRightWhile';
 export * from './dropWhile';
+export * from './eq';
 export * from './every';
 export * from './fakeAvatar';
 export * from './fakeImage';

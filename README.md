@@ -261,6 +261,18 @@ dropWhile(users, ['active', false]); // => objects for ['pebbles']
 dropWhile(users, 'active'); // => objects for ['barney', 'fred', 'pebbles']
 ```
 
+- [eq](https://lodash.com/docs/#eq)
+
+```typescript
+const object = { a: 1 };
+const other = { a: 1 };
+eq(object, object); // => true
+eq(object, other); // => false
+eq('a', 'a'); // => true
+eq('a', Object('a')); // => false
+eq(NaN, NaN); // => true
+```
+
 - [every](https://lodash.com/docs/#every)
 
 ```typescript
