@@ -126,6 +126,7 @@ export * from './mergeWith';
 export * from './min';
 export * from './minBy';
 export * from './nanoid';
+export * from './negate';
 export * from './noCase';
 export * from './noop';
 export * from './now';

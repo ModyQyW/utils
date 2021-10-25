@@ -1102,6 +1102,7 @@ minBy(objects, 'n'); // => { 'n': 1 }
 nanoid(); => // 'V1StGXR8_Z5jdHi6B-myT'
 ```
 
+- [negate](https://lodash.com/docs/#negate)
 - [noCase](https://github.com/blakeembrey/change-case#nocase)
 
 ```typescript
