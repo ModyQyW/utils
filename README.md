@@ -314,6 +314,28 @@ findIndex(users, ['active', false]); // => 0
 findIndex(users, 'active'); // => 2
 ```
 
+- [findLastIndex](https://lodash.com/docs/#findLastIndex)
+
+```typescript
+import { findLastIndex } from '@modyqyw/utils';
+
+const users = [
+  { user: 'barney', active: true },
+  { user: 'fred', active: false },
+  { user: 'pebbles', active: false },
+];
+
+findLastIndex(users, function (o) {
+  return o.user == 'pebbles';
+}); // => 2
+
+findLastIndex(users, { user: 'barney', active: true }); // => 0
+
+findLastIndex(users, ['active', false]); // => 2
+
+findLastIndex(users, 'active'); // => 0
+```
+
 - [floor](https://lodash.com/docs/#floor)
 
 ```typescript
