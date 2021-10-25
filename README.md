@@ -736,6 +736,15 @@ isEvenNumber(1); // => false
 isEvenNumber(2); // => true
 ```
 
+- [isFinite](https://lodash.com/docs/#isFinite)
+
+```typescript
+isFinite(3); // => true
+isFinite(Number.MIN_VALUE); // => true
+isFinite(Infinity); // => false
+isFinite('3'); // => false
+```
+
 - [isFloat](./src/isFloat.ts)
 
 ```typescript
