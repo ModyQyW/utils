@@ -67,6 +67,7 @@ export * from './intersectionBy';
 export * from './intersectionWith';
 export * from './invokeMap';
 export * from './isArguments';
+export * from './isArray';
 export * from './isArrayBuffer';
 export * from './isArrayLike';
 export * from './isArrayLikeObject';

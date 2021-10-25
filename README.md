@@ -612,6 +612,15 @@ isArguments(
 isArguments([1, 2, 3]); // => false
 ```
 
+- [isArray](https://lodash.com/docs/#isArray)
+
+```typescript
+isArray([1, 2, 3]); // => true
+isArray(document.body.children); // => false
+isArray('abc'); // => false
+isArray(noop); // => false
+```
+
 - [isArrayBuffer](https://lodash.com/docs/#isArrayBuffer)
 
 ```typescript
