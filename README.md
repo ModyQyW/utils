@@ -493,6 +493,22 @@ findIndex(users, ['active', false]); // => 0
 findIndex(users, 'active'); // => 2
 ```
 
+- [findKey](https://lodash.com/docs/#findKey)
+
+```typescript
+const users = {
+  barney: { age: 36, active: true },
+  fred: { age: 40, active: false },
+  pebbles: { age: 1, active: true },
+};
+findKey(users, function (o) {
+  return o.age < 40;
+}); // => 'barney' (iteration order is not guaranteed)
+findKey(users, { age: 1, active: true }); // => 'pebbles'
+findKey(users, ['active', false]); // => 'fred'
+findKey(users, 'active'); // => 'barney'
+```
+
 - [findLast](https://lodash.com/docs/#findLast)
 
 ```typescript
