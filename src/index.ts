@@ -31,6 +31,7 @@ export * from './findLast';
 export * from './findLastIndex';
 export * from './flatMap';
 export * from './flatMapDeep';
+export * from './flatMapDepth';
 export * from './flatten';
 export * from './flattenDeep';
 export * from './flattenDepth';

@@ -352,6 +352,18 @@ flatMapDeep([1, 2], function duplicate(n) {
 }); // => [1, 1, 2, 2]
 ```
 
+- [flatMapDepth](https://lodash.com/docs/#flatMapDepth)
+
+```typescript
+flatMapDepth(
+  [1, 2],
+  function duplicate(n) {
+    return [[[n, n]]];
+  },
+  2,
+); // => [[1, 1], [2, 2]]
+```
+
 - [flatten](https://lodash.com/docs/#flatten)
 
 ```typescript
