@@ -149,6 +149,7 @@ export * from './shuffle';
 export * from './size';
 export * from './sleep';
 export * from './snakeCase';
+export * from './some';
 export * from './sortBy';
 export * from './sortedIndex';
 export * from './sortedIndexBy';

@@ -1401,6 +1401,19 @@ snakeCase('PascalCase'); // => 'pascal_case'
 snakeCase('version 1.2.10'); // => 'version_1_2_10'
 ```
 
+- [some](https://lodash.com/docs/#some)
+
+```typescript
+some([null, 0, 'yes', false], Boolean); // => true
+const users = [
+  { user: 'barney', active: true },
+  { user: 'fred', active: false },
+];
+some(users, { user: 'barney', active: false }); // => false
+some(users, ['active', false]); // => true
+some(users, 'active'); // => true
+```
+
 - [sortBy](https://lodash.com/docs/#sortBy)
 
 ```typescript
