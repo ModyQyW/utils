@@ -1375,6 +1375,14 @@ sentenceCase('version 1.2.10'); // => 'Version 1 2 10'
 shuffle([1, 2, 3, 4]); // => [4, 1, 3, 2]
 ```
 
+- [size](https://lodash.com/docs/#size)
+
+```typescript
+size([1, 2, 3]); // => 3
+size({ a: 1, b: 2 }); // => 2
+size('pebbles'); // => 7
+```
+
 - [sleep](./src/sleep.ts)
 
 ```typescript
