@@ -444,6 +444,15 @@ headerCase('PascalCase'); // => 'Pascal-Case'
 headerCase('version 1.2.10'); // => 'Version-1-2-10'
 ```
 
+- [includes](https://lodash.com/docs/#includes)
+
+```typescript
+includes([1, 2, 3], 1); // => true
+includes([1, 2, 3], 1, 2); // => false
+includes({ a: 1, b: 2 }, 1); // => true
+includes('abcd', 'bc'); // => true
+```
+
 - [indexOf](https://lodash.com/docs/#indexOf)
 
 ```typescript

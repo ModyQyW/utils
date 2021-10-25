@@ -42,6 +42,7 @@ export * from './fromPairs';
 export * from './groupBy';
 export * from './head';
 export * from './headerCase';
+export * from './includes';
 export * from './indexOf';
 export * from './initial';
 export * from './intersection';
