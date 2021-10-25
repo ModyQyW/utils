@@ -76,6 +76,16 @@ Bar.prototype.d = 4;
 assignIn({ a: 0 }, new Foo(), new Bar()); // => { 'a': 1, 'b': 2, 'c': 3, 'd': 4 }
 ```
 
+- [assignInWith](https://lodash.com/docs/#assignInWith)
+
+```typescript
+function customizer(objValue, srcValue) {
+  return isUndefined(objValue) ? srcValue : objValue;
+}
+const defaults = partialRight(assignInWith, customizer);
+defaults({ a: 1 }, { b: 2 }, { a: 3 }); // => { 'a': 1, 'b': 2 }
+```
+
 - [before](https://lodash.com/docs/#before)
 - [bind](https://lodash.com/docs/#bind)
 - [bindKey](https://lodash.com/docs/#bindKey)
