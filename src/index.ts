@@ -133,6 +133,7 @@ export * from './now';
 export * from './nth';
 export * from './once';
 export * from './orderBy';
+export * from './overArgs';
 export * from './pad';
 export * from './padEnd';
 export * from './padStart';

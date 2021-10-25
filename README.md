@@ -1135,6 +1135,7 @@ const users = [
 orderBy(users, ['user', 'age'], ['asc', 'desc']); // => [{ user: 'barney', age: 36 }, { user: 'barney', age: 34 }, { user: 'fred', age: 48 }, { user: 'fred', age: 40 }]
 ```
 
+- [overArgs](https://lodash.com/docs/#overArgs)
 - [pad](https://lodash.com/docs/#pad)
 
 ```typescript
