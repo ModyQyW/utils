@@ -493,6 +493,19 @@ const others = [
 intersectionWith(objects, others, isEqual); // => [{ 'x': 1, 'y': 2 }]
 ```
 
+- [invokeMap](https://lodash.com/docs/#invokeMap)
+
+```typescript
+invokeMap(
+  [
+    [5, 1, 7],
+    [3, 2, 1],
+  ],
+  'sort',
+); // => [[1, 5, 7], [1, 2, 3]]
+invokeMap([123, 456], String.prototype.split, ''); // => [['1', '2', '3'], ['4', '5', '6']]
+```
+
 - [isArrayBuffer](https://lodash.com/docs/#isArrayBuffer)
 
 ```typescript
