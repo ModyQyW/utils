@@ -686,6 +686,17 @@ fromPairs([
 ]); // => { 'a': 1, 'b': 2 }
 ```
 
+- [functions](https://lodash.com/docs/#functions)
+
+```typescript
+function Foo() {
+  this.a = _.constant('a');
+  this.b = _.constant('b');
+}
+Foo.prototype.c = _.constant('c');
+functions(new Foo()); // => ['a', 'b']
+```
+
 - [groupBy](https://lodash.com/docs/#groupBy)
 
 ```typescript

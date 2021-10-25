@@ -71,6 +71,7 @@ export * from './forInRight';
 export * from './forOwn';
 export * from './forOwnRight';
 export * from './fromPairs';
+export * from './functions';
 export * from './groupBy';
 export * from './gt';
 export * from './gte';
