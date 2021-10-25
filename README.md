@@ -534,6 +534,22 @@ findLastIndex(users, ['active', false]); // => 2
 findLastIndex(users, 'active'); // => 0
 ```
 
+- [findLastKey](https://lodash.com/docs/#findLastKey)
+
+```typescript
+const users = {
+  barney: { age: 36, active: true },
+  fred: { age: 40, active: false },
+  pebbles: { age: 1, active: true },
+};
+findLastKey(users, function (o) {
+  return o.age < 40;
+}); // => returns 'pebbles' assuming `findKey` returns 'barney'
+findLastKey(users, { age: 36, active: true }); // => 'barney'
+findLastKey(users, ['active', false]); // => 'fred'
+findLastKey(users, 'active'); // => 'pebbles'
+```
+
 - [flatMap](https://lodash.com/docs/#flatMap)
 
 ```typescript

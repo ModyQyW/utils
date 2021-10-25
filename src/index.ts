@@ -55,6 +55,7 @@ export * from './findIndex';
 export * from './findKey';
 export * from './findLast';
 export * from './findLastIndex';
+export * from './findLastKey';
 export * from './flatMap';
 export * from './flatMapDeep';
 export * from './flatMapDepth';
