@@ -78,6 +78,7 @@ export * from './isElement';
 export * from './isEmail';
 export * from './isEmpty';
 export * from './isEqual';
+export * from './isEqualWith';
 export * from './isError';
 export * from './isEvalError';
 export * from './isEvenNumber';

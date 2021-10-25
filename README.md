@@ -699,6 +699,22 @@ isEqual(object, other); // => true
 object === other; // => false
 ```
 
+- [isEqualWith](https://lodash.com/docs/#isEqualWith)
+
+```typescript
+function isGreeting(value) {
+  return /^h(?:i|ello)$/.test(value);
+}
+function customizer(objValue, othValue) {
+  if (isGreeting(objValue) && isGreeting(othValue)) {
+    return true;
+  }
+}
+const array = ['hello', 'goodbye'];
+const other = ['hi', 'goodbye'];
+isEqualWith(array, other, customizer); // => true
+```
+
 - [isError](https://lodash.com/docs/#isError)
 
 ```typescript
