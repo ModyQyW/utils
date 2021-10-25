@@ -271,6 +271,12 @@ circle instanceof Shape; // => true
 - [curry](https://lodash.com/docs/#curry)
 - [curryRight](https://lodash.com/docs/#curryRight)
 - [debounce](https://lodash.com/docs/#debounce)
+- [defaults](https://lodash.com/docs/#defaults)
+
+```typescript
+defaults({ a: 1 }, { b: 2 }, { a: 3 }); // => { 'a': 1, 'b': 2 }
+```
+
 - [defer](https://lodash.com/docs/#defer)
 - [delay](https://lodash.com/docs/#delay)
 - [difference](https://lodash.com/docs/#difference)
