@@ -1951,6 +1951,17 @@ Foo.prototype.c = 3;
 toPairs(new Foo()); // => [['a', 1], ['b', 2]] (iteration order is not guaranteed)
 ```
 
+- [toPairsIn](https://lodash.com/docs/#toPairsIn)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+toPairsIn(new Foo()); // => [['a', 1], ['b', 2], ['c', 3]] (iteration order is not guaranteed)
+```
+
 - [toPlainObject](https://lodash.com/docs/#toPlainObject)
 
 ```typescript

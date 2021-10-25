@@ -224,6 +224,7 @@ export * from './toInteger';
 export * from './toLength';
 export * from './toNumber';
 export * from './toPairs';
+export * from './toPairsIn';
 export * from './toPlainObject';
 export * from './toSafeInteger';
 export * from './toShortUuid';
