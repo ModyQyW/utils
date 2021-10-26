@@ -2514,6 +2514,13 @@ upperCase('fooBar'); // => 'FOO BAR'
 upperCase('__foo_bar__'); // => 'FOO BAR'
 ```
 
+- [upperFirst](https://lodash.com/docs/#upperFirst)
+
+```typescript
+upperFirst('fred'); // => 'Fred'
+upperFirst('FRED'); // => 'FRED'
+```
+
 - [uuid](./src/uuid.ts)
 - [values](https://lodash.com/docs/#values)
 
