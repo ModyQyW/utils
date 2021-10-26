@@ -855,6 +855,13 @@ invertBy(object, function (value) {
 }); // => { 'group1': ['a', 'c'], 'group2': ['b'] }
 ```
 
+- [invoke](https://lodash.com/docs/#invoke)
+
+```typescript
+const object = { a: [{ b: { c: [1, 2, 3, 4] } }] };
+invoke(object, 'a[0].b.c.slice', 1, 3); // => [2, 3]
+```
+
 - [invokeMap](https://lodash.com/docs/#invokeMap)
 
 ```typescript
