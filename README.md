@@ -1624,6 +1624,13 @@ nth(array, 1); // => 'b'
 nth(array, -2); // => 'c';
 ```
 
+- [omit](https://lodash.com/docs/#omit)
+
+```typescript
+const object = { a: 1, b: '2', c: 3 };
+omit(object, ['a', 'c']); // => { 'b': '2' }
+```
+
 - [once](https://lodash.com/docs/#once)
 - [orderBy](https://lodash.com/docs/#orderBy)
 

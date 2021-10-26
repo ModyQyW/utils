@@ -179,6 +179,7 @@ export * from './noCase';
 export * from './noop';
 export * from './now';
 export * from './nth';
+export * from './omit';
 export * from './once';
 export * from './orderBy';
 export * from './overArgs';
