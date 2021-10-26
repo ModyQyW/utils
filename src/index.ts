@@ -272,6 +272,7 @@ export * from './unset';
 export * from './unzip';
 export * from './unzipWith';
 export * from './update';
+export * from './updateWith';
 export * from './upperCase';
 export * from './uuid';
 export * from './without';

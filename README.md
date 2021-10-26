@@ -2409,6 +2409,13 @@ update(object, 'x[0].y.z', function (n) {
 console.log(object.x[0].y.z); // => 0
 ```
 
+- [updateWith](https://lodash.com/docs/#updateWith)
+
+```typescript
+const object = {};
+updateWith(object, '[0][1]', constant('a'), Object); // => { '0': { '1': 'a' } }
+```
+
 - [upperCase](https://lodash.com/docs/#upperCase)
 
 ```typescript
