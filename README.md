@@ -2258,6 +2258,14 @@ toLength(Infinity); // => 4294967295
 toLength('3.2'); // => 3
 ```
 
+- [toLower](https://lodash.com/docs/#toLower)
+
+```typescript
+toLower('--Foo-Bar--'); // => '--foo-bar--'
+toLower('fooBar'); // => 'foobar'
+toLower('__FOO_BAR__'); // => '__foo_bar__'
+```
+
 - [toNumber](https://lodash.com/docs/#toNumber)
 
 ```typescript

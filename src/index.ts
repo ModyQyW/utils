@@ -257,6 +257,7 @@ export * from './toArray';
 export * from './toFinite';
 export * from './toInteger';
 export * from './toLength';
+export * from './toLower';
 export * from './toNumber';
 export * from './toPairs';
 export * from './toPairsIn';
