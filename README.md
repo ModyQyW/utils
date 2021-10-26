@@ -399,6 +399,12 @@ eq('a', Object('a')); // => false
 eq(NaN, NaN); // => true
 ```
 
+- [escape](https://lodash.com/docs/#escape)
+
+```typescript
+escape('fred, barney, & pebbles'); // => 'fred, barney, &amp; pebbles'
+```
+
 - [every](https://lodash.com/docs/#every)
 
 ```typescript
