@@ -1867,7 +1867,7 @@ console.log(array); // => [3, 2, 1]
 - [result](https://lodash.com/docs/#result)
 
 ```typescript
-const object = { 'a': [{ 'b': { 'c1': 3, 'c2': constant(4) } }] };
+const object = { a: [{ b: { c1: 3, c2: constant(4) } }] };
 result(object, 'a[0].b.c1'); // => 3
 result(object, 'a[0].b.c2'); // => 4
 result(object, 'a[0].b.c3', 'default'); // => 'default'
