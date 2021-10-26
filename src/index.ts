@@ -45,6 +45,7 @@ export * from './dropWhile';
 export * from './endsWith';
 export * from './eq';
 export * from './escape';
+export * from './escapeRegExp';
 export * from './every';
 export * from './fakeAvatar';
 export * from './fakeImage';

@@ -405,6 +405,12 @@ eq(NaN, NaN); // => true
 escape('fred, barney, & pebbles'); // => 'fred, barney, &amp; pebbles'
 ```
 
+- [escapeRegExp](https://lodash.com/docs/#escapeRegExp)
+
+```typescript
+escapeRegExp('[lodash](https://lodash.com/)'); // => '\[lodash\]\(https://lodash\.com/\)'
+```
+
 - [every](https://lodash.com/docs/#every)
 
 ```typescript
