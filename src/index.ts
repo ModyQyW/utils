@@ -213,6 +213,7 @@ export * from './reduceRight';
 export * from './reject';
 export * from './remove';
 export * from './repeat';
+export * from './replace';
 export * from './rest';
 export * from './result';
 export * from './retry';

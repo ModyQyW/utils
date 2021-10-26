@@ -1903,6 +1903,12 @@ repeat('abc', 2); // => 'abcabc'
 repeat('abc', 0); // => ''
 ```
 
+- [replace](https://lodash.com/docs/#replace)
+
+```typescript
+replace('Hi Fred', 'Fred', 'Barney'); // => 'Hi Barney'
+```
+
 - [reverse](https://lodash.com/docs/#reverse)
 
 ```typescript
