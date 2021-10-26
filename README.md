@@ -2396,6 +2396,12 @@ truncate('hi-diddly-ho there, neighborino', {
 ```
 
 - [unary](https://lodash.com/docs/#unary)
+- [unescape](https://lodash.com/docs/#unescape)
+
+```typescript
+unescape('fred, barney, &amp; pebbles'); // => 'fred, barney, & pebbles'
+```
+
 - [union](https://lodash.com/docs/#union)
 
 ```typescript

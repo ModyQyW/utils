@@ -273,6 +273,7 @@ export * from './trimEnd';
 export * from './trimStart';
 export * from './truncate';
 export * from './unary';
+export * from './unescape';
 export * from './union';
 export * from './unionBy';
 export * from './unionWith';
