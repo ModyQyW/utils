@@ -2395,6 +2395,20 @@ const zipped = zip([1, 2], [10, 20], [100, 200]); // => [[1, 10, 100], [2, 20, 2
 unzipWith(zipped, add); // => [3, 30, 300]
 ```
 
+- [update](https://lodash.com/docs/#update)
+
+```typescript
+const object = { a: [{ b: { c: 3 } }] };
+update(object, 'a[0].b.c', function (n) {
+  return n * n;
+});
+console.log(object.a[0].b.c); // => 9
+update(object, 'x[0].y.z', function (n) {
+  return n ? n + 1 : 0;
+});
+console.log(object.x[0].y.z); // => 0
+```
+
 - [upperCase](https://lodash.com/docs/#upperCase)
 
 ```typescript
