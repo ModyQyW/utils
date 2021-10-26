@@ -1729,6 +1729,14 @@ const object = { a: 1, b: '2', c: 3 };
 pick(object, ['a', 'c']); // => { 'a': 1, 'c': 3 }
 ```
 
+- [pickBy](https://lodash.com/docs/#pickBy)
+
+```typescript
+const object = { a: 1, b: '2', c: 3 };
+pickBy(object, isNumber);
+// => { 'a': 1, 'c': 3 }
+```
+
 - [pull](https://lodash.com/docs/#pull)
 
 ```typescript

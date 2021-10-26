@@ -194,6 +194,7 @@ export * from './partition';
 export * from './pascalCase';
 export * from './pathCase';
 export * from './pick';
+export * from './pickBy';
 export * from './pull';
 export * from './pullAll';
 export * from './pullAllBy';
