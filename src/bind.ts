@@ -1,1 +1,1 @@
-export {bind} from 'lodash-es'
+export { bind } from 'lodash-es';
