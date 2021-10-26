@@ -243,6 +243,7 @@ export * from './sortedUniqBy';
 export * from './split';
 export * from './spread';
 export * from './startCase';
+export * from './startsWith';
 export * from './subtract';
 export * from './sum';
 export * from './sumBy';

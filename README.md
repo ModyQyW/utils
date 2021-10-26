@@ -2135,6 +2135,14 @@ startCase('fooBar'); // => 'Foo Bar'
 startCase('__FOO_BAR__'); // => 'FOO BAR'
 ```
 
+- [startsWith](https://lodash.com/docs/#startsWith)
+
+```typescript
+startsWith('abc', 'a'); // => true
+startsWith('abc', 'b'); // => false
+startsWith('abc', 'b', 1); // => true
+```
+
 - [subtract](https://lodash.com/docs/#subtract)
 
 ```typescript
