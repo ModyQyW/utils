@@ -162,6 +162,7 @@ export * from './keysIn';
 export * from './last';
 export * from './lastIndexOf';
 export * from './lowerCase';
+export * from './lowerFirst';
 export * from './lt';
 export * from './lte';
 export * from './map';

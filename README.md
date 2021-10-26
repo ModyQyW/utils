@@ -1488,6 +1488,13 @@ lowerCase('fooBar'); // => 'foo bar'
 lowerCase('__FOO_BAR__'); // => 'foo bar'
 ```
 
+- [lowerFirst](https://lodash.com/docs/#lowerFirst)
+
+```typescript
+lowerFirst('Fred'); // => 'fred'
+lowerFirst('FRED'); // => 'fRED'
+```
+
 - [lt](https://lodash.com/docs/#lt)
 
 ```typescript
