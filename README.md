@@ -1430,6 +1430,17 @@ keys(new Foo()); // => ['a', 'b'] (iteration order is not guaranteed)
 keys('hi'); // => ['0', '1']
 ```
 
+- [keysIn](https://lodash.com/docs/#keysIn)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+keysIn(new Foo()); // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+```
+
 - [last](https://lodash.com/docs/#last)
 
 ```typescript
