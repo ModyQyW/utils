@@ -2371,6 +2371,16 @@ const objects = [
 uniqWith(objects, isEqual); // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
 ```
 
+- [unset](https://lodash.com/docs/#unset)
+
+```typescript
+const object = { 'a': [{ 'b': { 'c': 7 } }] };
+unset(object, 'a[0].b.c'); // => true
+console.log(object); // => { 'a': [{ 'b': {} }] };
+unset(object, ['a', '0', 'b', 'c']); // => true
+console.log(object); // => { 'a': [{ 'b': {} }] };
+```
+
 - [unzip](https://lodash.com/docs/#unzip)
 
 ```typescript

@@ -268,6 +268,7 @@ export * from './uniq';
 export * from './uniqBy';
 export * from './uniqueId';
 export * from './uniqWith';
+export * from './unset';
 export * from './unzip';
 export * from './unzipWith';
 export * from './upperCase';
