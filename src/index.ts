@@ -88,6 +88,7 @@ export * from './inRange';
 export * from './intersection';
 export * from './intersectionBy';
 export * from './intersectionWith';
+export * from './invert';
 export * from './invokeMap';
 export * from './isArguments';
 export * from './isArray';

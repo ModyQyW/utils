@@ -838,6 +838,13 @@ const others = [
 intersectionWith(objects, others, isEqual); // => [{ 'x': 1, 'y': 2 }]
 ```
 
+- [invert](https://lodash.com/docs/#invert)
+
+```typescript
+const object = { a: 1, b: 2, c: 1 };
+invert(object); // => { '1': 'c', '2': 'b' }
+```
+
 - [invokeMap](https://lodash.com/docs/#invokeMap)
 
 ```typescript
