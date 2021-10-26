@@ -1719,6 +1719,13 @@ paramCase('PascalCase'); // => 'pascal-case'
 paramCase('version 1.2.10'); // => 'version-1-2-10'
 ```
 
+- [parseInt](https://lodash.com/docs/#parseInt)
+
+```typescript
+parseInt('08'); // => 8
+map(['6', '08', '10'], parseInt); // => [6, 8, 10]
+```
+
 - [partial](https://lodash.com/docs/#partial)
 - [partialRight](https://lodash.com/docs/#partialRight)
 - [partition](https://lodash.com/docs/#partition)
