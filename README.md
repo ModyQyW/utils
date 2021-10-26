@@ -2437,6 +2437,17 @@ values(new Foo()); // => [1, 2] (iteration order is not guaranteed)
 values('hi'); // => ['h', 'i']
 ```
 
+- [valuesIn](https://lodash.com/docs/#valuesIn)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+valuesIn(new Foo()); // => [1, 2, 3] (iteration order is not guaranteed)
+```
+
 - [without](https://lodash.com/docs/#without)
 
 ```typescript
