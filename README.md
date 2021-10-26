@@ -743,8 +743,8 @@ gte(1, 3); // => false
 - [has](https://lodash.com/docs/#has)
 
 ```typescript
-const object = { 'a': { 'b': 2 } };
-const other = create({ 'a': create({ 'b': 2 }) });
+const object = { a: { b: 2 } };
+const other = create({ a: create({ b: 2 }) });
 has(object, 'a'); // => true
 has(object, 'a.b'); // => true
 has(object, ['a', 'b']); // => true
@@ -754,7 +754,7 @@ has(other, 'a'); // => false
 - [hasIn](https://lodash.com/docs/#hasIn)
 
 ```typescript
-const object = create({ 'a': create({ 'b': 2 }) });
+const object = create({ a: create({ b: 2 }) });
 hasIn(object, 'a'); // => true
 hasIn(object, 'a.b'); // => true
 hasIn(object, ['a', 'b']); // => true
