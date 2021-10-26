@@ -1498,6 +1498,19 @@ mapKeys({ a: 1, b: 2 }, function (value, key) {
 }); // => { 'a1': 1, 'b2': 2 }
 ```
 
+- [mapValues](https://lodash.com/docs/#mapValues)
+
+```typescript
+const users = {
+  fred: { user: 'fred', age: 40 },
+  pebbles: { user: 'pebbles', age: 1 },
+};
+mapValues(users, function (o) {
+  return o.age;
+}); // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
+mapValues(users, 'age'); // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
+```
+
 - [max](https://lodash.com/docs/#max)
 
 ```typescript

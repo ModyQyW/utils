@@ -162,6 +162,7 @@ export * from './lt';
 export * from './lte';
 export * from './map';
 export * from './mapKeys';
+export * from './mapValues';
 export * from './max';
 export * from './maxBy';
 export * from './mean';
