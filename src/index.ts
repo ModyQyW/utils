@@ -28,6 +28,7 @@ export * from './create';
 export * from './curry';
 export * from './curryRight';
 export * from './debounce';
+export * from './deburr';
 export * from './defaults';
 export * from './defaultsDeep';
 export * from './defer';
