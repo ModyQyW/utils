@@ -1938,6 +1938,13 @@ set(object, ['x', '0', 'y', 'z'], 5);
 console.log(object.x[0].y.z); // => 5
 ```
 
+- [setWith](https://lodash.com/docs/#setWith)
+
+```typescript
+const object = {};
+setWith(object, '[0][1]', 'a', Object); // => { '0': { '1': 'a' } }
+```
+
 - [shortUuid](./src/shortUuid.ts)
 - [shuffle](https://lodash.com/docs/#shuffle)
 

@@ -215,6 +215,7 @@ export * from './sample';
 export * from './sampleSize';
 export * from './sentenceCase';
 export * from './set';
+export * from './setWith';
 export * from './slice';
 export * from './shortUuid';
 export * from './shuffle';
