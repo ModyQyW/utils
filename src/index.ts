@@ -42,6 +42,7 @@ export * from './drop';
 export * from './dropRight';
 export * from './dropRightWhile';
 export * from './dropWhile';
+export * from './endsWith';
 export * from './eq';
 export * from './every';
 export * from './fakeAvatar';

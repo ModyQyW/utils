@@ -379,6 +379,14 @@ dropWhile(users, ['active', false]); // => objects for ['pebbles']
 dropWhile(users, 'active'); // => objects for ['barney', 'fred', 'pebbles']
 ```
 
+- [endsWith](https://lodash.com/docs/#endsWith)
+
+```typescript
+endsWith('abc', 'c'); // => true
+endsWith('abc', 'b'); // => false
+endsWith('abc', 'b', 2); // => true
+```
+
 - [eq](https://lodash.com/docs/#eq)
 
 ```typescript
