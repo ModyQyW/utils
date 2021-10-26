@@ -240,6 +240,7 @@ export * from './sortedLastIndexBy';
 export * from './sortedLastIndexOf';
 export * from './sortedUniq';
 export * from './sortedUniqBy';
+export * from './split';
 export * from './spread';
 export * from './startCase';
 export * from './subtract';

@@ -2120,6 +2120,12 @@ sortedUniq([1, 1, 2]); // => [1, 2]
 sortedUniqBy([1.1, 1.2, 2.3, 2.4], Math.floor); // => [1.1, 2.3]
 ```
 
+- [split](https://lodash.com/docs/#split)
+
+```typescript
+split('a-b-c', '-', 2); // => ['a', 'b']
+```
+
 - [spread](https://lodash.com/docs/#spread)
 - [startCase](https://lodash.com/docs/#startCase)
 
