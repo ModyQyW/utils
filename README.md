@@ -1631,6 +1631,14 @@ const object = { a: 1, b: '2', c: 3 };
 omit(object, ['a', 'c']); // => { 'b': '2' }
 ```
 
+- [omitBy](https://lodash.com/docs/#omitBy)
+
+```typescript
+const object = { a: 1, b: '2', c: 3 };
+omitBy(object, isNumber);
+// => { 'b': '2' }
+```
+
 - [once](https://lodash.com/docs/#once)
 - [orderBy](https://lodash.com/docs/#orderBy)
 

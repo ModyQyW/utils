@@ -180,6 +180,7 @@ export * from './noop';
 export * from './now';
 export * from './nth';
 export * from './omit';
+export * from './omitBy';
 export * from './once';
 export * from './orderBy';
 export * from './overArgs';
