@@ -1895,6 +1895,14 @@ console.log(array); // => [1, 3]
 console.log(evens); // => [2, 4]
 ```
 
+- [repeat](https://lodash.com/docs/#repeat)
+
+```typescript
+repeat('*', 3); // => '***'
+repeat('abc', 2); // => 'abcabc'
+repeat('abc', 0); // => ''
+```
+
 - [reverse](https://lodash.com/docs/#reverse)
 
 ```typescript
