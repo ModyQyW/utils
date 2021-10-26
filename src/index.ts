@@ -161,6 +161,7 @@ export * from './lowerCase';
 export * from './lt';
 export * from './lte';
 export * from './map';
+export * from './mapKeys';
 export * from './max';
 export * from './maxBy';
 export * from './mean';

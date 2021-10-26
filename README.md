@@ -1490,6 +1490,14 @@ const users = [{ user: 'barney' }, { user: 'fred' }];
 map(users, 'user'); // => ['barney', 'fred']
 ```
 
+- [mapKeys](https://lodash.com/docs/#mapKeys)
+
+```typescript
+mapKeys({ a: 1, b: 2 }, function (value, key) {
+  return key + value;
+}); // => { 'a1': 1, 'b2': 2 }
+```
+
 - [max](https://lodash.com/docs/#max)
 
 ```typescript
