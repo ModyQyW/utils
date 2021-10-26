@@ -275,6 +275,7 @@ export * from './update';
 export * from './updateWith';
 export * from './upperCase';
 export * from './uuid';
+export * from './values';
 export * from './without';
 export * from './words';
 export * from './wrap';

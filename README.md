@@ -2425,6 +2425,18 @@ upperCase('__foo_bar__'); // => 'FOO BAR'
 ```
 
 - [uuid](./src/uuid.ts)
+- [values](https://lodash.com/docs/#values)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+values(new Foo()); // => [1, 2] (iteration order is not guaranteed)
+values('hi'); // => ['h', 'i']
+```
+
 - [without](https://lodash.com/docs/#without)
 
 ```typescript
