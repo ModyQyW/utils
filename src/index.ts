@@ -265,6 +265,7 @@ export * from './toPlainObject';
 export * from './toSafeInteger';
 export * from './toShortUuid';
 export * from './toString';
+export * from './toUpper';
 export * from './toUuid';
 export * from './transform';
 export * from './trim';

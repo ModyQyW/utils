@@ -2327,6 +2327,14 @@ toString(-0); // => '-0'
 toString([1, 2, 3]); // => '1,2,3'
 ```
 
+- [toUpper](https://lodash.com/docs/#toUpper)
+
+```typescript
+toUpper('--foo-bar--'); // => '--FOO-BAR--'
+toUpper('fooBar'); // => 'FOOBAR'
+toUpper('__foo_bar__'); // => '__FOO_BAR__'
+```
+
 - [toUuid](./src/toUuid.ts)
 - [transform](https://lodash.com/docs/#transform)
 
