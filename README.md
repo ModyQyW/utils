@@ -845,6 +845,16 @@ const object = { a: 1, b: 2, c: 1 };
 invert(object); // => { '1': 'c', '2': 'b' }
 ```
 
+- [invertBy](https://lodash.com/docs/#invertBy)
+
+```typescript
+const object = { a: 1, b: 2, c: 1 };
+invertBy(object); // => { '1': ['a', 'c'], '2': ['b'] }
+invertBy(object, function (value) {
+  return 'group' + value;
+}); // => { 'group1': ['a', 'c'], 'group2': ['b'] }
+```
+
 - [invokeMap](https://lodash.com/docs/#invokeMap)
 
 ```typescript
