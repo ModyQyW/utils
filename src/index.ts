@@ -207,6 +207,7 @@ export * from './reduceRight';
 export * from './reject';
 export * from './remove';
 export * from './rest';
+export * from './result';
 export * from './retry';
 export * from './reverse';
 export * from './round';
