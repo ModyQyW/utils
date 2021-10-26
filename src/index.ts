@@ -193,6 +193,7 @@ export * from './partialRight';
 export * from './partition';
 export * from './pascalCase';
 export * from './pathCase';
+export * from './pick';
 export * from './pull';
 export * from './pullAll';
 export * from './pullAllBy';

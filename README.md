@@ -1722,6 +1722,13 @@ pathCase('PascalCase'); // => 'pascal/case'
 pathCase('version 1.2.10'); // => 'version/1/2/10'
 ```
 
+- [pick](https://lodash.com/docs/#pick)
+
+```typescript
+const object = { a: 1, b: '2', c: 3 };
+pick(object, ['a', 'c']); // => { 'a': 1, 'c': 3 }
+```
+
 - [pull](https://lodash.com/docs/#pull)
 
 ```typescript
