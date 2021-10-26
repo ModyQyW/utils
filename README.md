@@ -1418,6 +1418,18 @@ keyBy(array, function (o) {
 keyBy(array, 'dir'); // => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }
 ```
 
+- [keys](https://lodash.com/docs/#keys)
+
+```typescript
+function Foo() {
+  this.a = 1;
+  this.b = 2;
+}
+Foo.prototype.c = 3;
+keys(new Foo()); // => ['a', 'b'] (iteration order is not guaranteed)
+keys('hi'); // => ['0', '1']
+```
+
 - [last](https://lodash.com/docs/#last)
 
 ```typescript
