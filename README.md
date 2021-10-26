@@ -2252,6 +2252,26 @@ toString([1, 2, 3]); // => '1,2,3'
 ```
 
 - [toUuid](./src/toUuid.ts)
+- [transform](https://lodash.com/docs/#transform)
+
+```typescript
+transform(
+  [2, 3, 4],
+  function (result, n) {
+    result.push((n *= n));
+    return n % 2 == 0;
+  },
+  [],
+); // => [4, 9]
+transform(
+  { a: 1, b: 2, c: 1 },
+  function (result, value, key) {
+    (result[value] || (result[value] = [])).push(key);
+  },
+  {},
+); // => { '1': ['a', 'c'], '2': ['b'] }
+```
+
 - [trim](https://lodash.com/docs/#trim)
 
 ```typescript

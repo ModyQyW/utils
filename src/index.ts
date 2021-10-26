@@ -255,6 +255,7 @@ export * from './toSafeInteger';
 export * from './toShortUuid';
 export * from './toString';
 export * from './toUuid';
+export * from './transform';
 export * from './trim';
 export * from './trimEnd';
 export * from './trimStart';
