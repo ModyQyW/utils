@@ -168,7 +168,6 @@ Please see links for more infos.
 - [isEvalError](./src/isEvalError.ts)
 - [isEvenNumber](./src/isEvenNumber.ts)
 - [isFinite](https://lodash.com/docs/#isFinite)
-- [isFloat](./src/isFloat.ts)
 - [isFunction](https://lodash.com/docs/#isFunction)
 - [isHash](https://github.com/validatorjs/validator.js#validators)
 - [isHexColor](https://github.com/validatorjs/validator.js#validators)
@@ -271,7 +270,7 @@ Please see links for more infos.
 - [reverse](https://lodash.com/docs/#reverse)
 - [rest](https://lodash.com/docs/#rest)
 - [result](https://lodash.com/docs/#result)
-- [retry](https://github.com/vercel/async-retry)
+- [retry](https://github.com/sindresorhus/p-retry)
 - [round](https://lodash.com/docs/#round)
 - [sample](https://lodash.com/docs/#sample)
 - [sampleSize](https://lodash.com/docs/#sampleSize)
@@ -357,10 +356,10 @@ Please see links for more infos.
 
 This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
 
-- [async-retry](https://github.com/vercel/async-retry)
 - [change-case](https://github.com/blakeembrey/change-case)
 - [lodash-es](https://github.com/lodash/lodash)
 - [nanoid](https://github.com/ai/nanoid)
+- [p-retry](https://github.com/sindresorhus/p-retry)
 - [short-uuid](https://github.com/oculus42/short-uuid)
 - [validator](https://github.com/validatorjs/validator.js)
 
