@@ -113,6 +113,7 @@ export * from './isError';
 export * from './isEvalError';
 export * from './isEvenNumber';
 export * from './isFinite';
+export * from './isFloat';
 export * from './isFunction';
 export * from './isHash';
 export * from './isHexColor';

@@ -168,6 +168,7 @@ Please see links for more infos.
 - [isEvalError](./src/isEvalError.ts)
 - [isEvenNumber](./src/isEvenNumber.ts)
 - [isFinite](https://lodash.com/docs/#isFinite)
+- [isFloat](./src/isFloat.ts)
 - [isFunction](https://lodash.com/docs/#isFunction)
 - [isHash](https://github.com/validatorjs/validator.js#validators)
 - [isHexColor](https://github.com/validatorjs/validator.js#validators)
