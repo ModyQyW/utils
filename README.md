@@ -353,6 +353,12 @@ Please see links for more infos.
 - [zipObjectDeep](https://lodash.com/docs/#zipObjectDeep)
 - [zipWith](https://lodash.com/docs/#zipWith)
 
+## Migration
+
+### Migrate v2 from v1
+
+- Replace [async-retry](https://github.com/vercel/async-retry) with [p-retry](https://github.com/sindresorhus/p-retry). Check your `retry` options.
+
 ## More
 
 This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
