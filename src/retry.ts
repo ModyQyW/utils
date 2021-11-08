@@ -1,3 +1,1 @@
-import retry from 'async-retry';
-
-export { retry };
+export { default as retry } from 'p-retry';
