@@ -1,3 +1,1 @@
-import isHSL from 'validator/es/lib/isHSL';
-
-export { isHSL };
+export { default as isHSL } from 'validator/es/lib/isHSL';

@@ -1,3 +1,1 @@
-import isRgbColor from 'validator/es/lib/isRgbColor';
-
-export { isRgbColor };
+export { default as isRgbColor } from 'validator/es/lib/isRgbColor';

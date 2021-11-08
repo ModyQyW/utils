@@ -1,3 +1,1 @@
-import isSemver from 'validator/es/lib/isSemVer';
-
-export { isSemver };
+export { default as isSemver } from 'validator/es/lib/isSemVer';

@@ -1,3 +1,1 @@
-import isEmail from 'validator/es/lib/isEmail';
-
-export { isEmail };
+export { default as isEmail } from 'validator/es/lib/isEmail';

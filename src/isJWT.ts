@@ -1,3 +1,1 @@
-import isJWT from 'validator/es/lib/isJWT';
-
-export { isJWT };
+export { default as isJWT } from 'validator/es/lib/isJWT';

@@ -1,3 +1,1 @@
-import isMobilePhone from 'validator/es/lib/isMobilePhone';
-
-export { isMobilePhone };
+export { default as isMobilePhone } from 'validator/es/lib/isMobilePhone';

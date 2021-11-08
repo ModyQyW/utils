@@ -1,3 +1,1 @@
-import isIdentityCard from 'validator/es/lib/isIdentityCard';
-
-export { isIdentityCard };
+export { default as isIdentityCard } from 'validator/es/lib/isIdentityCard';

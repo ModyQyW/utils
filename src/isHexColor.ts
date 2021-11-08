@@ -1,3 +1,1 @@
-import isHexColor from 'validator/es/lib/isHexColor';
-
-export { isHexColor };
+export { default as isHexColor } from 'validator/es/lib/isHexColor';

@@ -1,3 +1,1 @@
-import isJSON from 'validator/es/lib/isJSON';
-
-export { isJSON };
+export { default as isJSON } from 'validator/es/lib/isJSON';
