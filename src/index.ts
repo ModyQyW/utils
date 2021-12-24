@@ -2,6 +2,7 @@ export * from './add';
 export * from './after';
 export * from './arrayIncludes';
 export * from './ary';
+export * from './asMutable';
 export * from './assign';
 export * from './assignIn';
 export * from './assignInWith';
