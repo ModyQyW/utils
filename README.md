@@ -54,7 +54,10 @@ Please see links for more infos.
 
 - [add](https://lodash.com/docs/#add)
 - [after](https://lodash.com/docs/#after)
+- [arrayIncludes](https://github.com/sindresorhus/ts-extras)
 - [ary](https://lodash.com/docs/#ary)
+- [asMutable](https://github.com/sindresorhus/ts-extras)
+- [assert](https://github.com/sindresorhus/is)
 - [assign](https://lodash.com/docs/#assign)
 - [assignIn](https://lodash.com/docs/#assignIn)
 - [assignInWith](https://lodash.com/docs/#assignInWith)
@@ -151,6 +154,7 @@ Please see links for more infos.
 - [invertBy](https://lodash.com/docs/#invertBy)
 - [invoke](https://lodash.com/docs/#invoke)
 - [invokeMap](https://lodash.com/docs/#invokeMap)
+- [is](https://github.com/sindresorhus/is)
 - [isArguments](https://lodash.com/docs/#isArguments)
 - [isArray](https://lodash.com/docs/#isArray)
 - [isArrayBuffer](https://lodash.com/docs/#isArrayBuffer)
@@ -159,6 +163,7 @@ Please see links for more infos.
 - [isBoolean](https://lodash.com/docs/#isBoolean)
 - [isBuffer](https://lodash.com/docs/#isBuffer)
 - [isDate](https://lodash.com/docs/#isDate)
+- [isDefined](https://github.com/sindresorhus/ts-extras)
 - [isElement](https://lodash.com/docs/#isElement)
 - [isEmail](https://github.com/validatorjs/validator.js#validators)
 - [isEmpty](https://lodash.com/docs/#isEmpty)
@@ -238,6 +243,10 @@ Please see links for more infos.
 - [noop](https://lodash.com/docs/#noop)
 - [now](https://lodash.com/docs/#now)
 - [nth](https://lodash.com/docs/#nth)
+- [objectEntries](https://github.com/sindresorhus/ts-extras)
+- [objectFromEntries](https://github.com/sindresorhus/ts-extras)
+- [objectHasOwn](https://github.com/sindresorhus/ts-extras)
+- [objectKeys](https://github.com/sindresorhus/ts-extras)
 - [omit](https://lodash.com/docs/#omit)
 - [omitBy](https://lodash.com/docs/#omitBy)
 - [once](https://lodash.com/docs/#once)
@@ -364,10 +373,12 @@ Please see links for more infos.
 This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
 
 - [change-case](https://github.com/blakeembrey/change-case)
+- [@sindresorhus/is](https://github.com/sindresorhus/is)
 - [lodash-es](https://github.com/lodash/lodash)
 - [nanoid](https://github.com/ai/nanoid)
 - [p-retry](https://github.com/sindresorhus/p-retry)
 - [short-uuid](https://github.com/oculus42/short-uuid)
+- [ts-extras](https://github.com/sindresorhus/ts-extras)
 - [validator](https://github.com/validatorjs/validator.js)
 
 If this library does not solve your problems, I suggest you look up the solution in the following libraries.
