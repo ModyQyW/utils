@@ -1,5 +1,6 @@
 export * from './add';
 export * from './after';
+export * from './arrayIncludes';
 export * from './ary';
 export * from './assign';
 export * from './assignIn';
