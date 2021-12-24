@@ -96,6 +96,7 @@ export * from './invert';
 export * from './invertBy';
 export * from './invoke';
 export * from './invokeMap';
+export * from './is';
 export * from './isArguments';
 export * from './isArray';
 export * from './isArrayBuffer';
