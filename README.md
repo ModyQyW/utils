@@ -48,9 +48,9 @@ export default defineConfig({
 
 ### API
 
-Please see [MDN docs](https://developer.mozilla.org/) for native APIs support. Some APIs in this library can be replaced by native APIs.
+Please see [MDN docs](https://developer.mozilla.org/) for native APIs support.
 
-Please see links for more infos.
+Some APIs in this library can be replaced by native APIs. Please see [you don't (may not) need lodash/underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) and [you might not need lodash](https://youmightnotneed.com/lodash/) for more infos.
 
 - [add](https://lodash.com/docs/#add)
 - [after](https://lodash.com/docs/#after)
