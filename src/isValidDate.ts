@@ -1,3 +1,4 @@
+// eslint-disable-next-line you-dont-need-lodash-underscore/is-nan
 import { isDate, isNaN } from 'lodash-es';
 
 /**

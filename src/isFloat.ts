@@ -1,3 +1,4 @@
+// eslint-disable-next-line you-dont-need-lodash-underscore/is-integer
 import { isNumber, isInteger } from 'lodash-es';
 
 /**
