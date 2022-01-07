@@ -6,7 +6,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve('src', 'index.ts'),
       name: 'UTILS',
-      fileName: 'index',
+      fileName: (format) => `index.${format}.${format === 'es' ? 'm' : ''}js`,
     },
   },
 });
