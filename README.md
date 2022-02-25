@@ -1,5 +1,9 @@
 # @modyqyw/utils
 
+**DEPRECATED.**
+
+**This library is intended to aggregate many useful libraries into one for developers to use. However, we often install and use libraries manually to just meet the needs in actual development. Also, keeping up with the updates of different libraries is a big challenge. So this library is deprecated.**
+
 Shareable utils for different JavaScript/TypeScript projects.
 
 [Plan](https://github.com/ModyQyW/utils/issues/1)
