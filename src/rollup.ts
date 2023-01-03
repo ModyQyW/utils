@@ -134,7 +134,7 @@ export function rollupIndexConfig(
   return rollupOptions;
 }
 
-export function rollupTypesConfig(
+export function rollupIndexTypesConfig(
   packageJson: PackageJson,
   { input = './src/index.ts', ...options }: Partial<RollupOptions> = {},
 ) {
