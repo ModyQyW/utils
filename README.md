@@ -1,411 +1,220 @@
 # @modyqyw/utils
 
-**DEPRECATED.**
+[![License](https://img.shields.io/github/license/ModyQyW/utils)](https://github.com/ModyQyW/utils/blob/main/LICENSE)
 
-**This library is intended to aggregate many useful libraries into one for developers to use. However, we often install and use libraries manually to just meet the needs in actual development. Also, keeping up with the updates of different libraries is a big challenge. So this library is deprecated.**
+[![npm](https://img.shields.io/npm/v/@modyqyw/utils)](https://www.npmjs.com/package/@modyqyw/utils/)
 
-Shareable utils for different JavaScript/TypeScript projects.
+Opinionated utils for JavaScript / TypeScript projects. Requires `node >= 14.18`.
 
-[Plan](https://github.com/ModyQyW/utils/issues/1)
-
-[Github](https://github.com/ModyQyW/utils) | [Gitee](https://github.com/ModyQyW/utils)
-
-## Usage
-
-### NPM
+## Installation
 
 ```shell
 npm install @modyqyw/utils
 ```
 
-```javascript
-// esm
-import { ... } from '@modyqyw/utils';
-// umd
-const { ... } = require('@modyqyw/utils');
-// do something with them
-...
-```
+## API
 
-### CDN
+### base
 
-```html
-<!-- jsdelivr -->
-<script src="https://cdn.jsdelivr.net/npm/@modyqyw/utils"></script>
-<!-- unpkg -->
-<script src="https://unpkg.com/@modyqyw/utils"></script>
-```
+#### debounce
 
-Then use `window.UTILS` directly.
+Reexported from [lodash.debounce](https://lodash.com/docs#debounce).
 
-### Vite
+#### throttle
+
+Reexported from [lodash.throttle](https://lodash.com/docs#throttle).
+
+#### isEqual
+
+Reexported from [lodash.isEqual](https://lodash.com/docs#isEqual).
+
+#### merge
+
+Reexported from [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts).
+
+#### nanoid
+
+Reexported from [nanoid](https://github.com/ai/nanoid).
+
+#### timestamp
+
+Get millisecond-based timestamp.
 
 ```typescript
-import { defineConfig } from 'vite';
+import { timestamp } from '@modyqyw/utils';
 
-export default defineConfig({
-  optimizeDeps: {
-    include: ['@modyqyw/utils'],
-  },
-});
+const ts = timestamp();
 ```
 
-### API
+### function
 
-Please see [MDN docs](https://developer.mozilla.org/) for native APIs support.
+#### noop
 
-Some APIs in this library can be replaced by native APIs. Please see [you don't (may not) need lodash/underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) and [you might not need lodash](https://youmightnotneed.com/lodash/) for more infos.
+Empty function.
 
-- [add](https://lodash.com/docs/#add)
-- [after](https://lodash.com/docs/#after)
-- [arrayIncludes](https://github.com/sindresorhus/ts-extras)
-- [ary](https://lodash.com/docs/#ary)
-- [asMutable](https://github.com/sindresorhus/ts-extras)
-- [assert](https://github.com/sindresorhus/is)
-- [assign](https://lodash.com/docs/#assign)
-- [assignIn](https://lodash.com/docs/#assignIn)
-- [assignInWith](https://lodash.com/docs/#assignInWith)
-- [assignWith](https://lodash.com/docs/#assignIn)
-- [at](https://lodash.com/docs/#at)
-- [before](https://lodash.com/docs/#before)
-- [bind](https://lodash.com/docs/#bind)
-- [bindKey](https://lodash.com/docs/#bindKey)
-- [camelCase](https://github.com/blakeembrey/change-case#camelcase)
-- [capitalCase](https://github.com/blakeembrey/change-case#capitalcase)
-- [castArray](https://lodash.com/docs/#castArray)
-- [ceil](https://lodash.com/docs/#ceil)
-- [chunk](https://lodash.com/docs/#chunk)
-- [clamp](https://lodash.com/docs/#clamp)
-- [clone](https://lodash.com/docs/#clone)
-- [cloneDeep](https://lodash.com/docs/#cloneDeep)
-- [cloneDeepWith](https://lodash.com/docs/#cloneDeepWith)
-- [cloneWith](https://lodash.com/docs/#cloneWith)
-- [compact](https://lodash.com/docs/#compact)
-- [concat](https://lodash.com/docs/#concat)
-- [conformsTo](https://lodash.com/docs/#conformsTo)
-- [constantCase](https://github.com/blakeembrey/change-case#constantcase)
-- [countBy](https://lodash.com/docs/#counyBy)
-- [create](https://lodash.com/docs/#create)
-- [curry](https://lodash.com/docs/#curry)
-- [curryRight](https://lodash.com/docs/#curryRight)
-- [debounce](https://lodash.com/docs/#debounce)
-- [deburr](https://lodash.com/docs/#deburr)
-- [defaults](https://lodash.com/docs/#defaults)
-- [defaultsDeep](https://lodash.com/docs/#defaultsDeep)
-- [defer](https://lodash.com/docs/#defer)
-- [delay](https://lodash.com/docs/#delay)
-- [difference](https://lodash.com/docs/#difference)
-- [differenceBy](https://lodash.com/docs/#differenceBy)
-- [differenceWith](https://lodash.com/docs/#differenceWith)
-- [dotCase](https://github.com/blakeembrey/change-case#dotcase)
-- [divide](https://lodash.com/docs/#divide)
-- [drop](https://lodash.com/docs/#drop)
-- [dropRight](https://lodash.com/docs/#dropRight)
-- [dropRightWhile](https://lodash.com/docs/#dropRightWhile)
-- [dropWhile](https://lodash.com/docs/#dropWhile)
-- [endsWith](https://lodash.com/docs/#endsWith)
-- [eq](https://lodash.com/docs/#eq)
-- [escape](https://lodash.com/docs/#escape)
-- [escapeRegExp](https://lodash.com/docs/#escapeRegExp)
-- [every](https://lodash.com/docs/#every)
-- [fakeAvatar](./src/fakeAvatar.ts)
-- [fakeImage](./src/fakeImage.ts)
-- [fakeLorem](./src/fakeLorem.ts) - same as fakeLoremParagraph
-- [fakeLoremParagraph](./src/fakeLoremParagraph.ts)
-- [fakeLoremSentence](./src/fakeLoremSentence.ts)
-- [fakeLoremWord](./src/fakeLoremWord.ts)
-- [fill](https://lodash.com/docs/#fill)
-- [filter](https://lodash.com/docs/#filter)
-- [find](https://lodash.com/docs/#find)
-- [findIndex](https://lodash.com/docs/#findIndex)
-- [findKey](https://lodash.com/docs/#findKey)
-- [findLast](https://lodash.com/docs/#findLast)
-- [findLastIndex](https://lodash.com/docs/#findLastIndex)
-- [findLastKey](https://lodash.com/docs/#findLastKey)
-- [flatMap](https://lodash.com/docs/#flatMap)
-- [flatMapDeep](https://lodash.com/docs/#flatMapDeep)
-- [flatMapDepth](https://lodash.com/docs/#flatMapDepth)
-- [flatten](https://lodash.com/docs/#flatten)
-- [flattenDeep](https://lodash.com/docs/#flattenDeep)
-- [flattenDepth](https://lodash.com/docs/#flattenDepth)
-- [flip](https://lodash.com/docs/#flip)
-- [floor](https://lodash.com/docs/#floor)
-- [forEach](https://lodash.com/docs/#forEach)
-- [forEachRight](https://lodash.com/docs/#forEachRight)
-- [forIn](https://lodash.com/docs/#forIn)
-- [forInRight](https://lodash.com/docs/#forInRight)
-- [forOwn](https://lodash.com/docs/#forOwn)
-- [forOwnRight](https://lodash.com/docs/#forOwnRight)
-- [fromPairs](https://lodash.com/docs/#fromPairs)
-- [functions](https://lodash.com/docs/#functions)
-- [functionsIn](https://lodash.com/docs/#functionsIn)
-- [get](https://lodash.com/docs/#get)
-- [groupBy](https://lodash.com/docs/#groupBy)
-- [gt](https://lodash.com/docs/#gt)
-- [gte](https://lodash.com/docs/#gte)
-- [has](https://lodash.com/docs/#has)
-- [hasIn](https://lodash.com/docs/#hasIn)
-- [head](https://lodash.com/docs/#head)
-- [headerCase](https://github.com/blakeembrey/change-case#headercase)
-- [includes](https://lodash.com/docs/#includes)
-- [indexOf](https://lodash.com/docs/#indexOf)
-- [initial](https://lodash.com/docs/#initial)
-- [inRange](https://lodash.com/docs/#inRange)
-- [intersection](https://lodash.com/docs/#intersection)
-- [intersectionBy](https://lodash.com/docs/#intersectionBy)
-- [intersectionWith](https://lodash.com/docs/#intersectionWith)
-- [invert](https://lodash.com/docs/#invert)
-- [invertBy](https://lodash.com/docs/#invertBy)
-- [invoke](https://lodash.com/docs/#invoke)
-- [invokeMap](https://lodash.com/docs/#invokeMap)
-- [is](https://github.com/sindresorhus/is)
-- [isArguments](https://lodash.com/docs/#isArguments)
-- [isArray](https://lodash.com/docs/#isArray)
-- [isArrayBuffer](https://lodash.com/docs/#isArrayBuffer)
-- [isArrayLike](https://lodash.com/docs/#isArrayLike)
-- [isArrayLikeObject](https://lodash.com/docs/#isArrayLikeObject)
-- [isBoolean](https://lodash.com/docs/#isBoolean)
-- [isBuffer](https://lodash.com/docs/#isBuffer)
-- [isDate](https://lodash.com/docs/#isDate)
-- [isDefined](https://github.com/sindresorhus/ts-extras)
-- [isElement](https://lodash.com/docs/#isElement)
-- [isEmail](https://github.com/validatorjs/validator.js#validators)
-- [isEmpty](https://lodash.com/docs/#isEmpty)
-- [isEqual](https://lodash.com/docs/#isEqual)
-- [isEqualWith](https://lodash.com/docs/#isEqualWith)
-- [isError](https://lodash.com/docs/#isError)
-- [isEvalError](./src/isEvalError.ts)
-- [isEvenNumber](./src/isEvenNumber.ts)
-- [isFinite](https://lodash.com/docs/#isFinite)
-- [isFloat](./src/isFloat.ts)
-- [isFunction](https://lodash.com/docs/#isFunction)
-- [isHash](https://github.com/validatorjs/validator.js#validators)
-- [isHexColor](https://github.com/validatorjs/validator.js#validators)
-- [isHSL](https://github.com/validatorjs/validator.js#validators)
-- [isIdentityCard](https://github.com/validatorjs/validator.js#validators)
-- [isInteger](https://lodash.com/docs/#isInteger)
-- [isJSON](https://github.com/validatorjs/validator.js#validators)
-- [isJWT](https://github.com/validatorjs/validator.js#validators)
-- [isLength](https://lodash.com/docs/#isLength)
-- [isMap](https://lodash.com/docs/#isMap)
-- [isMatch](https://lodash.com/docs/#isMatch)
-- [isMatchWith](https://lodash.com/docs/#isMatchWith)
-- [isMobilePhone](https://github.com/validatorjs/validator.js#validators)
-- [isNaN](https://lodash.com/docs/#isNaN)
-- [isNative](https://lodash.com/docs/#isNative)
-- [isNil](https://lodash.com/docs/#isNil)
-- [isNull](https://lodash.com/docs/#isNull)
-- [isNumber](https://lodash.com/docs/#isNumber)
-- [isObject](https://lodash.com/docs/#isObject)
-- [isObjectLike](https://lodash.com/docs/#isObjectLike)
-- [isOddNumber](./src/isOddNumber.ts)
-- [isPlainObject](https://lodash.com/docs/#isPlainObject)
-- [isRangeError](./src/isRangeError.ts)
-- [isReferenceError](./src/isReferenceError.ts)
-- [isRegExp](https://lodash.com/docs/#isRegExp)
-- [isRgbColor](https://github.com/validatorjs/validator.js#validators)
-- [isSafeInteger](https://lodash.com/docs/#isSafeInteger)
-- [isSemver](https://github.com/validatorjs/validator.js#validators)
-- [isSet](https://lodash.com/docs/#isSet)
-- [isString](https://lodash.com/docs/#isString)
-- [isStrongPassword](https://github.com/validatorjs/validator.js#validators)
-- [isSymbol](https://lodash.com/docs/#isSymbol)
-- [isSyntaxError](./src/isSyntaxError.ts)
-- [isTypedArray](https://lodash.com/docs/#isTypedArray)
-- [isTypeError](./src/isTypeError.ts)
-- [isUndefined](https://lodash.com/docs/#isUndefined)
-- [isURIError](./src/isURIError.ts)
-- [isValidDate](./src/isValidDate.ts)
-- [isWeakMap](https://lodash.com/docs/#isWeakMap)
-- [isWeakSet](https://lodash.com/docs/#isWeakSet)
-- [join](https://lodash.com/docs/#join)
-- [kebabCase](https://lodash.com/docs/#kebabCase)
-- [keyBy](https://lodash.com/docs/#keyBy)
-- [keys](https://lodash.com/docs/#keys)
-- [keysIn](https://lodash.com/docs/#keysIn)
-- [last](https://lodash.com/docs/#last)
-- [lastIndexOf](https://lodash.com/docs/#lastIndexOf)
-- [lowerCase](https://lodash.com/docs/#lowerCase)
-- [lowerFirst](https://lodash.com/docs/#lowerFirst)
-- [lt](https://lodash.com/docs/#lt)
-- [lte](https://lodash.com/docs/#lte)
-- [map](https://lodash.com/docs/#map)
-- [mapKeys](https://lodash.com/docs/#mapKeys)
-- [mapValues](https://lodash.com/docs/#mapValues)
-- [max](https://lodash.com/docs/#max)
-- [maxBy](https://lodash.com/docs/#maxBy)
-- [mean](https://lodash.com/docs/#mean)
-- [meanBy](https://lodash.com/docs/#meanBy)
-- [memoize](https://lodash.com/docs/#memoize)
-- [merge](https://lodash.com/docs/#merge)
-- [min](https://lodash.com/docs/#min)
-- [minBy](https://lodash.com/docs/#minBy)
-- [multiply](https://lodash.com/docs/#multiply)
-- [nanoid](https://github.com/ai/nanoid)
-- [negate](https://lodash.com/docs/#negate)
-- [noCase](https://github.com/blakeembrey/change-case#nocase)
-- [noop](https://lodash.com/docs/#noop)
-- [now](https://lodash.com/docs/#now)
-- [nth](https://lodash.com/docs/#nth)
-- [objectEntries](https://github.com/sindresorhus/ts-extras)
-- [objectFromEntries](https://github.com/sindresorhus/ts-extras)
-- [objectHasOwn](https://github.com/sindresorhus/ts-extras)
-- [objectKeys](https://github.com/sindresorhus/ts-extras)
-- [omit](https://lodash.com/docs/#omit)
-- [omitBy](https://lodash.com/docs/#omitBy)
-- [once](https://lodash.com/docs/#once)
-- [orderBy](https://lodash.com/docs/#orderBy)
-- [overArgs](https://lodash.com/docs/#overArgs)
-- [pad](https://lodash.com/docs/#pad)
-- [padEnd](https://lodash.com/docs/#padEnd)
-- [padStart](https://lodash.com/docs/#padStart)
-- [paramCase](https://github.com/blakeembrey/change-case#paramcase)
-- [parseInt](https://lodash.com/docs/#parseInt)
-- [partial](https://lodash.com/docs/#partial)
-- [partialRight](https://lodash.com/docs/#partialRight)
-- [partition](https://lodash.com/docs/#partition)
-- [pascalCase](https://github.com/blakeembrey/change-case#pascalcase)
-- [pathCase](https://github.com/blakeembrey/change-case#pathcase)
-- [pick](https://lodash.com/docs/#pick)
-- [pickBy](https://lodash.com/docs/#pickBy)
-- [pull](https://lodash.com/docs/#pull)
-- [pullAll](https://lodash.com/docs/#pullAll)
-- [pullAllBy](https://lodash.com/docs/#pullAllBy)
-- [pullAllWith](https://lodash.com/docs/#pullAllWith)
-- [pullAt](https://lodash.com/docs/#pullAt)
-- [random](https://lodash.com/docs/#random)
-- [rearg](https://lodash.com/docs/#rearg)
-- [reduce](https://lodash.com/docs/#reduce)
-- [reduceRight](https://lodash.com/docs/#reduceRight)
-- [reject](https://lodash.com/docs/#reject)
-- [remove](https://lodash.com/docs/#remove)
-- [repeat](https://lodash.com/docs/#repeat)
-- [replace](https://lodash.com/docs/#replace)
-- [reverse](https://lodash.com/docs/#reverse)
-- [rest](https://lodash.com/docs/#rest)
-- [result](https://lodash.com/docs/#result)
-- [retry](https://github.com/sindresorhus/p-retry)
-- [round](https://lodash.com/docs/#round)
-- [sample](https://lodash.com/docs/#sample)
-- [sampleSize](https://lodash.com/docs/#sampleSize)
-- [slice](https://lodash.com/docs/#slice)
-- [sentenceCase](https://github.com/blakeembrey/change-case#sentencecase)
-- [set](https://lodash.com/docs/#set)
-- [setWith](https://lodash.com/docs/#setWith)
-- [shortUuid](./src/shortUuid.ts)
-- [shuffle](https://lodash.com/docs/#shuffle)
-- [size](https://lodash.com/docs/#size)
-- [sleep](./src/sleep.ts)
-- [snakeCase](https://github.com/blakeembrey/change-case#snakecase)
-- [some](https://lodash.com/docs/#some)
-- [sortBy](https://lodash.com/docs/#sortBy)
-- [sortedIndex](https://lodash.com/docs/#sortedIndex)
-- [sortedIndexBy](https://lodash.com/docs/#sortedIndexBy)
-- [sortedLastIndexOf](https://lodash.com/docs/#sortedLastIndexOf)
-- [sortedUniq](https://lodash.com/docs/#sortedUniq)
-- [sortedUniqBy](https://lodash.com/docs/#sortedUniqBy)
-- [split](https://lodash.com/docs/#split)
-- [spread](https://lodash.com/docs/#spread)
-- [startCase](https://lodash.com/docs/#startCase)
-- [startsWith](https://lodash.com/docs/#startsWith)
-- [subtract](https://lodash.com/docs/#subtract)
-- [sum](https://lodash.com/docs/#sum)
-- [sumBy](https://lodash.com/docs/#sumBy)
-- [tail](https://lodash.com/docs/#tail)
-- [take](https://lodash.com/docs/#take)
-- [takeRight](https://lodash.com/docs/#takeRight)
-- [takeRightWhile](https://lodash.com/docs/#takeRightWhile)
-- [takeWhile](https://lodash.com/docs/#takeWhile)
-- [throttle](https://lodash.com/docs/#throttle)
-- [toArray](https://lodash.com/docs/#toArray)
-- [toFinite](https://lodash.com/docs/#toFinite)
-- [toInteger](https://lodash.com/docs/#toInteger)
-- [toLength](https://lodash.com/docs/#toLength)
-- [toLower](https://lodash.com/docs/#toLower)
-- [toNumber](https://lodash.com/docs/#toNumber)
-- [toPairs](https://lodash.com/docs/#toPairs)
-- [toPairsIn](https://lodash.com/docs/#toPairsIn)
-- [toPlainObject](https://lodash.com/docs/#toPlainObject)
-- [toSafeInteger](https://lodash.com/docs/#toSafeInteger)
-- [toShortUuid](./src/toShortUuid.ts)
-- [toString](https://lodash.com/docs/#toString)
-- [toUpper](https://lodash.com/docs/#toUpper)
-- [toUuid](./src/toUuid.ts)
-- [transform](https://lodash.com/docs/#transform)
-- [trim](https://lodash.com/docs/#trim)
-- [trimEnd](https://lodash.com/docs/#trimEnd)
-- [trimStart](https://lodash.com/docs/#trimStart)
-- [truncate](https://lodash.com/docs/#truncate)
-- [unary](https://lodash.com/docs/#unary)
-- [unescape](https://lodash.com/docs/#unescape)
-- [union](https://lodash.com/docs/#union)
-- [unionBy](https://lodash.com/docs/#unionBy)
-- [unionWith](https://lodash.com/docs/#unionWith)
-- [uniq](https://lodash.com/docs/#uniq)
-- [uniqBy](https://lodash.com/docs/#uniqBy)
-- [uniqueId](https://lodash.com/docs/#uniqueId)
-- [uniqWith](https://lodash.com/docs/#uniqWith)
-- [unset](https://lodash.com/docs/#unset)
-- [unzip](https://lodash.com/docs/#unzip)
-- [unzipWith](https://lodash.com/docs/#unzipWith)
-- [update](https://lodash.com/docs/#update)
-- [updateWith](https://lodash.com/docs/#updateWith)
-- [upperCase](https://lodash.com/docs/#upperCase)
-- [upperFirst](https://lodash.com/docs/#upperFirst)
-- [uuid](./src/uuid.ts)
-- [values](https://lodash.com/docs/#values)
-- [valuesIn](https://lodash.com/docs/#valuesIn)
-- [without](https://lodash.com/docs/#without)
-- [words](https://lodash.com/docs/#words)
-- [wrap](https://lodash.com/docs/#wrap)
-- [xor](https://lodash.com/docs/#xor)
-- [xorBy](https://lodash.com/docs/#xorBy)
-- [xorWith](https://lodash.com/docs/#xorWith)
-- [zip](https://lodash.com/docs/#zip)
-- [zipObject](https://lodash.com/docs/#zipObject)
-- [zipObjectDeep](https://lodash.com/docs/#zipObjectDeep)
-- [zipWith](https://lodash.com/docs/#zipWith)
+```typescript
+import { noop } from '@modyqyw/utils';
 
-## Migration
+// nothing happen
+noop();
+```
 
-### Migrate v2 from v1
+### promise
 
-- Replace [async-retry](https://github.com/vercel/async-retry) with [p-retry](https://github.com/sindresorhus/p-retry). Check your `retry` options.
+#### pRetry
 
-## More
+Reexported from [p-retry](https://github.com/sindresorhus/p-retry).
 
-This simple (maybe powerful) library is implemented using the following libraries and will hopefully solve many development problems.
+### rollup
 
-- [change-case](https://github.com/blakeembrey/change-case)
-- [@sindresorhus/is](https://github.com/sindresorhus/is)
-- [lodash-es](https://github.com/lodash/lodash)
-- [nanoid](https://github.com/ai/nanoid)
-- [p-retry](https://github.com/sindresorhus/p-retry)
-- [short-uuid](https://github.com/oculus42/short-uuid)
-- [ts-extras](https://github.com/sindresorhus/ts-extras)
-- [validator](https://github.com/validatorjs/validator.js)
+You probably don't need this, unless you use `rollup` like me.
 
-If this library does not solve your problems, I suggest you look up the solution in the following libraries.
+#### rollupIsDevelopment
 
-- [convert](https://github.com/jonahsnider/convert)
-- [dayjs](https://github.com/iamkun/dayjs)
-- [faker](https://github.com/Marak/faker.js)
-- [format-rmb](https://github.com/bazingaedward/ChinaCurrency)
-- [fp-ts](https://gcanti.github.io/fp-ts/)
-- [futil-js](https://github.com/smartprocure/futil-js)
-- [gcoord](https://github.com/hujiulong/gcoord)
-- [lodash-es](https://github.com/lodash/lodash)
-- [mitt](https://github.com/developit/mitt)
-- [mockjs](https://github.com/nuysoft/Mock)
-- [mockjs-esm](https://gitee.com/dongzhongzhidong/Mock)
-- [numbro](https://github.com/BenjaminVanRyseghem/numbro)
-- [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
-- [qs](https://github.com/ljharb/qs)
-- [query-string](https://github.com/sindresorhus/query-string)
-- [ramda](https://github.com/ramda/ramda)
-- [remeda](https://remedajs.com/)
-- [ua-parser-js](https://github.com/faisalman/ua-parser-js)
-- [validator](https://github.com/validatorjs/validator.js)
-- [xe-utils](https://github.com/x-extends/xe-utils)
+Based on `watch` and check `process.env.ROLLUP_WATCH`.
 
-Great thanks to the authors and contributors of all these libraries. :D
+```typescript
+import { rollupIsDevelopment } from '@modyqyw/utils';
+
+const isDevelopment = rollupIsDevelopment();
+```
+
+#### rollupIsProduction
+
+The opposite of `rollupIsDevelopment`.
+
+#### rollupCjsFooter
+
+Try to patch `module.exports.default` into `module.exports`.
+
+#### rollupEsmBanner
+
+Try to add `__dirname` and `__filename` polyfills.
+
+#### rollupExternal
+
+Exclude all `dependencies` and `peerDependencies` in `package.json`. Also exclude `node` builtin modules.
+
+#### rollupHashbang
+
+Based on [rollup-plugin-hashbang](https://github.com/egoist/rollup-plugin-hashbang).
+
+#### rollupJson
+
+Based on [@rollup/plugin-json](https://github.com/rollup/plugins/tree/master/packages/json).
+
+#### rollupNodeResolve
+
+Based on [@rollup/plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve).
+
+#### rollupCommonjs
+
+Based on [@rollup/plugin-commonjs](https://github.com/rollup/plugins/tree/master/packages/commonjs).
+
+#### rollupEsbuild
+
+Based on [rollup-plugin-esbuild](https://github.com/egoist/rollup-plugin-esbuild).
+
+#### rollupBundleSize
+
+Based on [rollup-plugin-bundle-size](https://github.com/vimeo/rollup-plugin-bundle-size).
+
+#### rollupTerser
+
+Based on [@rollup/plugin-terser](https://github.com/rollup/plugins/tree/master/packages/terser).
+
+Only apply in production.
+
+#### rollupDts
+
+Based on [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts).
+
+#### rollupIndexConfig
+
+#### rollupTypesConfig
+
+#### rollupWorkerConfig
+
+#### rollupCliConfig
+
+Pass `package.json` data as first param and `rollup` options as second param. Merge default options and passed options shallowly.
+
+### string
+
+#### `change-case`
+
+Reexported from [change-case](https://github.com/blakeembrey/change-case).
+
+#### titleCase
+
+Reexported from [title-case](https://github.com/blakeembrey/change-case/tree/master/packages/title-case).
+
+#### lowerCase
+
+Reexported from [lowerCase](https://github.com/blakeembrey/change-case/tree/master/packages/lower-case).
+
+#### upperCase
+
+Reexported from [lowerCase](https://github.com/blakeembrey/change-case/tree/master/packages/upper-case).
+
+#### qs
+
+Reexported from [qs](https://github.com/ljharb/qs).
+
+#### toString
+
+Convert value to string. Try `value.toString()` first, then `Object.prototype.toString.call(value)`.
+
+```typescript
+import { toString } from '@modyqyw/utils';
+
+const string = toString(...);
+```
+
+### types
+
+#### is
+
+Reexported from [@sindresorhus/is](https://github.com/sindresorhus/is).
+
+#### assert
+
+Reexported from [@sindresorhus/is](https://github.com/sindresorhus/is).
+
+#### `type-fest`
+
+Reexported from [type-fest](https://github.com/sindresorhus/type-fest)
+
+#### Awaitable
+
+```typescript
+type Awaitable<T> = T | PromiseLike<T>;
+```
+
+### Nullable
+
+```typescript
+type Nullable<T> = T | null | undefined;
+```
+
+### Arrayble
+
+```typescript
+type Arrayable<T> = T | Array<T>;
+```
+
+### ElementOf
+
+```typescript
+type ElementOf<T> = T extends (infer E)[] ? E : never;
+```
+
+### Fn
+
+```typescript
+type Fn<T = void> = () => T;
+```
+
+## Acknowledges
+
+Inspired by [@antfu/utils](https://github.com/antfu/utils). Also thanks for all packages great jobs.

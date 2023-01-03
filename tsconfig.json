@@ -1,21 +1,29 @@
 {
-  "extends": "./node_modules/@modyqyw/fabric/tsconfig.base.json",
+  "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",
-    "jsx": "preserve",
-    "paths": {},
-    "types": [],
-    "target": "ESNext"
+    "baseUrl": ".",
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "resolveJsonModule": true,
+    "types": ["node"]
   },
   "include": [
-    "./**/.*.js",
-    "./**/*.js",
-    "./**/*.jsx",
-    "./**/.*.ts",
-    "./**/*.ts",
-    "./**/*.tsx",
-    "./**/*.vue",
-    "./**/*.svelte"
+    "**/.*.js",
+    "**/.*.cjs",
+    "**/.*.mjs",
+    "**/.*.ts",
+    "**/.*.cts",
+    "**/.*.mts",
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.ts",
+    "**/*.cts",
+    "**/*.mts",
+    "**/*.jsx",
+    "**/*.tsx",
+    "**/*.vue"
   ],
-  "exclude": [".cache", ".temp", ".tmp", "dist*", "node_modules"]
+  "exclude": ["**/node_modules", "**/dist"]
 }
