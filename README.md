@@ -67,7 +67,7 @@ Reexported from [p-retry](https://github.com/sindresorhus/p-retry).
 
 ### rollup
 
-You probably don't need this, unless you use `rollup` like me.
+You probably don't need this but need [tsup](https://github.com/egoist/tsup) or [unbuild](https://github.com/unjs/unbuild), unless you use `rollup` like me.
 
 #### rollupIsDevelopment
 
@@ -137,8 +137,6 @@ Based on [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts).
 
 #### rollupCliConfig
 
-#### rollupMultiEntryConfig (beta)
-
 Pass `package.json` data as first param and `rollup` options as second param. Merge default options and passed options shallowly.
 
 ```typescript
@@ -149,7 +147,6 @@ import {
   rollupIndexTypesConfig,
   rollupWorkerConfig,
   rollupCliConfig,
-  rollupMultiEntryConfig,
 } from '@modyqyw/utils';
 
 export default defineConfig([
@@ -158,7 +155,6 @@ export default defineConfig([
   rollupIndexTypesConfig(),
   rollupWorkerConfig(),
   rollupCliConfig(),
-  rollupMultiEntryConfig(),
 ]);
 ```
 
@@ -167,7 +163,6 @@ export default defineConfig([
 {
   "type": "module",
   "exports": {
-    // for multi entry, you have to update here
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs",
