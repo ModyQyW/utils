@@ -59,7 +59,8 @@ export function rollupMultiEntry(options?: RollupMultiEntryOptions) {
 }
 
 export function rollupHashbang() {
-  return hashbang();
+  // @ts-ignore
+  return (hashbang?.default || hashbang)();
 }
 
 export { RollupJsonOptions };
