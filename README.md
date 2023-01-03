@@ -168,9 +168,7 @@ export default defineConfig([
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
-    },
-    "./package.json": "./package.json",
-    "./*": "./dist/*"
+    }
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
