@@ -37,14 +37,17 @@ export const rollupEsmBanner: RollupAddonFunction = ({ modules }) => {
   return '';
 };
 
-export const rollupExternal = (packageJson?: PackageJson): RollupExternalOption => {
+export const rollupExternal = (
+  packageJson?: PackageJson,
+  noExternal?: string[],
+): RollupExternalOption => {
   const pkg = packageJson ?? getPackageJson();
   return [
     ...Object.keys(pkg.dependencies ?? {}),
     ...Object.keys(pkg.peerDependencies ?? {}),
     ...builtinModules,
     ...builtinModules.map((m) => `node:${m}`),
-  ];
+  ].filter((item) => !(noExternal ?? []).includes(item));
 };
 
 export function rollupHashbang() {
