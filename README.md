@@ -267,3 +267,11 @@ type Fn<T = void> = () => T;
 ## Acknowledges
 
 Inspired by [@antfu/utils](https://github.com/antfu/utils). Also thanks for all packages great jobs.
+
+## [Sponsors](https://github.com/ModyQyW/sponsors)
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/ModyQyW/sponsors/sponsorkit/sponsors.svg">
+    <img src="https://cdn.jsdelivr.net/gh/ModyQyW/sponsors/sponsorkit/sponsors.svg"/>
+  </a>
+</p>
