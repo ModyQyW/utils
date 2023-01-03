@@ -131,7 +131,7 @@ Based on [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts).
 
 #### rollupIndexConfig
 
-#### rollupTypesConfig
+#### rollupIndexTypesConfig
 
 #### rollupWorkerConfig
 
