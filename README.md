@@ -137,6 +137,8 @@ Based on [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts).
 
 #### rollupCliConfig
 
+#### rollupMultiEntryConfig (beta)
+
 Pass `package.json` data as first param and `rollup` options as second param. Merge default options and passed options shallowly.
 
 ```typescript
@@ -149,13 +151,16 @@ import {
   rollupIndexTypesConfig,
   rollupWorkerConfig,
   rollupCliConfig,
+  rollupMultiEntryConfig,
 } from '@modyqyw/utils';
 
 export default defineConfig([
+  // compose theme as you need
   rollupIndexConfig(),
   rollupIndexTypesConfig(),
   rollupWorkerConfig(),
   rollupCliConfig(),
+  rollupMultiEntryConfig(),
 ]);
 ```
 
@@ -164,6 +169,7 @@ export default defineConfig([
 {
   "type": "module",
   "exports": {
+    // for multi entry, you have to update here
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs",
@@ -173,12 +179,12 @@ export default defineConfig([
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  // object type bin
+  // object bin
   "bin": {
     "cli-name": "./dist/cli.mjs",
     "another-cli-name": "./dist/cli.mjs"
   },
-  // string type bin
+  // string bin
   "bin": ".dist/cli.mjs",
   "files": [
     "dist"
