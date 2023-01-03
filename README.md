@@ -143,8 +143,6 @@ Pass `package.json` data as first param and `rollup` options as second param. Me
 
 ```typescript
 // rollup.config.ts
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'rollup';
 import {
   rollupIndexConfig,
