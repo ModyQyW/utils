@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 3.0.4 (2023-01-03)
+
+- fix: `hashbang` is not a function
+- perf: `rollupCliConfig` set target to `node14.18` by default
+
 ## 3.0.3 (2023-01-03)
 
 - feat: add `getPackageJson`
