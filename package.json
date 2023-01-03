@@ -25,6 +25,7 @@
     "email": "wurui-dev@foxmail.com",
     "url": "https://modyqyw.github.io"
   },
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.js",
