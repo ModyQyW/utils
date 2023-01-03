@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0.5 (2023-01-03)
+
+- feat!: remove `rollupMultiEntryConfig`
+
 ## 3.0.4 (2023-01-03)
 
 - fix: `hashbang` is not a function
