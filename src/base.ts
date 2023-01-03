@@ -11,5 +11,5 @@ export { debounce, throttle, isEqual, deepmerge as merge, nanoid };
 
 export const timestamp = () => +Date.now();
 
-export const getPackageJson = () =>
-  JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf8')) as PackageJson;
+export const getPackageJson = (cwd = process.cwd()) =>
+  JSON.parse(readFileSync(resolve(cwd, 'package.json'), 'utf8')) as PackageJson;
