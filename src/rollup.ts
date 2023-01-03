@@ -64,6 +64,7 @@ export function rollupHashbang() {
 }
 
 export { RollupJsonOptions };
+/** Convert json to esm module */
 export function rollupJson(options?: RollupJsonOptions) {
   return json({
     preferConst: true,
@@ -72,6 +73,7 @@ export function rollupJson(options?: RollupJsonOptions) {
 }
 
 export { RollupNodeResolveOptions };
+/** Locate modules in node_modules */
 export function rollupNodeResolve(options?: RollupNodeResolveOptions) {
   return nodeResolve({
     preferBuiltins: true,
@@ -79,17 +81,19 @@ export function rollupNodeResolve(options?: RollupNodeResolveOptions) {
   });
 }
 
-export { RollupCommonJSOptions };
-export function rollupCommonjs(options?: RollupCommonJSOptions) {
-  return commonjs({
+export { RollupEsbuildOptions };
+/** Transpile codes */
+export function rollupEsbuild(options?: RollupEsbuildOptions) {
+  return esbuild({
+    target: 'es2017',
     ...options,
   });
 }
 
-export { RollupEsbuildOptions };
-export function rollupEsbuild(options?: RollupEsbuildOptions) {
-  return esbuild({
-    target: 'es2017',
+export { RollupCommonJSOptions };
+/** Converts commonjs modules to esm modules */
+export function rollupCommonjs(options?: RollupCommonJSOptions) {
+  return commonjs({
     ...options,
   });
 }
@@ -101,6 +105,7 @@ export function rollupBundleSize() {
 export interface RollupTerserOptions extends TerserOptions {
   maxWorkers?: number;
 }
+/** Minify */
 export function rollupTerser(options?: RollupTerserOptions) {
   return rollupIsProduction()
     ? terser({
@@ -116,6 +121,7 @@ export function rollupTerser(options?: RollupTerserOptions) {
 }
 
 export { RollupDtsOptions };
+/** Generate .d.ts */
 export function rollupDts(options?: RollupDtsOptions) {
   return dts({
     // https://github.com/Swatinem/rollup-plugin-dts/issues/143
@@ -138,10 +144,11 @@ export function rollupIndexConfig(
       { file: module, format: 'esm', banner: rollupEsmBanner },
     ],
     plugins: [
+      rollupHashbang(),
       rollupJson(),
       rollupNodeResolve(),
-      rollupCommonjs(),
       rollupEsbuild(),
+      rollupCommonjs(),
       rollupBundleSize(),
       rollupTerser(),
     ],
@@ -179,10 +186,11 @@ export function rollupWorkerConfig(
       { file: './dist/worker.mjs', format: 'esm', banner: rollupEsmBanner },
     ],
     plugins: [
+      rollupHashbang(),
       rollupJson(),
       rollupNodeResolve(),
-      rollupCommonjs(),
       rollupEsbuild(),
+      rollupCommonjs(),
       rollupBundleSize(),
       rollupTerser(),
     ],
@@ -208,8 +216,8 @@ export function rollupCliConfig(
       rollupHashbang(),
       rollupJson(),
       rollupNodeResolve(),
-      rollupCommonjs(),
       rollupEsbuild({ target: 'node14.18' }),
+      rollupCommonjs(),
       rollupBundleSize(),
       rollupTerser(),
     ],
@@ -231,8 +239,8 @@ export function rollupMultiEntryConfig(
       rollupHashbang(),
       rollupJson(),
       rollupNodeResolve(),
-      rollupCommonjs(),
       rollupEsbuild(),
+      rollupCommonjs(),
       rollupBundleSize(),
       rollupTerser(),
     ],
