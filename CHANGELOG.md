@@ -1,9 +1,13 @@
 # CHANGELOG
 
-## Unreleased
+## 3.0.3 (2023-01-03)
 
-- perf: add `getPackageJson`
-- perf: make `rollup` utils `packageJson` optional
+- feat: add `getPackageJson`
+- feat: make `rollup` utils `packageJson` optional
+- feat: add `rollupMultiEntryConfig` (beta)
+- feat: allow `rollupExternal` `noExternal` param
+- fix: fix `rollupCliConfig` params passing
+- feat!: remove `qs` because not common enough
 
 ## 3.0.2 (2023-01-03)
 
