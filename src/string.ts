@@ -1,6 +1,3 @@
-import qs from 'qs';
-export { qs };
-
 export {
   camelCase,
   capitalCase,
