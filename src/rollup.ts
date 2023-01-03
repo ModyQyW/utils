@@ -209,7 +209,7 @@ export function rollupCliConfig(
       rollupJson(),
       rollupNodeResolve(),
       rollupCommonjs(),
-      rollupEsbuild(),
+      rollupEsbuild({ target: 'node14.18' }),
       rollupBundleSize(),
       rollupTerser(),
     ],
