@@ -4,6 +4,7 @@ import {
   type ExternalOption as RollupExternalOption,
   type RollupOptions,
 } from 'rollup';
+import multiEntry, { type RollupMultiEntryOptions } from '@rollup/plugin-multi-entry';
 import hashbang from 'rollup-plugin-hashbang';
 import json, { type RollupJsonOptions } from '@rollup/plugin-json';
 import nodeResolve, { type RollupNodeResolveOptions } from '@rollup/plugin-node-resolve';
@@ -49,6 +50,13 @@ export const rollupExternal = (
     ...builtinModules.map((m) => `node:${m}`),
   ].filter((item) => !(noExternal ?? []).includes(item));
 };
+
+export { RollupMultiEntryOptions };
+export function rollupMultiEntry(options?: RollupMultiEntryOptions) {
+  return multiEntry({
+    ...options,
+  });
+}
 
 export function rollupHashbang() {
   return hashbang();
@@ -196,6 +204,29 @@ export function rollupCliConfig(
         ? { file: bin, format: type }
         : [...new Set(Object.values(bin))].map((v) => ({ file: v, format: type })),
     plugins: [
+      rollupHashbang(),
+      rollupJson(),
+      rollupNodeResolve(),
+      rollupCommonjs(),
+      rollupEsbuild(),
+      rollupBundleSize(),
+      rollupTerser(),
+    ],
+    external: rollupExternal(pkg),
+    ...options,
+  };
+  return rollupOptions;
+}
+
+export function rollupMultiEntryConfig(
+  packageJson?: PackageJson,
+  { input = './src/**/*.ts', ...options }: Partial<RollupOptions> = {},
+) {
+  const pkg = packageJson ?? getPackageJson();
+  const rollupOptions: RollupOptions = {
+    input,
+    plugins: [
+      rollupMultiEntry(),
       rollupHashbang(),
       rollupJson(),
       rollupNodeResolve(),
