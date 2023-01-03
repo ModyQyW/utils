@@ -14,7 +14,8 @@ import bundleSize from 'rollup-plugin-bundle-size';
 import terser from '@rollup/plugin-terser';
 import { type MinifyOptions as TerserOptions } from 'terser';
 import dts, { type Options as RollupDtsOptions } from 'rollup-plugin-dts';
-import { PackageJson } from './types';
+import { getPackageJson } from './base';
+import { type PackageJson } from './types';
 
 export const rollupIsDevelopment = () => process.env.ROLLUP_WATCH;
 export const rollupIsProduction = () => !rollupIsDevelopment();
@@ -36,12 +37,15 @@ export const rollupEsmBanner: RollupAddonFunction = ({ modules }) => {
   return '';
 };
 
-export const rollupExternal = (packageJson: PackageJson): RollupExternalOption => [
-  ...Object.keys(packageJson.dependencies ?? {}),
-  ...Object.keys(packageJson.peerDependencies ?? {}),
-  ...builtinModules,
-  ...builtinModules.map((m) => `node:${m}`),
-];
+export const rollupExternal = (packageJson?: PackageJson): RollupExternalOption => {
+  const pkg = packageJson ?? getPackageJson();
+  return [
+    ...Object.keys(pkg.dependencies ?? {}),
+    ...Object.keys(pkg.peerDependencies ?? {}),
+    ...builtinModules,
+    ...builtinModules.map((m) => `node:${m}`),
+  ];
+};
 
 export function rollupHashbang() {
   return hashbang();
@@ -110,10 +114,11 @@ export function rollupDts(options?: RollupDtsOptions) {
 }
 
 export function rollupIndexConfig(
-  packageJson: PackageJson,
+  packageJson?: PackageJson,
   { input = './src/index.ts', ...options }: Partial<RollupOptions> = {},
 ) {
-  const { main = './dist/index.cjs', module = './dist/index.js' } = packageJson;
+  const pkg = packageJson ?? getPackageJson();
+  const { main = './dist/index.cjs', module = './dist/index.mjs' } = pkg;
   const rollupOptions: RollupOptions = {
     input,
     output: [
@@ -128,36 +133,38 @@ export function rollupIndexConfig(
       rollupBundleSize(),
       rollupTerser(),
     ],
-    external: rollupExternal(packageJson),
+    external: rollupExternal(pkg),
     ...options,
   };
   return rollupOptions;
 }
 
 export function rollupIndexTypesConfig(
-  packageJson: PackageJson,
+  packageJson?: PackageJson,
   { input = './src/index.ts', ...options }: Partial<RollupOptions> = {},
 ) {
-  const { types = './dist/index.d.ts' } = packageJson;
+  const pkg = packageJson ?? getPackageJson();
+  const { types = './dist/index.d.ts' } = pkg;
   const rollupOptions: RollupOptions = {
     input,
     output: [{ file: types, format: 'esm' }],
     plugins: [rollupDts(), rollupBundleSize()],
-    external: rollupExternal(packageJson),
+    external: rollupExternal(pkg),
     ...options,
   };
   return rollupOptions;
 }
 
 export function rollupWorkerConfig(
-  packageJson: PackageJson,
+  packageJson?: PackageJson,
   { input = './src/worker.ts', ...options }: Partial<RollupOptions> = {},
 ) {
+  const pkg = packageJson ?? getPackageJson();
   const rollupOptions: RollupOptions = {
     input,
     output: [
       { file: './dist/worker.cjs', format: 'cjs' },
-      { file: './dist/worker.js', format: 'esm', banner: rollupEsmBanner },
+      { file: './dist/worker.mjs', format: 'esm', banner: rollupEsmBanner },
     ],
     plugins: [
       rollupJson(),
@@ -167,17 +174,18 @@ export function rollupWorkerConfig(
       rollupBundleSize(),
       rollupTerser(),
     ],
-    external: rollupExternal(packageJson),
+    external: rollupExternal(pkg),
     ...options,
   };
   return rollupOptions;
 }
 
 export function rollupCliConfig(
-  packageJson: PackageJson,
+  packageJson?: PackageJson,
   { input = './src/cli.ts', ...options }: Partial<RollupOptions> = {},
 ) {
-  const { bin = './dist/cli.cjs', type = 'commonjs' } = packageJson;
+  const pkg = packageJson ?? getPackageJson();
+  const { bin = './dist/cli.cjs', type = 'commonjs' } = pkg;
   const rollupOptions: RollupOptions = {
     input,
     output:
