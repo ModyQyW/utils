@@ -139,6 +139,62 @@ Based on [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts).
 
 Pass `package.json` data as first param and `rollup` options as second param. Merge default options and passed options shallowly.
 
+```typescript
+// rollup.config.ts
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { defineConfig } from 'rollup';
+import {
+  rollupIndexConfig,
+  rollupIndexTypesConfig,
+  rollupWorkerConfig,
+  rollupCliConfig,
+} from '@modyqyw/utils';
+
+export default defineConfig([
+  rollupIndexConfig(),
+  rollupIndexTypesConfig(),
+  rollupWorkerConfig(),
+  rollupCliConfig(),
+]);
+```
+
+```typescript
+// package.json
+{
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./*": "./dist/*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  // object type bin
+  "bin": {
+    "cli-name": "./dist/cli.mjs",
+    "another-cli-name": "./dist/cli.mjs"
+  },
+  // string type bin
+  "bin": ".dist/cli.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.ts --configPlugin esbuild",
+    "dev": "rollup -c rollup.config.ts --configPlugin esbuild --watch"
+  },
+  "engines": {
+    "node": ">=14.18"
+  }
+}
+```
+
 ### string
 
 #### `change-case`
