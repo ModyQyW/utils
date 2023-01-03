@@ -204,7 +204,7 @@ export function rollupCliConfig(
       rollupBundleSize(),
       rollupTerser(),
     ],
-    external: rollupExternal(packageJson),
+    external: rollupExternal(pkg),
     ...options,
   };
   return rollupOptions;
