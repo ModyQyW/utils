@@ -217,10 +217,6 @@ Reexported from [lowerCase](https://github.com/blakeembrey/change-case/tree/mast
 
 Reexported from [lowerCase](https://github.com/blakeembrey/change-case/tree/master/packages/upper-case).
 
-#### qs
-
-Reexported from [qs](https://github.com/ljharb/qs).
-
 #### toString
 
 Convert value to string. Try `value.toString()` first, then `Object.prototype.toString.call(value)`.
