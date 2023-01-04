@@ -120,9 +120,26 @@ export function rollupDts(options?: RollupDtsOptions) {
   });
 }
 
+export interface CustomRollupOptions extends RollupOptions {
+  dts: RollupDtsOptions;
+  json: RollupJsonOptions;
+  nodeResolve: RollupNodeResolveOptions;
+  esbuild: RollupEsbuildOptions;
+  commonjs: RollupCommonJSOptions;
+  terser: RollupTerserOptions;
+}
+
 export function rollupIndexConfig(
   packageJson?: PackageJson,
-  { input = './src/index.ts', ...options }: Partial<RollupOptions> = {},
+  {
+    input = './src/index.ts',
+    json,
+    nodeResolve,
+    esbuild,
+    commonjs,
+    terser,
+    ...options
+  }: Partial<CustomRollupOptions> = {},
   emitCjs = true,
 ) {
   const pkg = packageJson ?? getPackageJson();
@@ -136,13 +153,12 @@ export function rollupIndexConfig(
         ]
       : [{ file: module, format: 'esm', banner: rollupEsmBanner }],
     plugins: [
-      rollupHashbang(),
-      rollupJson(),
-      rollupNodeResolve(),
-      rollupEsbuild(),
-      rollupCommonjs(),
+      rollupJson(json),
+      rollupNodeResolve(nodeResolve),
+      rollupEsbuild(esbuild),
+      rollupCommonjs(commonjs),
       rollupBundleSize(),
-      rollupTerser(),
+      rollupTerser(terser),
     ],
     external: rollupExternal(pkg),
     ...options,
@@ -152,14 +168,14 @@ export function rollupIndexConfig(
 
 export function rollupIndexTypesConfig(
   packageJson?: PackageJson,
-  { input = './src/index.ts', ...options }: Partial<RollupOptions> = {},
+  { input = './src/index.ts', dts, ...options }: Partial<CustomRollupOptions> = {},
 ) {
   const pkg = packageJson ?? getPackageJson();
   const { types = './dist/index.d.ts' } = pkg;
   const rollupOptions: RollupOptions = {
     input,
     output: [{ file: types, format: 'esm' }],
-    plugins: [rollupDts(), rollupBundleSize()],
+    plugins: [rollupDts(dts), rollupBundleSize()],
     external: rollupExternal(pkg),
     ...options,
   };
@@ -168,7 +184,15 @@ export function rollupIndexTypesConfig(
 
 export function rollupWorkerConfig(
   packageJson?: PackageJson,
-  { input = './src/worker.ts', ...options }: Partial<RollupOptions> = {},
+  {
+    input = './src/worker.ts',
+    json,
+    nodeResolve,
+    esbuild,
+    commonjs,
+    terser,
+    ...options
+  }: Partial<CustomRollupOptions> = {},
   emitCjs = true,
 ) {
   const pkg = packageJson ?? getPackageJson();
@@ -181,13 +205,12 @@ export function rollupWorkerConfig(
         ]
       : [{ file: './dist/worker.mjs', format: 'esm', banner: rollupEsmBanner }],
     plugins: [
-      rollupHashbang(),
-      rollupJson(),
-      rollupNodeResolve(),
-      rollupEsbuild(),
-      rollupCommonjs(),
+      rollupJson(json),
+      rollupNodeResolve(nodeResolve),
+      rollupEsbuild(esbuild),
+      rollupCommonjs(commonjs),
       rollupBundleSize(),
-      rollupTerser(),
+      rollupTerser(terser),
     ],
     external: rollupExternal(pkg),
     ...options,
@@ -197,7 +220,15 @@ export function rollupWorkerConfig(
 
 export function rollupCliConfig(
   packageJson?: PackageJson,
-  { input = './src/cli.ts', ...options }: Partial<RollupOptions> = {},
+  {
+    input = './src/cli.ts',
+    json,
+    nodeResolve,
+    esbuild,
+    commonjs,
+    terser,
+    ...options
+  }: Partial<CustomRollupOptions> = {},
 ) {
   const pkg = packageJson ?? getPackageJson();
   const { bin = './dist/cli.cjs', type = 'commonjs' } = pkg;
@@ -209,12 +240,12 @@ export function rollupCliConfig(
         : [...new Set(Object.values(bin))].map((v) => ({ file: v, format: type })),
     plugins: [
       rollupHashbang(),
-      rollupJson(),
-      rollupNodeResolve(),
-      rollupEsbuild({ target: 'node14.18' }),
-      rollupCommonjs(),
+      rollupJson(json),
+      rollupNodeResolve(nodeResolve),
+      rollupEsbuild({ target: 'node14.18', ...esbuild }),
+      rollupCommonjs(commonjs),
       rollupBundleSize(),
-      rollupTerser(),
+      rollupTerser(terser),
     ],
     external: rollupExternal(pkg),
     ...options,
