@@ -21,7 +21,7 @@ export const rollupIsDevelopment = () => process.env.ROLLUP_WATCH;
 export const rollupIsProduction = () => !rollupIsDevelopment();
 
 export const rollupCjsFooter: RollupAddonFunction = () =>
-  'module.exports = Object.assign(exports.default, exports);';
+  'module.exports = Object.assign(exports.default || {}, exports);';
 
 export const rollupEsmBanner: RollupAddonFunction = ({ modules }) => {
   const entries = Object.entries(modules);
