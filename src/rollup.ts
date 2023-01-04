@@ -127,21 +127,21 @@ export interface CustomRollupOptions extends RollupOptions {
   esbuild: RollupEsbuildOptions;
   commonjs: RollupCommonJSOptions;
   terser: RollupTerserOptions;
+  emitCjs: boolean;
+  packageJson: PackageJson;
 }
 
-export function rollupIndexConfig(
-  packageJson?: PackageJson,
-  {
-    input = './src/index.ts',
-    json,
-    nodeResolve,
-    esbuild,
-    commonjs,
-    terser,
-    ...options
-  }: Partial<CustomRollupOptions> = {},
+export function rollupIndexConfig({
+  input = './src/index.ts',
+  json,
+  nodeResolve,
+  esbuild,
+  commonjs,
+  terser,
   emitCjs = true,
-) {
+  packageJson,
+  ...options
+}: Partial<Omit<CustomRollupOptions, 'dts'>> = {}) {
   const pkg = packageJson ?? getPackageJson();
   const { main = './dist/index.cjs', module = './dist/index.mjs' } = pkg;
   const rollupOptions: RollupOptions = {
@@ -166,10 +166,14 @@ export function rollupIndexConfig(
   return rollupOptions;
 }
 
-export function rollupIndexTypesConfig(
-  packageJson?: PackageJson,
-  { input = './src/index.ts', dts, ...options }: Partial<CustomRollupOptions> = {},
-) {
+export function rollupIndexTypesConfig({
+  input = './src/index.ts',
+  dts,
+  packageJson,
+  ...options
+}: Partial<
+  Omit<CustomRollupOptions, 'json' | 'nodeResolve' | 'esbuild' | 'commonjs' | 'terser' | 'emitCjs'>
+> = {}) {
   const pkg = packageJson ?? getPackageJson();
   const { types = './dist/index.d.ts' } = pkg;
   const rollupOptions: RollupOptions = {
@@ -182,19 +186,17 @@ export function rollupIndexTypesConfig(
   return rollupOptions;
 }
 
-export function rollupWorkerConfig(
-  packageJson?: PackageJson,
-  {
-    input = './src/worker.ts',
-    json,
-    nodeResolve,
-    esbuild,
-    commonjs,
-    terser,
-    ...options
-  }: Partial<CustomRollupOptions> = {},
+export function rollupWorkerConfig({
+  input = './src/worker.ts',
+  json,
+  nodeResolve,
+  esbuild,
+  commonjs,
+  terser,
   emitCjs = true,
-) {
+  packageJson,
+  ...options
+}: Partial<Omit<CustomRollupOptions, 'dts'>> = {}) {
   const pkg = packageJson ?? getPackageJson();
   const rollupOptions: RollupOptions = {
     input,
@@ -218,18 +220,16 @@ export function rollupWorkerConfig(
   return rollupOptions;
 }
 
-export function rollupCliConfig(
-  packageJson?: PackageJson,
-  {
-    input = './src/cli.ts',
-    json,
-    nodeResolve,
-    esbuild,
-    commonjs,
-    terser,
-    ...options
-  }: Partial<CustomRollupOptions> = {},
-) {
+export function rollupCliConfig({
+  input = './src/cli.ts',
+  json,
+  nodeResolve,
+  esbuild,
+  commonjs,
+  terser,
+  packageJson,
+  ...options
+}: Partial<Omit<CustomRollupOptions, 'dts' | 'emitCjs'>> = {}) {
   const pkg = packageJson ?? getPackageJson();
   const { bin = './dist/cli.cjs', type = 'commonjs' } = pkg;
   const rollupOptions: RollupOptions = {
