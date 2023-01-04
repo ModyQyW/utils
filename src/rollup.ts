@@ -101,9 +101,6 @@ export interface RollupTerserOptions extends TerserOptions {
 export function rollupTerser(options?: RollupTerserOptions) {
   return rollupIsProduction()
     ? terser({
-        compress: {
-          drop_console: true,
-        },
         format: {
           ascii_only: true,
         },
