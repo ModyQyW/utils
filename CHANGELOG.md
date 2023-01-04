@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0.9 (2023-01-04)
+
+- perf: allow passing `rollup` plugins options to `rollup` configs
+
 ## 3.0.8 (2023-01-04)
 
 - fix: fix `rollupCjsFooter`
