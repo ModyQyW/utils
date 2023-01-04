@@ -123,15 +123,18 @@ export function rollupDts(options?: RollupDtsOptions) {
 export function rollupIndexConfig(
   packageJson?: PackageJson,
   { input = './src/index.ts', ...options }: Partial<RollupOptions> = {},
+  emitCjs = true,
 ) {
   const pkg = packageJson ?? getPackageJson();
   const { main = './dist/index.cjs', module = './dist/index.mjs' } = pkg;
   const rollupOptions: RollupOptions = {
     input,
-    output: [
-      { file: main, format: 'cjs', exports: 'named', footer: rollupCjsFooter },
-      { file: module, format: 'esm', banner: rollupEsmBanner },
-    ],
+    output: emitCjs
+      ? [
+          { file: main, format: 'cjs', exports: 'named', footer: rollupCjsFooter },
+          { file: module, format: 'esm', banner: rollupEsmBanner },
+        ]
+      : [{ file: module, format: 'esm', banner: rollupEsmBanner }],
     plugins: [
       rollupHashbang(),
       rollupJson(),
@@ -166,14 +169,17 @@ export function rollupIndexTypesConfig(
 export function rollupWorkerConfig(
   packageJson?: PackageJson,
   { input = './src/worker.ts', ...options }: Partial<RollupOptions> = {},
+  emitCjs = true,
 ) {
   const pkg = packageJson ?? getPackageJson();
   const rollupOptions: RollupOptions = {
     input,
-    output: [
-      { file: './dist/worker.cjs', format: 'cjs' },
-      { file: './dist/worker.mjs', format: 'esm', banner: rollupEsmBanner },
-    ],
+    output: emitCjs
+      ? [
+          { file: './dist/worker.cjs', format: 'cjs' },
+          { file: './dist/worker.mjs', format: 'esm', banner: rollupEsmBanner },
+        ]
+      : [{ file: './dist/worker.mjs', format: 'esm', banner: rollupEsmBanner }],
     plugins: [
       rollupHashbang(),
       rollupJson(),
