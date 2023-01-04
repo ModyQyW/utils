@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0.10 (2023-01-04)
+
+- fix!: params
+
 ## 3.0.9 (2023-01-04)
 
 - perf: allow passing `rollup` plugins options to `rollup` configs
