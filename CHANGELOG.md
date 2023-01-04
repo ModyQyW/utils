@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0.7 (2023-01-04)
+
+- perf: `emitCjs` param for `rollupIndexConfig` and `rollupWorkerConfig`
+
 ## 3.0.6 (2023-01-04)
 
 - fix: remove `rollup` -> `terser` -> `drop_console`
