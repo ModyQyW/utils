@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0.6 (2023-01-04)
+
+- fix: remove `rollup` -> `terser` -> `drop_console`
+
 ## 3.0.5 (2023-01-03)
 
 - feat!: remove `rollupMultiEntryConfig`
