@@ -59,6 +59,23 @@ import { noop } from '@modyqyw/utils';
 noop();
 ```
 
+### node
+
+#### `mlly`
+
+Reexported from [mlly](https://github.com/unjs/mlly).
+
+#### getPackageJson
+
+Get `package.json` as an object.
+
+```typescript
+import { getPackageJson } from '@modyqyw/utils';
+
+// use `process.cwd()` by default
+const packageJson = getPackageJson(process.cwd());
+```
+
 ### promise
 
 #### pRetry
