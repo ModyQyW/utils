@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.1.0 (2023-01-05)
+
+- feat: export `mlly`
+
 ## 3.0.10 (2023-01-04)
 
 - fix!: params
