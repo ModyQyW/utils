@@ -14,7 +14,7 @@ import bundleSize from 'rollup-plugin-bundle-size';
 import terser from '@rollup/plugin-terser';
 import { type MinifyOptions as TerserOptions } from 'terser';
 import dts, { type Options as RollupDtsOptions } from 'rollup-plugin-dts';
-import { getPackageJson } from './base';
+import { getPackageJson } from './node';
 import { type PackageJson } from './types';
 
 export const rollupIsDevelopment = () => process.env.ROLLUP_WATCH;
