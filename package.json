@@ -2,7 +2,7 @@
   "name": "@modyqyw/utils",
   "version": "3.1.0",
   "private": false,
-  "description": "Opinionated utils for JavaScript / TypeScript projects",
+  "description": "Opinionated shareable utils for different JavaScript/TypeScript projects.",
   "keywords": [
     "javascript",
     "typescript",

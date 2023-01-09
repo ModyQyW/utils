@@ -4,7 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/@modyqyw/utils)](https://www.npmjs.com/package/@modyqyw/utils/)
 
-Opinionated utils for JavaScript / TypeScript projects. Requires `node >= 14.18`.
+Opinionated shareable utils for different JavaScript/TypeScript projects. Requires `node >= 14.18`.
 
 ## Installation
 
