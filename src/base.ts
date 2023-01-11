@@ -1,9 +1,6 @@
-import debounce from 'lodash.debounce';
-import throttle from 'lodash.throttle';
 import isEqual from 'lodash.isequal';
-import { deepmerge } from 'deepmerge-ts';
-import { nanoid } from 'nanoid';
+import isEqualWith from 'lodash.isequalwith';
 
-export { debounce, throttle, isEqual, deepmerge as merge, nanoid };
+export { isEqual, isEqualWith };
 
 export const timestamp = () => +Date.now();
