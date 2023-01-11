@@ -14,27 +14,81 @@ npm install @modyqyw/utils
 
 ## API
 
+### array
+
+#### difference
+
+Reexported from [lodash.difference](https://lodash.com/docs#difference).
+
+#### differenceBy
+
+Reexported from [lodash.differenceBy](https://lodash.com/docs#differenceBy).
+
+#### differenceWith
+
+Reexported from [lodash.differenceWith](https://lodash.com/docs#differenceWith).
+
+#### intersection
+
+Reexported from [lodash.intersection](https://lodash.com/docs#intersection).
+
+#### intersectionBy
+
+Reexported from [lodash.intersectionBy](https://lodash.com/docs#intersectionBy).
+
+#### intersectionWith
+
+Reexported from [lodash.intersectionWith](https://lodash.com/docs#intersectionWith).
+
+#### union
+
+Reexported from [lodash.union](https://lodash.com/docs#union).
+
+#### unionBy
+
+Reexported from [lodash.unionBy](https://lodash.com/docs#unionBy).
+
+#### unionWith
+
+Reexported from [lodash.unionWith](https://lodash.com/docs#unionWith).
+
+#### uniq
+
+Reexported from [lodash.uniq](https://lodash.com/docs#uniq).
+
+#### uniqBy
+
+Reexported from [lodash.uniqBy](https://lodash.com/docs#uniqBy).
+
+#### uniqWith
+
+Reexported from [lodash.uniqWith](https://lodash.com/docs#uniqWith).
+
+#### toArray
+
+Convert value to an array.
+
+```typescript
+import { toArray } from '@modyqyw/utils';
+
+toArray(); // []
+toArray(undefined); // []
+toArray(null); // []
+toArray(1); // [1]
+toArray('abc'); // ['abc']
+toArray({ a: 1, b: 2 }); // [{ a: 1, b: 2 }]
+toArray([1, 2]); // [1, 2]
+```
+
 ### base
-
-#### debounce
-
-Reexported from [lodash.debounce](https://lodash.com/docs#debounce).
-
-#### throttle
-
-Reexported from [lodash.throttle](https://lodash.com/docs#throttle).
 
 #### isEqual
 
 Reexported from [lodash.isEqual](https://lodash.com/docs#isEqual).
 
-#### merge
+#### isEqualWith
 
-Reexported from [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts).
-
-#### nanoid
-
-Reexported from [nanoid](https://github.com/ai/nanoid).
+Reexported from [lodash.isEqual](https://lodash.com/docs#isEqual).
 
 #### timestamp
 
@@ -47,6 +101,18 @@ const ts = timestamp();
 ```
 
 ### function
+
+#### debounce
+
+Reexported from [lodash.debounce](https://lodash.com/docs#debounce).
+
+#### throttle
+
+Reexported from [lodash.throttle](https://lodash.com/docs#throttle).
+
+#### memorize
+
+Reexported from [lodash.memorize](https://lodash.com/docs#memorize).
 
 #### noop
 
@@ -76,138 +142,21 @@ import { getPackageJson } from '@modyqyw/utils';
 const packageJson = getPackageJson(process.cwd());
 ```
 
+### object
+
+#### merge
+
+Reexported from [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts).
+
+#### mergeCustom
+
+Reexported from [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts).
+
 ### promise
 
 #### pRetry
 
 Reexported from [p-retry](https://github.com/sindresorhus/p-retry).
-
-### rollup
-
-You probably don't need this but need [tsup](https://github.com/egoist/tsup) or [unbuild](https://github.com/unjs/unbuild), unless you use `rollup` like me.
-
-#### rollupIsDevelopment
-
-Based on `watch` and check `process.env.ROLLUP_WATCH`.
-
-```typescript
-import { rollupIsDevelopment } from '@modyqyw/utils';
-
-const isDevelopment = rollupIsDevelopment();
-```
-
-#### rollupIsProduction
-
-The opposite of `rollupIsDevelopment`.
-
-#### rollupCjsFooter
-
-Try to patch `module.exports.default` into `module.exports`.
-
-#### rollupEsmBanner
-
-Try to add `__dirname` and `__filename` polyfills.
-
-#### rollupExternal
-
-Exclude all `dependencies` and `peerDependencies` in `package.json`. Also exclude `node` builtin modules.
-
-#### rollupHashbang
-
-Based on [rollup-plugin-hashbang](https://github.com/egoist/rollup-plugin-hashbang).
-
-#### rollupJson
-
-Based on [@rollup/plugin-json](https://github.com/rollup/plugins/tree/master/packages/json).
-
-#### rollupNodeResolve
-
-Based on [@rollup/plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve).
-
-#### rollupCommonjs
-
-Based on [@rollup/plugin-commonjs](https://github.com/rollup/plugins/tree/master/packages/commonjs).
-
-#### rollupEsbuild
-
-Based on [rollup-plugin-esbuild](https://github.com/egoist/rollup-plugin-esbuild).
-
-#### rollupBundleSize
-
-Based on [rollup-plugin-bundle-size](https://github.com/vimeo/rollup-plugin-bundle-size).
-
-#### rollupTerser
-
-Based on [@rollup/plugin-terser](https://github.com/rollup/plugins/tree/master/packages/terser).
-
-Only apply in production.
-
-#### rollupDts
-
-Based on [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts).
-
-#### rollupIndexConfig
-
-#### rollupIndexTypesConfig
-
-#### rollupWorkerConfig
-
-#### rollupCliConfig
-
-Pass `package.json` data as first param and `rollup` options as second param. Merge default options and passed options shallowly.
-
-```typescript
-// rollup.config.ts
-import { defineConfig } from 'rollup';
-import {
-  rollupIndexConfig,
-  rollupIndexTypesConfig,
-  rollupWorkerConfig,
-  rollupCliConfig,
-} from '@modyqyw/utils';
-
-export default defineConfig([
-  // compose theme as you need
-  rollupIndexConfig(),
-  rollupIndexTypesConfig(),
-  rollupWorkerConfig(),
-  rollupCliConfig(),
-]);
-```
-
-```typescript
-// package.json
-{
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  // object bin
-  "bin": {
-    "cli-name": "./dist/cli.mjs",
-    "another-cli-name": "./dist/cli.mjs"
-  },
-  // string bin
-  "bin": ".dist/cli.mjs",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "rollup -c rollup.config.ts --configPlugin esbuild",
-    "dev": "rollup -c rollup.config.ts --configPlugin esbuild --watch"
-  },
-  "engines": {
-    "node": ">=14.18"
-  }
-}
-```
 
 ### string
 
@@ -221,11 +170,11 @@ Reexported from [title-case](https://github.com/blakeembrey/change-case/tree/mas
 
 #### lowerCase
 
-Reexported from [lowerCase](https://github.com/blakeembrey/change-case/tree/master/packages/lower-case).
+Reexported from [lower-case](https://github.com/blakeembrey/change-case/tree/master/packages/lower-case).
 
 #### upperCase
 
-Reexported from [lowerCase](https://github.com/blakeembrey/change-case/tree/master/packages/upper-case).
+Reexported from [upper-case](https://github.com/blakeembrey/change-case/tree/master/packages/upper-case).
 
 #### toString
 
