@@ -1,5 +1,26 @@
 # CHANGELOG
 
+## 3.2.0 (2023-01-11)
+
+- feat: add `difference`
+- feat: add `differenceBy`
+- feat: add `differenceWith`
+- feat: add `intersection`
+- feat: add `intersectionBy`
+- feat: add `intersectionWith`
+- feat: add `union`
+- feat: add `unionBy`
+- feat: add `unionWith`
+- feat: add `uniq`
+- feat: add `uniqBy`
+- feat: add `uniqWith`
+- feat: add `toArray`
+- feat: add `isEqualWith`
+- feat: add `memorize`
+- feat: add `mergeCustom`
+- feat!: remove `rollup`
+- feat!: targets at `es2020`
+
 ## 3.1.1 (2023-01-11)
 
 - fix: fix exports
