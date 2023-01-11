@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.1.1 (2023-01-11)
+
+- fix: fix exports
+
 ## 3.1.0 (2023-01-05)
 
 - feat: export `mlly`
