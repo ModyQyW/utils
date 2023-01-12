@@ -3,7 +3,7 @@ export { is, assert };
 
 export type Awaitable<T> = T | PromiseLike<T>;
 
-export type Nullable<T> = T | null | undefined;
+export type Nullable<T> = T | null;
 
 export type Arrayable<T> = T | Array<T>;
 
