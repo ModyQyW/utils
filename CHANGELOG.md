@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.2.1 (2023-01-12)
+
+- fix: fix `Nullable`
+
 ## 3.2.0 (2023-01-11)
 
 - feat: add `difference`
