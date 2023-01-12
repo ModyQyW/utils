@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.2.2 (2023-01-12)
+
+- fix: fix exports
+
 ## 3.2.1 (2023-01-12)
 
 - fix: fix `Nullable`
