@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 3.3.0 (2023-01-16)
+
+- feat: add `arrayIncludes`
+- feat: add `objectKeys`
+- feat: add `objectEntries`
+- feat: add `objectFromEntries`
+- feat: add `pLimit`
+- feat: add `PQueue`
+- feat: add `pDebounce`
+- feat: add `pThrottle`
+- feat: add `setHas`
+
 ## 3.2.2 (2023-01-12)
 
 - fix: fix exports
