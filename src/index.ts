@@ -4,5 +4,6 @@ export * from './function';
 export * from './node';
 export * from './object';
 export * from './promise';
+export * from './set';
 export * from './string';
 export * from './types';

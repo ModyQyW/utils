@@ -27,6 +27,8 @@ export {
   uniqWith,
 };
 
+export { arrayIncludes } from 'ts-extras';
+
 export function toArray<T>(value?: Nullable<Arrayable<T>>) {
   const v = value ?? [];
   return Array.isArray(v) ? v : [v];

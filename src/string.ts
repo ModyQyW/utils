@@ -12,8 +12,8 @@ export {
   sentenceCase,
   snakeCase,
 } from 'change-case';
-export * from 'lower-case';
-export * from 'upper-case';
-export * from 'title-case';
+export { lowerCase, localeLowerCase } from 'lower-case';
+export { upperCase, localeUpperCase } from 'upper-case';
+export { titleCase } from 'title-case';
 
 export const toString = (v: any) => (v?.toString() ?? Object.prototype.toString.call(v)) as string;
