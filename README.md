@@ -64,6 +64,10 @@ Reexported from [lodash.uniqBy](https://lodash.com/docs#uniqBy).
 
 Reexported from [lodash.uniqWith](https://lodash.com/docs#uniqWith).
 
+#### arrayIncludes
+
+Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras).
+
 #### toArray
 
 Convert value to an array.
@@ -152,11 +156,58 @@ Reexported from [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts).
 
 Reexported from [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts).
 
+#### objectKeys
+
+Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras).
+
+#### objectEntries
+
+Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras).
+
+#### objectFromEntries
+
+Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras).
+
 ### promise
+
+#### pLimit
+
+Reexported from [p-limit](https://github.com/sindresorhus/p-limit).
+
+#### PQueue
+
+Reexported from [p-queue](https://github.com/sindresorhus/p-queue).
 
 #### pRetry
 
 Reexported from [p-retry](https://github.com/sindresorhus/p-retry).
+
+#### pDebounce
+
+Reexported from [p-debounce](https://github.com/sindresorhus/p-debounce).
+
+#### pThrottle
+
+Reexported from [p-throttle](https://github.com/sindresorhus/p-throttle).
+
+#### sleep
+
+Sleep 💤, then call `callback` if passed.
+
+```typescript
+import { sleep } from '@modyqyw/utils';
+
+await sleep(1000); // sleep 1s
+await sleep(1000, () => {
+  console.log('Hi.');
+}); // sleep 1s, then log `Hi.`
+```
+
+### set
+
+#### setHas
+
+Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras).
 
 ### string
 
@@ -164,15 +215,15 @@ Reexported from [p-retry](https://github.com/sindresorhus/p-retry).
 
 Reexported from [change-case](https://github.com/blakeembrey/change-case).
 
-#### titleCase
+#### `title-case`
 
 Reexported from [title-case](https://github.com/blakeembrey/change-case/tree/master/packages/title-case).
 
-#### lowerCase
+#### `lower-case`
 
 Reexported from [lower-case](https://github.com/blakeembrey/change-case/tree/master/packages/lower-case).
 
-#### upperCase
+#### `upper-case`
 
 Reexported from [upper-case](https://github.com/blakeembrey/change-case/tree/master/packages/upper-case).
 
