@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "@sindresorhus/is": "^5.3.0",
+    "@types/deepmerge": "^2.2.0",
     "@types/lodash.debounce": "^4.0.7",
     "@types/lodash.difference": "^4.5.7",
     "@types/lodash.differenceby": "^4.8.7",
@@ -73,7 +74,7 @@
     "@types/lodash.uniqby": "^4.7.7",
     "@types/lodash.uniqwith": "^4.5.7",
     "change-case": "^4.1.2",
-    "deepmerge-ts": "^4.2.2",
+    "deepmerge": "^4.2.2",
     "lodash.debounce": "^4.0.8",
     "lodash.difference": "^4.5.0",
     "lodash.differenceby": "^4.8.0",

@@ -13,6 +13,7 @@ specifiers:
   '@rollup/plugin-terser': ^0.3.0
   '@sindresorhus/is': ^5.3.0
   '@tsconfig/node18': ^1.0.1
+  '@types/deepmerge': ^2.2.0
   '@types/lodash.debounce': ^4.0.7
   '@types/lodash.difference': ^4.5.7
   '@types/lodash.differenceby': ^4.8.7
@@ -38,7 +39,7 @@ specifiers:
   c8: ^7.12.0
   change-case: ^4.1.2
   commitizen: ^4.2.6
-  deepmerge-ts: ^4.2.2
+  deepmerge: ^4.2.2
   esbuild: ^0.17.0
   eslint: ^8.32.0
   husky: ^8.0.3
@@ -87,6 +88,7 @@ specifiers:
 
 dependencies:
   '@sindresorhus/is': 5.3.0
+  '@types/deepmerge': 2.2.0
   '@types/lodash.debounce': 4.0.7
   '@types/lodash.difference': 4.5.7
   '@types/lodash.differenceby': 4.8.7
@@ -105,7 +107,7 @@ dependencies:
   '@types/lodash.uniqby': 4.7.7
   '@types/lodash.uniqwith': 4.5.7
   change-case: 4.1.2
-  deepmerge-ts: 4.2.2
+  deepmerge: 4.2.2
   lodash.debounce: 4.0.8
   lodash.difference: 4.5.0
   lodash.differenceby: 4.8.0
@@ -1553,6 +1555,13 @@ packages:
       '@types/ms': 0.7.31
     dev: true
 
+  /@types/deepmerge/2.2.0:
+    resolution: {integrity: sha512-FEQYDHh6+Q+QXKSrIY46m+/lAmAj/bk4KpLaam+hArmzaVpMBHLcfwOH2Q2UOkWM7XsdY9PmZpGyPAjh/JRGhQ==}
+    deprecated: This is a stub types definition. deepmerge provides its own type definitions, so you do not need this installed.
+    dependencies:
+      deepmerge: 4.2.2
+    dev: false
+
   /@types/eslint/8.4.10:
     resolution: {integrity: sha512-Sl/HOqN8NKPmhWo2VBEPm0nvHnu2LL3v9vKo8MEq0EtbJ4eVzGPl41VNPvn5E1i5poMk4/XD8UriLHpJvEP/Nw==}
     dependencies:
@@ -2912,11 +2921,11 @@ packages:
   /deepmerge-ts/4.2.2:
     resolution: {integrity: sha512-Ka3Kb21tiWjvQvS9U+1Dx+aqFAHsdTnMdYptLTmC2VAmDFMugWMY1e15aTODstipmCun8iNuqeSfcx6rsUUk0Q==}
     engines: {node: '>=12.4.0'}
+    dev: true
 
   /deepmerge/4.2.2:
     resolution: {integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /defaults/1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
