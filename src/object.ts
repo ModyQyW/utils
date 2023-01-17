@@ -1,4 +1,4 @@
-import { deepmerge as merge, deepmergeCustom as mergeCustom } from 'deepmerge-ts';
+import merge from 'deepmerge';
 export { objectKeys, objectEntries, objectFromEntries } from 'ts-extras';
 
-export { merge, mergeCustom };
+export { merge };
