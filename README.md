@@ -150,11 +150,7 @@ const packageJson = getPackageJson(process.cwd());
 
 #### merge
 
-Reexported from [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts).
-
-#### mergeCustom
-
-Reexported from [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts).
+Reexported from [deepmerge](https://github.com/TehShrike/deepmerge).
 
 #### objectKeys
 
