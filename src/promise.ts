@@ -1,16 +1,15 @@
-import pLimit from 'p-limit';
-import pRetry from 'p-retry';
-import pDebounce from 'p-debounce';
-import pThrottle from 'p-throttle';
 import { Fn } from './types';
 
-export { pLimit, pRetry, pDebounce, pThrottle };
+export { default as pLimit } from 'p-limit';
+export { default as pRetry } from 'p-retry';
+export { default as pDebounce } from 'p-debounce';
+export { default as pThrottle } from 'p-throttle';
 
-export function sleep(ms: number, callback?: Fn<any>) {
-  return new Promise<void>((resolve) =>
+/** Sleep 💤, then call `callback` if passed. */
+export const sleep = (ms: number, callback?: Fn<any>) =>
+  new Promise<void>((resolve) =>
     setTimeout(async () => {
       await callback?.();
       resolve();
     }, ms),
   );
-}

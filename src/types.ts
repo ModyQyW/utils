@@ -1,5 +1,4 @@
-import is, { assert } from '@sindresorhus/is';
-export { is, assert };
+export type Falsy = false | 0 | 0n | '' | null | undefined;
 
 export type Awaitable<T> = T | PromiseLike<T>;
 
@@ -116,4 +115,5 @@ export type {
   GlobalThis,
   PackageJson,
   TsConfigJson,
+  TsConfigJson as TsconfigJson,
 } from 'type-fest';
