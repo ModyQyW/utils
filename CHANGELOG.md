@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 4.0.0
+
+v3 has too many breaking changes. So I am actually releasing stable v3.
+
+- feat!: remove `lodash` / `ramda`
+- feat!: update `difference`, `differenceWith`, `intersection`, `intersectionWith`, `uniq`, `uniqWith`, `union`, `unionWith`
+- feat!: remove `differenceBy`, `intersectionBy`, `uniqBy`, `unionBy`
+- feat!: update `debounce` and `throttle`
+- feat!: remove `memorize`
+- feat!: remove `PQueue`
+- feat: add `resolvePackageJson`, `setPackageJson`
+- feat: add `resolveTsconfigJson`, `getTsconfigJson`, `setTsconfigJson`
+- feat: add `Falsy` type
+- feat: add `TsconfigJson` type, just an alias of `TsConfigJson`
+
 ## 3.3.1 (2023-01-17)
 
 - feat!: replace `deepmerge-ts` with `deepmerge`
