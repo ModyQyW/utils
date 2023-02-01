@@ -1,4 +1,5 @@
 export { default as is, assert } from '@sindresorhus/is';
+export { default as merge } from 'deepmerge';
 
 /** Get millisecond-based timestamp. */
 export const getTimestamp = () => +Date.now();
