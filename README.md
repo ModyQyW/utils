@@ -22,6 +22,12 @@ Reexported from [@sindresorhus/is](https://github.com/sindresorhus/is).
 
 No plans to provide `isXxx`. Just use `is.xxx`.
 
+#### merge
+
+Reexported from [deepmerge](https://github.com/TehShrike/deepmerge).
+
+You can use this to do deep clone.
+
 #### getTimestamp
 
 Get millisecond-based timestamp.
@@ -258,10 +264,6 @@ unionWith([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }], isDeepEqual);
 ```
 
 ### object
-
-#### merge
-
-Reexported from [deepmerge](https://github.com/TehShrike/deepmerge).
 
 #### objectKeys
 
