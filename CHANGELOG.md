@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## 4.0.0
+## 4.1.0 (2023-02-03)
+
+- feat: add `pipe`
+
+## 4.0.0 (2023-01-30)
 
 v3 has too many breaking changes. So I am actually releasing stable v3.
 
