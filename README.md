@@ -16,6 +16,10 @@ npm install @modyqyw/utils
 
 ### base
 
+Check [lodash](https://lodash.com/), [ramda](https://ramdajs.com/) and [rameda](https://remedajs.com/) for more.
+
+I recommend [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone) for deep clone.
+
 #### is & assert
 
 Reexported from [@sindresorhus/is](https://github.com/sindresorhus/is).
@@ -25,8 +29,6 @@ No plans to provide `isXxx`. Just use `is.xxx`.
 #### merge
 
 Reexported from [deepmerge](https://github.com/TehShrike/deepmerge).
-
-You can use this to do deep clone.
 
 #### getTimestamp
 
@@ -285,6 +287,8 @@ Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras).
 
 ### promise
 
+Check [promise-fun](https://github.com/sindresorhus/promise-fun) and [rxjs](https://rxjs.dev/) for more.
+
 #### pLimit
 
 Reexported from [p-limit](https://github.com/sindresorhus/p-limit).
@@ -324,6 +328,23 @@ Reexported from [throttle-debounce](https://github.com/niksy/throttle-debounce).
 
 Reexported from [throttle-debounce](https://github.com/niksy/throttle-debounce).
 
+#### pipe
+
+Performs left-to-right function composition.
+
+```typescript
+import { pipe } from '@modyqyw/utils';
+
+const fn = pipe(
+  (a: number, b: number) => a + b, // first do
+  (a) => Math.pow(a, 2), // second do
+  (a) => a * 3,
+  (a) => a / 4,
+  (a) => a - 2,
+);
+fn(1, 1); // 1
+```
+
 #### noop
 
 Empty function.
@@ -337,7 +358,7 @@ noop();
 
 ### node
 
-[mlly](https://github.com/unjs/mlly), [pkg-types](https://github.com/unjs/pkg-types), and [local-pkg](https://github.com/antfu/local-pkg) may also help.
+Check [mlly](https://github.com/unjs/mlly), [pkg-types](https://github.com/unjs/pkg-types), and [local-pkg](https://github.com/antfu/local-pkg) for more.
 
 #### createCJS
 
