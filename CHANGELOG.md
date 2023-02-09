@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Unreleased
+
+- build: switch to `unbuild`
+
 ## 4.1.0 (2023-02-03)
 
 - feat: add `pipe`
