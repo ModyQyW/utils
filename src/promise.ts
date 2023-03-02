@@ -6,10 +6,11 @@ export { default as pDebounce } from 'p-debounce';
 export { default as pThrottle } from 'p-throttle';
 
 /** Sleep 💤, then call `callback` if passed. */
-export const sleep = (ms: number, callback?: Fn<any>) =>
-  new Promise<void>((resolve) =>
+export function sleep<T = any>(ms: number, callback?: Fn<T>) {
+  return new Promise<void>((resolve) =>
     setTimeout(async () => {
       await callback?.();
       resolve();
     }, ms),
   );
+}

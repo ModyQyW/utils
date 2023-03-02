@@ -1,26 +1,38 @@
 /** Convert string to lower case. */
-export const lowerCase = (string: string) => string.toLowerCase();
+export function lowerCase(string: string) {
+  return string.toLowerCase();
+}
 
 /** Convert string to locale lower case. */
-export const localeLowerCase = (string: string, locales?: string | string[]) =>
-  string.toLocaleLowerCase(locales);
+export function localeLowerCase(string: string, locales?: string | string[]) {
+  return string.toLocaleLowerCase(locales);
+}
 
 /** Convert first char to lower case. */
-export const lowerCaseFirst = (string: string) => string.charAt(0).toLowerCase() + string.slice(1);
+export function lowerCaseFirst(string: string) {
+  return string.charAt(0).toLowerCase() + string.slice(1);
+}
 
 /** Convert string to upper case. */
-export const upperCase = (string: string) => string.toUpperCase();
+export function upperCase(string: string) {
+  return string.toUpperCase();
+}
 
 /** Convert string to locale upper case. */
-export const localeUpperCase = (string: string, locales?: string | string[]) =>
-  string.toLocaleUpperCase(locales);
+export function localeUpperCase(string: string, locales?: string | string[]) {
+  return string.toLocaleUpperCase(locales);
+}
 
 /** Convert first char to upper case. */
-export const upperCaseFirst = (string: string) => string.charAt(0).toUpperCase() + string.slice(1);
+export function upperCaseFirst(string: string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 /**
  * Convert value to string.
  *
  * Try `value.toString()` first, then `Object.prototype.toString.call(value)`.
  */
-export const toString = (v: any) => (v?.toString() ?? Object.prototype.toString.call(v)) as string;
+export function toString(v: any) {
+  return (v?.toString() ?? Object.prototype.toString.call(v)) as string;
+}

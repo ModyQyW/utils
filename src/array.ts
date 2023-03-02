@@ -1,20 +1,21 @@
-import { Nullable, Arrayable } from './types';
+import { Optional, Arrayable } from './types';
 
 export { arrayIncludes } from 'ts-extras';
 
 /** Convert value to an array. */
-export const toArray = <T>(value?: Nullable<Arrayable<T>>) => {
+export function toArray<T>(value?: Optional<Arrayable<T>>) {
   const v = value ?? [];
   return Array.isArray(v) ? v : [v];
-};
+}
 
 /**
  * Find difference elements between two arrays.
  *
  * Return a new array.
  */
-export const difference = <T>(array1: T[], array2: T[]) =>
-  array1.filter((item) => !array2.includes(item));
+export function difference<T>(array1: T[], array2: T[]) {
+  return array1.filter((item) => !array2.includes(item));
+}
 
 /**
  * Find difference elements between two arrays.
@@ -23,11 +24,11 @@ export const difference = <T>(array1: T[], array2: T[]) =>
  *
  * Return a new array.
  */
-export const differenceWith = <T>(
+export function differenceWith<T>(
   array1: T[],
   array2: T[],
   equalFn?: (value1: T, value2: T) => boolean,
-) => {
+) {
   if (!equalFn) return difference(array1, array2);
   const result: T[] = [];
   for (const item of array1) {
@@ -35,15 +36,16 @@ export const differenceWith = <T>(
     if (index === -1) result.push(item);
   }
   return result;
-};
+}
 
 /**
  * Find same elements between two arrays.
  *
  * Return a new array.
  */
-export const intersection = <T>(array1: T[], array2: T[]) =>
-  array1.filter((item) => array2.includes(item));
+export function intersection<T>(array1: T[], array2: T[]) {
+  return array1.filter((item) => array2.includes(item));
+}
 
 /**
  * Find same elements between two arrays.
@@ -52,11 +54,11 @@ export const intersection = <T>(array1: T[], array2: T[]) =>
  *
  * Return a new array.
  */
-export const intersectionWith = <T>(
+export function intersectionWith<T>(
   array1: T[],
   array2: T[],
   equalFn?: (value1: T, value2: T) => boolean,
-) => {
+) {
   if (!equalFn) return intersection(array1, array2);
   const result: T[] = [];
   for (const item of array1) {
@@ -64,14 +66,16 @@ export const intersectionWith = <T>(
     if (index >= 0) result.push(item);
   }
   return result;
-};
+}
 
 /**
  * Find unique elements.
  *
  * Return a new array.
  */
-export const uniq = <T>(array: T[]) => [...new Set(array)];
+export function uniq<T>(array: T[]) {
+  return [...new Set(array)];
+}
 
 /**
  * Find unique elements.
@@ -80,7 +84,7 @@ export const uniq = <T>(array: T[]) => [...new Set(array)];
  *
  * Return a new array.
  */
-export const uniqWith = <T>(array: T[], equalFn?: (value1: T, value2: T) => boolean) => {
+export function uniqWith<T>(array: T[], equalFn?: (value1: T, value2: T) => boolean) {
   if (!equalFn) return uniq(array);
   const result: T[] = [];
   for (const item of array) {
@@ -88,14 +92,16 @@ export const uniqWith = <T>(array: T[], equalFn?: (value1: T, value2: T) => bool
     if (index === -1) result.push(item);
   }
   return result;
-};
+}
 
 /**
  * Find all elements in two arrays.
  *
  * Return a new array.
  */
-export const union = <T>(array1: T[], array2: T[]) => [...new Set([...array1, ...array2])];
+export function union<T>(array1: T[], array2: T[]) {
+  return [...new Set([...array1, ...array2])];
+}
 
 /**
  * Find all elements in two arrays.
@@ -104,8 +110,10 @@ export const union = <T>(array1: T[], array2: T[]) => [...new Set([...array1, ..
  *
  * Return a new array.
  */
-export const unionWith = <T>(
+export function unionWith<T>(
   array1: T[],
   array2: T[],
   equalFn?: (value1: T, value2: T) => boolean,
-) => uniqWith([...array1, ...array2], equalFn);
+) {
+  return uniqWith([...array1, ...array2], equalFn);
+}

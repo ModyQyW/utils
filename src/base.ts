@@ -2,17 +2,23 @@ export { default as is, assert } from '@sindresorhus/is';
 export { default as merge } from 'deepmerge';
 
 /** Get millisecond-based timestamp. */
-export const getTimestamp = () => +Date.now();
+export function getTimestamp() {
+  return +Date.now();
+}
 
 /** Get value type name. */
-export const getType = (value?: unknown) => Object.prototype.toString.call(value).slice(8, -1);
+export function getType(value?: unknown) {
+  return Object.prototype.toString.call(value).slice(8, -1);
+}
 
 /**
  * Use Object.is directly to determine if two values are equal.
  *
  * Use isDeepEqual If you need a deep comparison.
  */
-export const isEqual = (value1: unknown, value2: unknown) => Object.is(value1, value2);
+export function isEqual(value1: unknown, value2: unknown) {
+  return Object.is(value1, value2);
+}
 
 /**
  * Determine if two values are equal.
@@ -23,7 +29,7 @@ export const isEqual = (value1: unknown, value2: unknown) => Object.is(value1, v
  *
  * Other cases are determined using Object.is.
  */
-export const isDeepEqual = (value1: unknown, value2: unknown): boolean => {
+export function isDeepEqual(value1: unknown, value2: unknown): boolean {
   const type1 = getType(value1);
   const type2 = getType(value2);
   if (type1 !== type2) return false;
@@ -42,4 +48,4 @@ export const isDeepEqual = (value1: unknown, value2: unknown): boolean => {
     return keys1.every((key: string) => isDeepEqual(v1[key], v2[key]));
   }
   return Object.is(value1, value2);
-};
+}
