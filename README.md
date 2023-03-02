@@ -118,13 +118,81 @@ Reexported from [change-case](https://github.com/blakeembrey/change-case).
 
 Reexported from [title-case](https://github.com/blakeembrey/change-case/tree/master/packages/title-case).
 
-#### `lower-case`
+#### lowerCase
 
-Reexported from [lower-case](https://github.com/blakeembrey/change-case/tree/master/packages/lower-case).
+Convert string to lower case.
 
-#### `upper-case`
+```typescript
+import { lowerCase } from '@modyqyw/utils';
 
-Reexported from [upper-case](https://github.com/blakeembrey/change-case/tree/master/packages/upper-case).
+lowerCase(''); // ''
+lowerCase('test'); // 'test'
+lowerCase('TEST'); // 'test'
+lowerCase('test string'); // 'test string'
+lowerCase('TEST STRING'); // 'test string'
+```
+
+#### localeLowerCase
+
+Convert string to locale lower case.
+
+```typescript
+import { localeLowerCase } from '@modyqyw/utils';
+
+localeLowerCase('STRING', 'en-US'); // 'string'
+```
+
+#### lowerCaseFirst
+
+Convert first char to lower case.
+
+```typescript
+import { lowerCaseFirst } from '@modyqyw/utils';
+
+lowerCaseFirst(''); // ''
+lowerCaseFirst('test'); // 'test'
+lowerCaseFirst('TEST'); // 'tEST'
+lowerCaseFirst('test string'); // 'test string'
+lowerCaseFirst('TEST STRING'); // 'tEST STRING'
+```
+
+#### upperCase
+
+Convert string to upper case.
+
+```typescript
+import { upperCase } from '@modyqyw/utils';
+
+upperCase(''); // ''
+upperCase('test'); // 'TEST'
+upperCase('TEST'); // 'TEST'
+upperCase('test string'); // 'TEST STRING'
+upperCase('TEST STRING'); // 'TEST STRING'
+```
+
+#### localeUpperCase
+
+Convert string to locale upper case.
+
+```typescript
+import { localeLowerCase } from '@modyqyw/utils';
+
+localeLowerCase('string', 'en-US'); // 'STRING'
+```
+
+#### upperCaseFirst
+
+Convert first char to upper case.
+
+```typescript
+import { lowerCaseFirst } from '@modyqyw/utils';
+
+lowerCaseFirst(''); // ''
+lowerCaseFirst('test'); // 'test'
+lowerCaseFirst('TEST'); // 'tEST'
+lowerCaseFirst('test string'); // 'test string'
+lowerCaseFirst('TEST STRING'); // 'tEST STRING'
+```
 
 #### toString
 
