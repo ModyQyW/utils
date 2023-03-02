@@ -3,6 +3,12 @@
 ## Unreleased
 
 - build: switch to `unbuild`
+- feat: self implement `lowerCase`
+- feat: self implement `localeLowerCase`
+- feat: self implement `upperCase`
+- feat: self implement `localeUpperCase`
+- feat: add `lowerCaseFirst`
+- feat: add `upperCaseFirst`
 
 ## 4.1.0 (2023-02-03)
 
