@@ -12,7 +12,6 @@ export {
   sentenceCase,
   snakeCase,
 } from 'change-case';
-export { titleCase } from 'title-case';
 
 /** Convert string to lower case. */
 export const lowerCase = (string: string) => string.toLowerCase();
