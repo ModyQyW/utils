@@ -114,10 +114,6 @@ Reexported from [change-case](https://github.com/blakeembrey/change-case).
 
 `kebabCase` is also available.
 
-#### `title-case`
-
-Reexported from [title-case](https://github.com/blakeembrey/change-case/tree/master/packages/title-case).
-
 #### lowerCase
 
 Convert string to lower case.

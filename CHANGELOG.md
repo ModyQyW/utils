@@ -9,6 +9,7 @@
 - feat: self implement `localeUpperCase`
 - feat: add `lowerCaseFirst`
 - feat: add `upperCaseFirst`
+- feat!: remove `titleCase`
 
 ## 4.1.0 (2023-02-03)
 
