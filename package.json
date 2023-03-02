@@ -59,7 +59,6 @@
     "@types/throttle-debounce": "^5.0.0",
     "change-case": "^4.1.2",
     "deepmerge": "^4.3.0",
-    "lower-case": "^2.0.2",
     "p-debounce": "^4.0.0",
     "p-limit": "^4.0.0",
     "p-retry": "^5.1.2",
@@ -67,8 +66,7 @@
     "throttle-debounce": "^5.0.0",
     "title-case": "^3.0.3",
     "ts-extras": "^0.11.0",
-    "type-fest": "^3.6.1",
-    "upper-case": "^2.0.2"
+    "type-fest": "^3.6.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
