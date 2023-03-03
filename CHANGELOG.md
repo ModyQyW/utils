@@ -16,8 +16,13 @@ This major version targets at removing dependencies.
 - feat: self implement `Primitive`
 - feat: add `BuiltIns`
 - feat: add `AnyRecord`
+- feat: add `Promisable`
 - feat: add `Undefinable`
 - feat: add `Optional`
+- feat!: update `Fn`
+- feat: add `PromisifyFn`
+- feat: add `AnyFn`
+- feat: add `PromisifyAnyFn`
 - feat!: remove many types from `type-fest`, except `PackageJson` and `TsConfigJson`
 - feat!: remove `title-case`
 - feat!: remove `change-case`

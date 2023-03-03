@@ -642,6 +642,8 @@ type Falsy = false | 0 | 0n | '' | null | undefined;
 type Awaitable<T> = T | PromiseLike<T>;
 ```
 
+You can also use `Promisable`.
+
 #### Nullable
 
 ```typescript
@@ -660,22 +662,40 @@ type Undefinable<T> = T | undefined;
 type Optional<T> = T | null | undefined;
 ```
 
-### Arrayble
+#### Arrayble
 
 ```typescript
 type Arrayable<T> = T | Array<T>;
 ```
 
-### ElementOf
+#### ElementOf
 
 ```typescript
 type ElementOf<T> = T extends (infer E)[] ? E : never;
 ```
 
-### Fn
+#### Fn
 
 ```typescript
-type Fn<T = void> = () => T;
+type Fn = () => void;
+```
+
+#### PromisifyFn
+
+```typescript
+type PromisifyFn<T extends Fn> = () => Promise<ReturnType<T>>;
+```
+
+#### AnyFn
+
+```typescript
+type AnyFn<T = any> = (...args: any[]) => T;
+```
+
+#### PromisifyAnyFn
+
+```typescript
+type PromisifyAnyFn<T extends AnyFn> = (...args: Parameters<T>) => Promise<ReturnType<T>>;
 ```
 
 #### PackageJson
