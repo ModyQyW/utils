@@ -199,7 +199,7 @@ toString([1, 2, 3]); // '1,2,3'
 
 #### arrayIncludes
 
-Same as `Array#includes`. With better types.
+Same as `Array#includes`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
 
 #### toArray
 
@@ -325,21 +325,21 @@ unionWith([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }], isDeepEqual);
 
 #### objectKeys
 
-Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras). Has better types.
+Same as `Object.keys`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
 
 #### objectEntries
 
-Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras). Has better types.
+Same as `Object.entries`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
 
 #### objectFromEntries
 
-Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras). Has better types.
+Same as `Object.fromEntries`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
 
 ### set
 
 #### setHas
 
-Same as `Set#has`. With better types.
+Same as `Set#has`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
 
 ### promise
 
