@@ -199,7 +199,7 @@ toString([1, 2, 3]); // '1,2,3'
 
 #### arrayIncludes
 
-Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras). Has better types.
+Same as `array.includes`. With better types.
 
 #### toArray
 
@@ -710,7 +710,7 @@ Reexported from [type-fest](https://github.com/sindresorhus/type-fest).
 
 Inspired by [@antfu/utils](https://github.com/antfu/utils).
 
-Also thanks for all packages great jobs. Check them for more!
+I have checked and learned from these libraries. Thanks a lot! Check them for more if you need.
 
 - [lodash](https://lodash.com/)
 - [ramda](https://ramdajs.com/)

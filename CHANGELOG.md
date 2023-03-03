@@ -5,28 +5,28 @@
 This major version targets at removing dependencies.
 
 - build: switch to `unbuild`
-- feat!: self implement `throttle`
-- feat!: self implement `debounce`
-- feat: self implement `lowerCase`
-- feat: self implement `localeLowerCase`
-- feat: self implement `upperCase`
-- feat: self implement `localeUpperCase`
-- feat: add `lowerCaseFirst`
-- feat: add `upperCaseFirst`
-- feat: self implement `Primitive`
-- feat: add `BuiltIns`
-- feat: add `AnyRecord`
-- feat: add `Promisable`
-- feat: add `Undefinable`
-- feat: add `Optional`
-- feat!: update `Fn`
-- feat: add `PromisifyFn`
-- feat: add `AnyFn`
-- feat: add `PromisifyAnyFn`
-- feat!: remove many types from `type-fest`, except `PackageJson` and `TsConfigJson`
-- feat!: remove `title-case`
-- feat!: remove `change-case`
-- feat!: remove `throttle-debounce`
+- feat!: `throttle`
+- feat!: `debounce`
+- feat: `lowerCase`
+- feat: `localeLowerCase`
+- feat: `upperCase`
+- feat: `localeUpperCase`
+- feat: `lowerCaseFirst`
+- feat: `upperCaseFirst`
+- feat: `Primitive`
+- feat: `BuiltIns`
+- feat: `AnyRecord`
+- feat: `Promisable`
+- feat: `Undefinable`
+- feat: `Optional`
+- feat!: `Fn`
+- feat: `PromisifyFn`
+- feat: `AnyFn`
+- feat: `PromisifyAnyFn`
+- feat!: only keep `PackageJson` and `TsConfigJson` from `type-fest`
+- feat!: `title-case`
+- feat!: `change-case`
+- feat!: `throttle-debounce`
 
 ## 4.1.0 (2023-02-03)
 
