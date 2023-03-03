@@ -9,6 +9,8 @@ export type Falsy = false | 0 | 0n | '' | null | undefined;
 
 export type Awaitable<T> = T | PromiseLike<T>;
 
+export type Promisable<T> = Awaitable<T>;
+
 export type Nullable<T> = T | null;
 
 export type Undefinable<T> = T | undefined;
@@ -19,6 +21,12 @@ export type Arrayable<T> = T | Array<T>;
 
 export type ElementOf<T> = T extends (infer E)[] ? E : never;
 
-export type Fn<T = void> = () => T;
+export type Fn<T = any> = () => T;
+
+export type PromisifyFn<T extends Fn> = () => Promise<ReturnType<T>>;
+
+export type AnyFn<T = any> = (...args: any[]) => T;
+
+export type PromisifyAnyFn<T extends AnyFn> = (...args: Parameters<T>) => Promise<ReturnType<T>>;
 
 export type { PackageJson, TsConfigJson } from 'type-fest';
