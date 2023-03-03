@@ -1,6 +1,18 @@
 import { Optional, Arrayable } from './types';
 
-export { arrayIncludes } from 'ts-extras';
+/**
+ * Determines whether an array includes a certain element, returning true or false as appropriate.
+ *
+ * @param searchElement — The element to search for.
+ * @param fromIndex — The position in this array at which to begin searching for searchElement.
+ */
+export function arrayIncludes<Type extends SuperType, SuperType = unknown>(
+  array: Type[] | readonly Type[],
+  item: SuperType,
+  fromIndex?: number,
+): item is Type {
+  return array.includes(item as Type, fromIndex);
+}
 
 /** Convert value to an array. */
 export function toArray<T>(value?: Optional<Arrayable<T>>) {
