@@ -2,14 +2,26 @@
 
 ## Unreleased
 
+This major version targets at removing dependencies.
+
 - build: switch to `unbuild`
+- feat!: self implement `throttle`
+- feat!: self implement `debounce`
 - feat: self implement `lowerCase`
 - feat: self implement `localeLowerCase`
 - feat: self implement `upperCase`
 - feat: self implement `localeUpperCase`
 - feat: add `lowerCaseFirst`
 - feat: add `upperCaseFirst`
-- feat!: remove `titleCase`
+- feat: self implement `Primitive`
+- feat: add `BuiltIns`
+- feat: add `AnyRecord`
+- feat: add `Undefinable`
+- feat: add `Optional`
+- feat!: remove many types from `type-fest`, except `PackageJson` and `TsConfigJson`
+- feat!: remove `title-case`
+- feat!: remove `change-case`
+- feat!: remove `throttle-debounce`
 
 ## 4.1.0 (2023-02-03)
 

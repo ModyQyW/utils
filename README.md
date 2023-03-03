@@ -16,8 +16,6 @@ npm install @modyqyw/utils
 
 ### base
 
-Check [lodash](https://lodash.com/), [ramda](https://ramdajs.com/) and [rameda](https://remedajs.com/) for more.
-
 I recommend [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone) for deep clone.
 
 #### is & assert
@@ -107,12 +105,6 @@ isDeepEqual([1, 2, 3, { a: 1, b: { c: true } }], [1, 2, 3, { a: 1, b: { c: false
 ```
 
 ### string
-
-#### `change-case`
-
-Reexported from [change-case](https://github.com/blakeembrey/change-case).
-
-`kebabCase` is also available.
 
 #### lowerCase
 
@@ -351,8 +343,6 @@ Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras).
 
 ### promise
 
-Check [promise-fun](https://github.com/sindresorhus/promise-fun) and [rxjs](https://rxjs.dev/) for more.
-
 #### pLimit
 
 Reexported from [p-limit](https://github.com/sindresorhus/p-limit).
@@ -384,13 +374,135 @@ await sleep(1000, () => {
 
 ### function
 
-#### debounce
-
-Reexported from [throttle-debounce](https://github.com/niksy/throttle-debounce).
-
 #### throttle
 
-Reexported from [throttle-debounce](https://github.com/niksy/throttle-debounce).
+Creates a throttled function that only invokes `callback` at most once per every `delay` milliseconds.
+
+```typescript
+import { throttle } from '@modyqyw/utils';
+
+const throttled = throttle(fn, 1000);
+throttled(); // called
+throttled();
+throttled();
+throttled(); // called
+setTimeout(throttled, 1200); // called
+```
+
+Disable `leading` or `trailing` in the third param. Default `{ leading: true, trailing: true }`.
+
+```typescript
+import { throttle } from '@modyqyw/utils';
+
+const throttled = throttle(fn, 1000, { trailing: false });
+throttled(); // called
+throttled();
+throttled();
+throttled();
+setTimeout(throttled, 1200); // called
+```
+
+```typescript
+import { throttle } from '@modyqyw/utils';
+
+const throttled = throttle(fn, 1000, { leading: false });
+throttled();
+throttled();
+throttled();
+throttled(); // called
+setTimeout(throttled, 1200); // called
+```
+
+```typescript
+import { throttle } from '@modyqyw/utils';
+
+const throttled = throttle(fn, 1000, { leading: false, trailing: false });
+throttled();
+throttled();
+throttled();
+throttled();
+setTimeout(throttled, 1200);
+```
+
+Use `.abort()` to abort next invocations. Pass `true` to abort the next invocation.
+
+```typescript
+import { throttle } from '@modyqyw/utils';
+
+const throttled = throttle(fn, 1000);
+throttled(); // called
+throttled();
+throttled.abort(true);
+throttled(); // called
+throttled.abort();
+throttled();
+throttled();
+```
+
+#### debounce
+
+Creates a debounced function that delays invoking `callback` until after `delay` milliseconds have elapsed since the last time the debounced function was invoked.
+
+```typescript
+import { debounce } from '@modyqyw/utils';
+
+const debounced = debounce(fn, 1000);
+debounced();
+debounced();
+debounced();
+debounced(); // called
+setTimeout(debounced, 1200); // called
+```
+
+Disable `leading` or `trailing` in the third param. Default `{ leading: false, trailing: true }`.
+
+```typescript
+import { debounce } from '@modyqyw/utils';
+
+const debounced = debounce(fn, 1000, { leading: false, trailing: false });
+debounced();
+debounced();
+debounced();
+debounced();
+setTimeout(debounced, 1200);
+```
+
+```typescript
+import { debounce } from '@modyqyw/utils';
+
+const debounced = debounce(fn, 1000, { leading: true, trailing: true });
+debounced(); // called
+debounced();
+debounced();
+debounced(); // called
+setTimeout(debounced, 1200); // called
+```
+
+```typescript
+import { debounce } from '@modyqyw/utils';
+
+const debounced = debounce(fn, 1000, { leading: true, trailing: false });
+debounced(); // called
+debounced();
+debounced();
+debounced();
+setTimeout(debounced, 1200); // called
+```
+
+Use `.abort()` to abort next invocations. Pass `true` to abort the next invocation.
+
+```typescript
+import { debounce } from '@modyqyw/utils';
+
+const debounced = debounce(fn, 1000);
+debounced();
+debounced();
+debounced.abort(true);
+debounced(); // called
+debounced.abort();
+debounced();
+debounced();
+```
 
 #### pipe
 
@@ -421,8 +533,6 @@ noop();
 ```
 
 ### node
-
-Check [mlly](https://github.com/unjs/mlly), [pkg-types](https://github.com/unjs/pkg-types), and [local-pkg](https://github.com/antfu/local-pkg) for more.
 
 #### createCJS
 
@@ -502,9 +612,23 @@ setTsconfigJson('/fake/path/tsconfig.json'); // pass a path directly
 
 ### types
 
-#### `type-fest`
+#### Primitive
 
-Reexported from [type-fest](https://github.com/sindresorhus/type-fest)
+```typescript
+type Primitive = null | undefined | string | number | boolean | symbol | bigint;
+```
+
+#### BuiltIns
+
+```typescript
+type BuiltIns = Primitive | Date | RegExp | Function | Error;
+```
+
+#### AnyRecord
+
+```typescript
+type AnyRecord = Record<string, any>;
+```
 
 #### Falsy
 
@@ -518,10 +642,22 @@ type Falsy = false | 0 | 0n | '' | null | undefined;
 type Awaitable<T> = T | PromiseLike<T>;
 ```
 
-### Nullable
+#### Nullable
 
 ```typescript
-type Nullable<T> = T | null | undefined;
+type Nullable<T> = T | null;
+```
+
+#### Undefinable
+
+```typescript
+type Undefinable<T> = T | undefined;
+```
+
+#### Optional
+
+```typescript
+type Optional<T> = T | null | undefined;
 ```
 
 ### Arrayble
@@ -542,9 +678,34 @@ type ElementOf<T> = T extends (infer E)[] ? E : never;
 type Fn<T = void> = () => T;
 ```
 
+#### PackageJson
+
+Reexported from [type-fest](https://github.com/sindresorhus/type-fest).
+
+#### TsConfigJson
+
+Reexported from [type-fest](https://github.com/sindresorhus/type-fest).
+
 ## Acknowledges
 
-Inspired by [@antfu/utils](https://github.com/antfu/utils). Also thanks for all packages great jobs.
+Inspired by [@antfu/utils](https://github.com/antfu/utils).
+
+Also thanks for all packages great jobs. Check them for more!
+
+- [lodash](https://lodash.com/)
+- [ramda](https://ramdajs.com/)
+- [rameda](https://remedajs.com/)
+- [fp-ts](https://gcanti.github.io/fp-ts/)
+- [io-ts](https://gcanti.github.io/io-ts/)
+- [zod](https://zod.dev/)
+- [change-case](https://github.com/blakeembrey/change-case)
+- [promise-fun](https://github.com/sindresorhus/promise-fun)
+- [rxjs](https://rxjs.dev/)
+- [mlly](https://github.com/unjs/mlly)
+- [pkg-types](https://github.com/unjs/pkg-types)
+- [local-pkg](https://github.com/antfu/local-pkg)
+- [type-fest](https://github.com/sindresorhus/type-fest)
+- [ts-essentials](https://github.com/ts-essentials/ts-essentials)
 
 ## [Sponsors](https://github.com/ModyQyW/sponsors)
 
