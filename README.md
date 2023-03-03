@@ -199,7 +199,7 @@ toString([1, 2, 3]); // '1,2,3'
 
 #### arrayIncludes
 
-Same as `array.includes`. With better types.
+Same as `Array#includes`. With better types.
 
 #### toArray
 
@@ -339,7 +339,7 @@ Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras). Has bett
 
 #### setHas
 
-Reexported from [ts-extras](https://github.com/sindresorhus/ts-extras).
+Same as `Set#has`. With better types.
 
 ### promise
 

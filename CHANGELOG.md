@@ -7,10 +7,6 @@ This major version targets at removing dependencies.
 - build: switch to `unbuild`
 - feat!: `throttle`
 - feat!: `debounce`
-- feat: `lowerCase`
-- feat: `localeLowerCase`
-- feat: `upperCase`
-- feat: `localeUpperCase`
 - feat: `lowerCaseFirst`
 - feat: `upperCaseFirst`
 - feat: `Primitive`
@@ -24,9 +20,8 @@ This major version targets at removing dependencies.
 - feat: `AnyFn`
 - feat: `PromisifyAnyFn`
 - feat!: only keep `PackageJson` and `TsConfigJson` from `type-fest`
-- feat!: `title-case`
-- feat!: `change-case`
-- feat!: `throttle-debounce`
+- feat!: remove `title-case`
+- feat!: remove `change-case`
 
 ## 4.1.0 (2023-02-03)
 
