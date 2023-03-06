@@ -4,7 +4,6 @@
 
 This major version targets at removing dependencies.
 
-- build: switch to `unbuild`
 - feat!: `throttle`
 - feat!: `debounce`
 - feat: `lowerCaseFirst`
