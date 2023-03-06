@@ -41,9 +41,9 @@ export default defineConfig([
       },
     ],
     plugins: [
-      esbuild({ target: 'es2020' }),
-      commonjs(),
       nodeResolve({ preferBuiltins: true }),
+      commonjs(),
+      esbuild({ target: 'es2020' }),
       del({
         targets: './dist/**/*',
         runOnce: isDev,
