@@ -1,8 +1,10 @@
 # CHANGELOG
 
-## Unreleased
+## 5.0.0 (2023-03-06)
 
-This major version targets at removing dependencies.
+This major version removes dependencies and types. Also move `dependencies` to `devDependencies`.
+
+We want to remove all extra dependencies in the next major versions.
 
 - feat!: `throttle`
 - feat!: `debounce`
