@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 6.0.0 (2023-04-24)
+
+This major version removes `node` related functions. Now it should be platform-unrelated.
+
+- feat!: remove `node` functions, you can use [mlly](https://unjs.io/mlly) instead
+- feat!: remove `BuiltIns` type and export all types from `type-fest`
+
 ## 5.0.0 (2023-03-06)
 
 This major version removes dependencies and types. Also move `dependencies` to `devDependencies`.
