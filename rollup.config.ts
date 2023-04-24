@@ -5,11 +5,12 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import esbuild from 'rollup-plugin-esbuild';
 import dts from 'rollup-plugin-dts';
 import del from 'rollup-plugin-delete';
-import { getPackageJson } from './src';
+import { PackageJson } from 'type-fest';
+import pkg from './package.json' assert { type: 'json' };
 
 const isDev = !!process.env.ROLLUP_WATCH;
 
-const packageJson = getPackageJson();
+const packageJson = pkg as PackageJson;
 const dependencies = packageJson.dependencies ?? {};
 const peerDependencies = packageJson.peerDependencies ?? {};
 
