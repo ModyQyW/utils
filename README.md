@@ -532,97 +532,11 @@ import { noop } from '@modyqyw/utils';
 noop();
 ```
 
-### node
-
-#### createCJS
-
-Create a compatible CommonJS context that is missing in ESM.
-
-```typescript
-import { createCjs } from '@modyqyw/utils';
-
-const { __filename, __dirname, require } = createCjs(); // same as createCjs(import.meta.url);
-```
-
-#### resolvePackageJson
-
-Resolve `package.json` path. Not validate the existence.
-
-```typescript
-import { resolvePackageJson } from '@modyqyw/utils';
-
-const path = resolvePackageJson(); // same as resolvePackageJson(process.cwd())
-const path = resolvePackageJson('/fake/path/package.json'); // pass a path directly
-```
-
-#### getPackageJson
-
-Get `package.json` as an object.
-
-```typescript
-import { getPackageJson } from '@modyqyw/utils';
-
-const packageJson = getPackageJson(); // same as getPackageJson(process.cwd())
-const packageJson = getPackageJson('/fake/path/package.json'); // pass a path directly
-```
-
-#### setPackageJson
-
-Set `package.json` content.
-
-```typescript
-import { setPackageJson } from '@modyqyw/utils';
-
-setPackageJson(); // same as setPackageJson(process.cwd())
-setPackageJson('/fake/path/package.json'); // pass a path directly
-```
-
-#### resolveTsconfigJson
-
-Resolve `tsconfig.json` path. Not validate the existence.
-
-```typescript
-import { resolveTsconfigJson } from '@modyqyw/utils';
-
-const path = resolveTsconfigJson(); // same as resolveTsconfigJson(process.cwd())
-const path = resolveTsconfigJson('/fake/path/tsconfig.json'); // pass a path directly
-```
-
-#### getTsconfigJson
-
-Get `tsconfig.json` as an object.
-
-```typescript
-import { getTsconfigJson } from '@modyqyw/utils';
-
-const tsconfigJson = getTsconfigJson(); // same as getTsconfigJson(process.cwd())
-const tsconfigJson = getTsconfigJson('/fake/path/tsconfig.json'); // pass a path directly
-```
-
-#### setTsconfigJson
-
-Set `tsconfig.json` content.
-
-```typescript
-import { setTsconfigJson } from '@modyqyw/utils';
-
-setTsconfigJson(); // same as setTsconfigJson(process.cwd())
-setTsconfigJson('/fake/path/tsconfig.json'); // pass a path directly
-```
-
 ### types
 
-#### Primitive
+#### `type-fest`
 
-```typescript
-type Primitive = null | undefined | string | number | boolean | symbol | bigint;
-```
-
-#### BuiltIns
-
-```typescript
-type BuiltIns = Primitive | Date | RegExp | Function | Error;
-```
+Reexported all types from [type-fest](https://github.com/sindresorhus/type-fest).
 
 #### AnyRecord
 
@@ -639,10 +553,10 @@ type Falsy = false | 0 | 0n | '' | null | undefined;
 #### Awaitable
 
 ```typescript
-type Awaitable<T> = T | PromiseLike<T>;
-```
+import { Promisable } from 'type-fest';
 
-You can also use `Promisable`.
+type Awaitable<T> = Promisable<T>;
+```
 
 #### Nullable
 
@@ -697,14 +611,6 @@ type AnyFn<T = any> = (...args: any[]) => T;
 ```typescript
 type PromisifyAnyFn<T extends AnyFn> = (...args: Parameters<T>) => Promise<ReturnType<T>>;
 ```
-
-#### PackageJson
-
-Reexported from [type-fest](https://github.com/sindresorhus/type-fest).
-
-#### TsConfigJson
-
-Reexported from [type-fest](https://github.com/sindresorhus/type-fest).
 
 ## Acknowledges
 
