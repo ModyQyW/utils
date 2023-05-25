@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Unreleased
+
+- feat!: remove `differenceWith`, please use `difference`
+- feat!: remove `intersectionWith`, please use `intersection`
+- feat!: remove `uniqWith`, please use `uniq`
+- feat!: remove `unionWith`, please use `union`
+- feat: add `range`
+
 ## 6.0.0 (2023-04-24)
 
 This major version removes `node` related functions. Now it should be platform-unrelated.
@@ -10,8 +18,6 @@ This major version removes `node` related functions. Now it should be platform-u
 ## 5.0.0 (2023-03-06)
 
 This major version removes dependencies and types. Also move `dependencies` to `devDependencies`.
-
-We want to remove all extra dependencies in the next major versions.
 
 - feat!: `throttle`
 - feat!: `debounce`
