@@ -76,6 +76,11 @@ export function difference<T>(
  * @example intersection([1, '2', {}], [1, {}]) => [1]
  *
  * @example intersection([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }]) => [1]
+ *
+ * @example intersection([1, '2', {}], [1, {}], isDeepEqual) => [1, {}]
+ *
+ * @example intersection([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual) => [1, {
+ * a: { b: 'c' } }]
  */
 export function intersection<T>(
   array1: T[],
@@ -122,7 +127,8 @@ export function uniq<T>(array: T[], equalFn?: (value1: T, value2: T) => boolean)
  *
  * @example union([1, '2', {}], [1, 3, {}], isDeepEqual) => [1, '2', {}, 3]
  *
- * @example union([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }], isDeepEqual)
+ * @example union([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }], isDeepEqual) => [1, '2', {
+ * a: { b: 'c' } }, 3]
  */
 export function union<T>(array1: T[], array2: T[], equalFn?: (value1: T, value2: T) => boolean) {
   return uniq([...array1, ...array2], equalFn);
