@@ -15,6 +15,8 @@ describe('base', () => {
     expect(getType(null)).toBe('Null');
     // Undefined
     expect(getType()).toBe('Undefined');
+    // eslint-disable-next-line unicorn/no-useless-undefined
+    expect(getType(undefined)).toBe('Undefined');
     // Boolean
     expect(getType(true)).toBe('Boolean');
     expect(getType(Boolean(''))).toBe('Boolean');
