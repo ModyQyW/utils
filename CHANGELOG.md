@@ -18,6 +18,7 @@
 - feat: add `isObject`
 - feat: add `isFunction`
 - feat: add `isArray`
+- feat: add `isBlob`
 
 ## 6.0.0 (2023-04-24)
 

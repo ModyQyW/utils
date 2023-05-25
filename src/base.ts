@@ -1,6 +1,31 @@
 export { default as merge } from 'deepmerge';
 
 /**
+ * Get value type name.
+ *
+ * @example getType(null) => 'Null'
+ *
+ * @example getType() => 'Undefined'
+ *
+ * @example getType(undefined) => 'Undefined'
+ *
+ * @example getType(true) => 'Boolean'
+ *
+ * @example getType(0) => 'Number'
+ *
+ * @example getType(0n) => 'BigInt'
+ *
+ * @example getType('') => 'String'
+ *
+ * @example getType({}) => 'Object'
+ *
+ * @example getType([]) => 'Array'
+ */
+export function getType(value?: unknown) {
+  return Object.prototype.toString.call(value).slice(8, -1);
+}
+
+/**
  * Determine if a value is a string.
  *
  * @example isString('') => true
@@ -213,7 +238,7 @@ export function isSymbol(value: unknown): value is symbol {
  * @example isObject([]) => false
  */
 export function isObject(value: unknown): value is object {
-  return Object.prototype.toString.call(value).slice(8, -1) === 'Object';
+  return getType(value) === 'Object';
 }
 
 /**
@@ -278,6 +303,11 @@ export function isArray<T = unknown>(
   return value.every((element) => assertion(element));
 }
 
+/** Determine if a value is a blob. */
+export function isBlob(value: unknown): value is Blob {
+  return getType(value) === 'Blob';
+}
+
 /**
  * Get millisecond-based timestamp.
  *
@@ -285,31 +315,6 @@ export function isArray<T = unknown>(
  */
 export function getTimestamp() {
   return +Date.now();
-}
-
-/**
- * Get value type name.
- *
- * @example getType(null) => 'Null'
- *
- * @example getType() => 'Undefined'
- *
- * @example getType(undefined) => 'Undefined'
- *
- * @example getType(true) => 'Boolean'
- *
- * @example getType(0) => 'Number'
- *
- * @example getType(0n) => 'BigInt'
- *
- * @example getType('') => 'String'
- *
- * @example getType({}) => 'Object'
- *
- * @example getType([]) => 'Array'
- */
-export function getType(value?: unknown) {
-  return Object.prototype.toString.call(value).slice(8, -1);
 }
 
 /**

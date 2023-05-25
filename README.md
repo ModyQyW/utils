@@ -16,6 +16,24 @@ npm install @modyqyw/utils
 
 ### base
 
+### getType
+
+Get value type name.
+
+```typescript
+import { getType } from '@modyqyw/utils';
+
+getType(null); // Null
+getType(); // Undefined
+getType(undefined); // Undefined
+getType(true); // Boolean
+getType(0); // Number
+getType(0n); // BigInt
+getType(''); // String
+getType({}); // Object
+getType([]); // Array
+```
+
 #### isString
 
 Determine if a value is a string.
@@ -231,10 +249,13 @@ import { isArray, isNumber } from '@modyqyw/utils';
 
 isArray([1, 2, 3], isNumber); // true
 isArray([1, 2, '3'], isNumber); // false
-
 ```
 
 You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isBlob
+
+Determine if a value is a blob.
 
 #### merge
 
@@ -250,24 +271,6 @@ Get millisecond-based timestamp.
 import { getTimestamp } from '@modyqyw/utils';
 
 const timestamp = getTimestamp();
-```
-
-### getType
-
-Get value type name.
-
-```typescript
-import { getType } from '@modyqyw/utils';
-
-getType(null); // Null
-getType(); // Undefined
-getType(undefined); // Undefined
-getType(true); // Boolean
-getType(0); // Number
-getType(0n); // BigInt
-getType(''); // String
-getType({}); // Object
-getType([]); // Array
 ```
 
 #### isEqual
