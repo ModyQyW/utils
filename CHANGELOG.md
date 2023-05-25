@@ -7,6 +7,16 @@
 - feat!: remove `uniqWith`, please use `uniq`
 - feat!: remove `unionWith`, please use `union`
 - feat: add `range`
+- feat: add `isString`
+- feat: add `isNumber`
+- feat: add `isBigInt`
+- feat: add `isBoolean`
+- feat: add `isUndefined`
+- feat: add `isNull`
+- feat: add `isSymbol`
+- feat: add `isObject`
+- feat: add `isFunction`
+- feat: add `isArray`
 
 ## 6.0.0 (2023-04-24)
 

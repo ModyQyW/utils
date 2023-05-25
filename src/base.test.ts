@@ -1,8 +1,156 @@
 import { describe, it, expect } from 'vitest';
-import { getTimestamp, getType, isEqual, isDeepEqual } from './base';
+import {
+  isString,
+  isNumber,
+  isBigInt,
+  isBoolean,
+  isUndefined,
+  isNull,
+  isSymbol,
+  isObject,
+  isFunction,
+  isArray,
+  getTimestamp,
+  getType,
+  isEqual,
+  isDeepEqual,
+} from './base';
 import { noop } from './function';
 
 describe('base', () => {
+  it('isString', () => {
+    expect(isString('')).toBe(true);
+    expect(isString(0)).toBe(false);
+    expect(isString(0n)).toBe(false);
+    expect(isString(true)).toBe(false);
+    expect(isString(undefined)).toBe(false);
+    expect(isString(null)).toBe(false);
+    expect(isString(Symbol())).toBe(false);
+    expect(isString({})).toBe(false);
+    expect(isString(noop)).toBe(false);
+    expect(isString([])).toBe(false);
+  });
+
+  it('isNumber', () => {
+    expect(isNumber('')).toBe(false);
+    expect(isNumber(0)).toBe(true);
+    expect(isNumber(0n)).toBe(false);
+    expect(isNumber(true)).toBe(false);
+    expect(isNumber(undefined)).toBe(false);
+    expect(isNumber(null)).toBe(false);
+    expect(isNumber(Symbol())).toBe(false);
+    expect(isNumber({})).toBe(false);
+    expect(isNumber(noop)).toBe(false);
+    expect(isNumber([])).toBe(false);
+  });
+
+  it('isBigInt', () => {
+    expect(isBigInt('')).toBe(false);
+    expect(isBigInt(0)).toBe(false);
+    expect(isBigInt(0n)).toBe(true);
+    expect(isBigInt(true)).toBe(false);
+    expect(isBigInt(undefined)).toBe(false);
+    expect(isBigInt(null)).toBe(false);
+    expect(isBigInt(Symbol())).toBe(false);
+    expect(isBigInt({})).toBe(false);
+    expect(isBigInt(noop)).toBe(false);
+    expect(isBigInt([])).toBe(false);
+  });
+
+  it('isBoolean', () => {
+    expect(isBoolean('')).toBe(false);
+    expect(isBoolean(0)).toBe(false);
+    expect(isBoolean(0n)).toBe(false);
+    expect(isBoolean(true)).toBe(true);
+    expect(isBoolean(undefined)).toBe(false);
+    expect(isBoolean(null)).toBe(false);
+    expect(isBoolean(Symbol())).toBe(false);
+    expect(isBoolean({})).toBe(false);
+    expect(isBoolean(noop)).toBe(false);
+    expect(isBoolean([])).toBe(false);
+  });
+
+  it('isUndefined', () => {
+    expect(isUndefined('')).toBe(false);
+    expect(isUndefined(0)).toBe(false);
+    expect(isUndefined(0n)).toBe(false);
+    expect(isUndefined(true)).toBe(false);
+    expect(isUndefined(undefined)).toBe(true);
+    expect(isUndefined(null)).toBe(false);
+    expect(isUndefined(Symbol())).toBe(false);
+    expect(isUndefined({})).toBe(false);
+    expect(isUndefined(noop)).toBe(false);
+    expect(isUndefined([])).toBe(false);
+  });
+
+  it('isNull', () => {
+    expect(isNull('')).toBe(false);
+    expect(isNull(0)).toBe(false);
+    expect(isNull(0n)).toBe(false);
+    expect(isNull(true)).toBe(false);
+    expect(isNull(undefined)).toBe(false);
+    expect(isNull(null)).toBe(true);
+    expect(isNull(Symbol())).toBe(false);
+    expect(isNull({})).toBe(false);
+    expect(isNull(noop)).toBe(false);
+    expect(isNull([])).toBe(false);
+  });
+
+  it('isSymbol', () => {
+    expect(isSymbol('')).toBe(false);
+    expect(isSymbol(0)).toBe(false);
+    expect(isSymbol(0n)).toBe(false);
+    expect(isSymbol(true)).toBe(false);
+    expect(isSymbol(undefined)).toBe(false);
+    expect(isSymbol(null)).toBe(false);
+    expect(isSymbol(Symbol())).toBe(true);
+    expect(isSymbol({})).toBe(false);
+    expect(isSymbol(noop)).toBe(false);
+    expect(isSymbol([])).toBe(false);
+  });
+
+  it('isObject', () => {
+    expect(isObject('')).toBe(false);
+    expect(isObject(0)).toBe(false);
+    expect(isObject(0n)).toBe(false);
+    expect(isObject(true)).toBe(false);
+    expect(isObject(undefined)).toBe(false);
+    expect(isObject(null)).toBe(false);
+    expect(isObject(Symbol())).toBe(false);
+    expect(isObject({})).toBe(true);
+    expect(isObject(noop)).toBe(false);
+    expect(isObject([])).toBe(false);
+  });
+
+  it('isFunction', () => {
+    expect(isFunction('')).toBe(false);
+    expect(isFunction(0)).toBe(false);
+    expect(isFunction(0n)).toBe(false);
+    expect(isFunction(true)).toBe(false);
+    expect(isFunction(undefined)).toBe(false);
+    expect(isFunction(null)).toBe(false);
+    expect(isFunction(Symbol())).toBe(false);
+    expect(isFunction({})).toBe(false);
+    expect(isFunction(noop)).toBe(true);
+    expect(isFunction([])).toBe(false);
+  });
+
+  it('isArray', () => {
+    expect(isArray('')).toBe(false);
+    expect(isArray(0)).toBe(false);
+    expect(isArray(0n)).toBe(false);
+    expect(isArray(true)).toBe(false);
+    expect(isArray(undefined)).toBe(false);
+    expect(isArray(null)).toBe(false);
+    expect(isArray(Symbol())).toBe(false);
+    expect(isArray({})).toBe(false);
+    expect(isArray(noop)).toBe(false);
+    expect(isArray([])).toBe(true);
+    expect(isArray<number>([])).toBe(true);
+    expect(isArray<number>([], isNumber)).toBe(true);
+    expect(isArray<number>([''], isNumber)).toBe(false);
+  });
+
   it('getTimestamp', () => {
     expect(getTimestamp()).toSatisfy<number>((v) => {
       const value = Date.now();

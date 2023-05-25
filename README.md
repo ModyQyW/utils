@@ -22,7 +22,7 @@ I recommend [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/s
 
 Reexported from [@sindresorhus/is](https://github.com/sindresorhus/is).
 
-No plans to provide `isXxx`. Just use `is.xxx`.
+Also provide `isString`, `isNumber`, `isBigInt`, `isBoolean`, `isUndefined`, `isNull`, `isSymbol`, `isObject`, `isFunction` and `isArray` for simple usage.
 
 #### merge
 
@@ -47,16 +47,18 @@ import { getType } from '@modyqyw/utils';
 
 getType(null); // Null
 getType(); // Undefined
+getType(undefined); // Undefined
 getType(true); // Boolean
 getType(0); // Number
 getType(0n); // BigInt
 getType(''); // String
+getType({}); // Object
 getType([]); // Array
 ```
 
 #### isEqual
 
-Use `Object.is` directly to determine if two values are equal. Use `isDeepEqual` if you need a deep comparison.
+Use `Object.is` directly to determine if two values are equal. Use [isDeepEqual](#isdeepequal) if you need a deep comparison.
 
 ```typescript
 import { isEqual } from '@modyqyw/utils';
@@ -81,7 +83,7 @@ isEqual([1, 2, 3, { a: 1, b: { c: true } }], [1, 2, 3, { a: 1, b: { c: false } }
 
 #### isDeepEqual
 
-Determine if two values are equal. For arrays, recursively determine the value corresponding to each index. For objects, recursively determine the value of each key. Other cases are determined using `Object.is`.
+Determine if two values are equal. For arrays, recursively determine the value corresponding to each index. For objects, recursively determine the value of each key. Other cases are determined with `Object.is`.
 
 ```typescript
 import { isDeepEqual } from '@modyqyw/utils';
