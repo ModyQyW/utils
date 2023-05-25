@@ -219,77 +219,43 @@ toArray([1, 2]); // [1, 2]
 
 #### difference
 
-Find difference elements in two arrays. Return a new array.
+Find difference elements between two arrays. Pass a function to judge equation or fallback to `Array.prototype.includes`. Return a new array.
 
 ```typescript
-import { difference } from '@modyqyw/utils';
+import { difference, isDeepEqual } from '@modyqyw/utils';
 
 difference([1, '2'], [1]); // ['2']
 difference([1, '2', {}], [1, {}]); // ['2', {}]
 difference([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }]); // ['2', { a: { b: 'c' } }]
-```
-
-#### differenceWith
-
-Find difference elements in two arrays. Pass a function to judge equation or fallback to `difference`. Return a new array.
-
-```typescript
-import { isDeepEqual, differenceWith } from '@modyqyw/utils';
-
-differenceWith([1, '2'], [1]); // ['2']
-differenceWith([1, '2', {}], [1, {}]); // ['2', {}]
-differenceWith([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }]); // ['2', { a: { b: 'c' } }]
-differenceWith([1, '2', {}], [1, {}], isDeepEqual); // ['2']
-differenceWith([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual); // ['2']
+difference([1, '2', {}], [1, {}], isDeepEqual); // ['2']
+difference([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual); // ['2']
 ```
 
 #### intersection
 
-Find same elements in two arrays. Return a new array.
+Find same elements between two arrays. Pass a function to judge equation or fallback to `Array.prototype.includes`. Return a new array.
 
 ```typescript
-import { intersection } from '@modyqyw/utils';
+import { intersection, isDeepEqual } from '@modyqyw/utils';
 
 intersection([1, '2'], [1]); // [1]
 intersection([1, '2', {}], [1, {}]); // [1]
 intersection([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }]); // [1]
-```
-
-#### intersectionWith
-
-Find same elements in two arrays. Pass a function to judge equation or fallback to `intersection`. Return a new array.
-
-```typescript
-import { isDeepEqual, intersectionWith } from '@modyqyw/utils';
-
-intersectionWith([1, '2'], [1]); // [1]
-intersectionWith([1, '2', {}], [1, {}]); // [1]
-intersectionWith([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }]); // [1]
-intersectionWith([1, '2', {}], [1, {}], isDeepEqual); // [1, {}]
-intersectionWith([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual); // [1, { a: { b: 'c' } }]
+intersection([1, '2', {}], [1, {}], isDeepEqual); // [1, {}]
+intersection([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual); // [1, {
+ * a: { b: 'c' } }]
 ```
 
 #### uniq
 
-Find unique elements. Return a new array.
+Find unique elements. Pass a function to judge equation or fallback to `Set`. Return a new array.
 
 ```typescript
-import { uniq } from '@modyqyw/utils';
+import { uniq, isDeepEqual } from '@modyqyw/utils';
 
 uniq([1, '2', 2, 2, '2']); // [1, '2', 2]
 uniq([1, '2', 2, 2, '2', {}, {}]); // [1, '2', 2, {}, {}]
-```
-
-#### uniqWith
-
-Find unique elements. Pass a function to judge equation or fallback to `uniq`. Return a new array.
-
-```typescript
-import { uniqWith } from '@modyqyw/utils';
-
-uniqWith([1, '2', 2, 2, '2']); // [1, '2', 2]
-uniqWith([1, '2', 2, 2, '2', {}, {}]); // [1, '2', 2, {}, {}]
-uniqWith([1, '2', 2, 2, '2', {}, {}], isDeepEqual); // [1, '2', 2, {}]
+uniq([1, '2', 2, 2, '2', {}, {}], isDeepEqual); // [1, '2', 2, {}]
 ```
 
 #### union
@@ -297,28 +263,35 @@ uniqWith([1, '2', 2, 2, '2', {}, {}], isDeepEqual); // [1, '2', 2, {}]
 Find all elements in two arrays. Return a new array.
 
 ```typescript
-import { union } from '@modyqyw/utils';
+import { union, isDeepEqual } from '@modyqyw/utils';
 
 union([1, '2'], [1, 3]); // [1, '2', 3]
 union([1, '2', {}], [1, 3, {}]); // [1, '2', {}, 3, {}]
-union([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }]);
-// [1, '2', { a: { b: 'c' } }, 3, { a: { b: 'c' } }]);
+union([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }]); // [1, '2', { a: { b: 'c' } }, 3, { a: { b: 'c' } }])
+union([1, '2', {}], [1, 3, {}], isDeepEqual); // [1, '2', {}, 3]
+union([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }], isDeepEqual); // [1, '2', { a: { b: 'c' } }, 3]
 ```
 
-#### unionWith
+#### range
 
-Find all elements in two arrays. Pass a function to judge equation or fallback to `union`. Return a new array.
+Creates an array of numbers (positive and/or negative) progressing from `start` up to, but not including `end`.
+
+`start` is set to 0 by default. You can pass `end` directly.
+
+`step` is set to 1 when `start` < `end` and -1 when `start` >= `end` by default.
+
+Return a new array.
 
 ```typescript
-import { isDeepEqual, unionWith } from '@modyqyw/utils';
+import { range } from '@modyqyw/utils';
 
-unionWith([1, '2'], [1, 3]); // [1, '2', 3]
-unionWith([1, '2', {}], [1, 3, {}]); // [1, '2', {}, 3, {}]
-unionWith([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }]);
-// [1, '2', { a: { b: 'c' } }, 3, { a: { b: 'c' } }]);
-unionWith([1, '2', {}], [1, 3, {}], isDeepEqual); // [1, '2', {}, 3]
-unionWith([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }], isDeepEqual);
-// [1, '2', { a: { b: 'c' } }, 3]
+range(4); // [0, 1, 2, 3]
+range(-4); // [0, -1, -2, -3]
+range(1, 5); // [1, 2, 3, 4]
+range(0, 20, 5); // [0, 5, 10, 15]
+range(0, -4, -1); // [0, -1, -2, -3]
+range(1, 4, 0); // [1, 1, 1]
+range(0); // []
 ```
 
 ### object
