@@ -1,4 +1,3 @@
-export { default as is, assert } from '@sindresorhus/is';
 export { default as merge } from 'deepmerge';
 
 /**

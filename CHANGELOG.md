@@ -6,6 +6,7 @@
 - feat!: remove `intersectionWith`, please use `intersection`
 - feat!: remove `uniqWith`, please use `uniq`
 - feat!: remove `unionWith`, please use `union`
+- feat!: remove `@sindresorhus/is`, please install manually for extra needs
 - feat: add `range`
 - feat: add `isString`
 - feat: add `isNumber`

@@ -16,17 +16,231 @@ npm install @modyqyw/utils
 
 ### base
 
-I recommend [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone) for deep clone.
+#### isString
 
-#### is & assert
+Determine if a value is a string.
 
-Reexported from [@sindresorhus/is](https://github.com/sindresorhus/is).
+```typescript
+import { isString } from '@modyqyw/utils';
 
-Also provide `isString`, `isNumber`, `isBigInt`, `isBoolean`, `isUndefined`, `isNull`, `isSymbol`, `isObject`, `isFunction` and `isArray` for simple usage.
+isString(''); // true
+isString(0); // false
+isString(0n); // false
+isString(true); // false
+isString(undefined); // false
+isString(null); // false
+isString(Symbol()); // false
+isString({}); // false
+isString(() => {}); // false
+isString([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isNumber
+
+Determine if a value is a number.
+
+```typescript
+import { isNumber } from '@modyqyw/utils';
+
+isNumber(''); // false
+isNumber(0); // true
+isNumber(0n); // false
+isNumber(true); // false
+isNumber(undefined); // false
+isNumber(null); // false
+isNumber(Symbol()); // false
+isNumber({}); // false
+isNumber(() => {}); // false
+isNumber([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isBigInt
+
+Determine if a value is a bigint.
+
+```typescript
+import { isBigInt } from '@modyqyw/utils';
+
+isBigInt(''); // false
+isBigInt(0); // false
+isBigInt(0n); // true
+isBigInt(true); // false
+isBigInt(undefined); // false
+isBigInt(null); // false
+isBigInt(Symbol()); // false
+isBigInt({}); // false
+isBigInt(() => {}); // false
+isBigInt([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isBoolean
+
+Determine if a value is a boolean.
+
+```typescript
+import { isBoolean } from '@modyqyw/utils';
+
+isBoolean(''); // false
+isBoolean(0); // false
+isBoolean(0n); // false
+isBoolean(true); // true
+isBoolean(undefined); // false
+isBoolean(null); // false
+isBoolean(Symbol()); // false
+isBoolean({}); // false
+isBoolean(() => {}); // false
+isBoolean([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isUndefined
+
+Determine if a value is undefined.
+
+```typescript
+import { isUndefined } from '@modyqyw/utils';
+
+isUndefined(''); // false
+isUndefined(0); // false
+isUndefined(0n); // false
+isUndefined(true); // false
+isUndefined(undefined); // true
+isUndefined(null); // false
+isUndefined(Symbol()); // false
+isUndefined({}); // false
+isUndefined(() => {}); // false
+isUndefined([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isNull
+
+Determine if a value is null.
+
+```typescript
+import { isNull } from '@modyqyw/utils';
+
+isNull(''); // false
+isNull(0); // false
+isNull(0n); // false
+isNull(true); // false
+isNull(undefined); // false
+isNull(null); // true
+isNull(Symbol()); // false
+isNull({}); // false
+isNull(() => {}); // false
+isNull([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isSymbol
+
+Determine if a value is a symbol.
+
+```typescript
+import { isSymbol } from '@modyqyw/utils';
+
+isSymbol(''); // false
+isSymbol(0); // false
+isSymbol(0n); // false
+isSymbol(true); // false
+isSymbol(undefined); // false
+isSymbol(null); // false
+isSymbol(Symbol()); // true
+isSymbol({}); // false
+isSymbol(() => {}); // false
+isSymbol([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isObject
+
+Determine if a value is a object.
+
+```typescript
+import { isObject } from '@modyqyw/utils';
+
+isObject(''); // false
+isObject(0); // false
+isObject(0n); // false
+isObject(true); // false
+isObject(undefined); // false
+isObject(null); // false
+isObject(Symbol()); // false
+isObject({}); // true
+isObject(() => {}); // false
+isObject([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isFunction
+
+Determine if a value is a function.
+
+```typescript
+import { isFunction } from '@modyqyw/utils';
+
+isFunction(''); // false
+isFunction(0); // false
+isFunction(0n); // false
+isFunction(true); // false
+isFunction(undefined); // false
+isFunction(null); // false
+isFunction(Symbol()); // false
+isFunction({}); // false
+isFunction(() => {}); // true
+isFunction([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
+#### isArray
+
+Determine if a value is an array.
+
+```typescript
+import { isArray } from '@modyqyw/utils';
+
+isArray(''); // false
+isArray(0); // false
+isArray(0n); // false
+isArray(true); // false
+isArray(undefined); // false
+isArray(null); // false
+isArray(Symbol()); // false
+isArray({}); // false
+isArray(() => {}); // false
+isArray([]); // true
+```
+
+You may want to determine if a value is an array and all of its items are numbers. Here is an example.
+
+```typescript
+import { isArray, isNumber } from '@modyqyw/utils';
+
+isArray([1, 2, 3], isNumber); // true
+isArray([1, 2, '3'], isNumber); // false
+
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
 
 #### merge
 
 Reexported from [deepmerge](https://github.com/TehShrike/deepmerge).
+
+You can use this for deep clone, or check [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone).
 
 #### getTimestamp
 
