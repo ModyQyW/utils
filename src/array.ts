@@ -133,3 +133,38 @@ export function uniq<T>(array: T[], equalFn?: (value1: T, value2: T) => boolean)
 export function union<T>(array1: T[], array2: T[], equalFn?: (value1: T, value2: T) => boolean) {
   return uniq([...array1, ...array2], equalFn);
 }
+
+export function range(end: number): number[];
+export function range(start: number, end: number): number[];
+export function range(start: number, end: number, step: number): number[];
+/**
+ * Creates an array of numbers (positive and/or negative) progressing from `start` up to, but not
+ * including `end`.
+ *
+ * `start` is set to 0 by default. You can pass `end` directly.
+ *
+ * `step` is set to 1 when `start` < `end` and -1 when `start` >= `end` by default.
+ *
+ * Return a new array.
+ *
+ * @example range(4) => [0, 1, 2, 3]
+ *
+ * @example range(-4) => [0, -1, -2, -3]
+ *
+ * @example range(1, 5) => [1, 2, 3, 4]
+ *
+ * @example range(0, 20, 5) => [0, 5, 10, 15]
+ *
+ * @example range(0, -4, -1) => [0, -1, -2, -3]
+ *
+ * @example range(1, 4, 0) => [1, 1, 1]
+ *
+ * @example range(0) => []
+ */
+export function range(...args: number[]) {
+  const start = args.length === 1 ? 0 : args[0];
+  const end = args[1] ?? args[0];
+  const step = args[2] ?? (start < end ? 1 : -1);
+  const length = Math.abs(Math.floor((end - start) / (step || (start < end ? 1 : -1))));
+  return Array.from({ length }).map((_, index) => start + index * step);
+}

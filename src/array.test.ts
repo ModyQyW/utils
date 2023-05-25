@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { toArray, difference, intersection, uniq, union } from './array';
+import { toArray, difference, intersection, uniq, union, range } from './array';
 import { isDeepEqual } from './base';
 
 describe('array', () => {
@@ -57,5 +57,16 @@ describe('array', () => {
     expect(
       union([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }], isDeepEqual),
     ).toStrictEqual([1, '2', { a: { b: 'c' } }, 3]);
+  });
+
+  it('range', () => {
+    expect(range(4)).toStrictEqual([0, 1, 2, 3]);
+    expect(range(-4)).toStrictEqual([0, -1, -2, -3]);
+    expect(range(1, 5)).toStrictEqual([1, 2, 3, 4]);
+    expect(range(0, 20, 5)).toStrictEqual([0, 5, 10, 15]);
+    expect(range(0, -4, -1)).toStrictEqual([0, -1, -2, -3]);
+    expect(range(0, -4, -2)).toStrictEqual([0, -2]);
+    expect(range(1, 4, 0)).toStrictEqual([1, 1, 1]);
+    expect(range(0)).toStrictEqual([]);
   });
 });
