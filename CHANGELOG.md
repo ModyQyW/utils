@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 7.0.0 (2023-05-25)
 
 - feat!: remove `differenceWith`, please use `difference`
 - feat!: remove `intersectionWith`, please use `intersection`
