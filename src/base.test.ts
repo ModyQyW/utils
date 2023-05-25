@@ -147,8 +147,8 @@ describe('base', () => {
     expect(isArray(noop)).toBe(false);
     expect(isArray([])).toBe(true);
     expect(isArray<number>([])).toBe(true);
-    expect(isArray<number>([], isNumber)).toBe(true);
-    expect(isArray<number>([''], isNumber)).toBe(false);
+    expect(isArray<number>([1, 2, 3], isNumber)).toBe(true);
+    expect(isArray<number>([1, 2, '3'], isNumber)).toBe(false);
   });
 
   it('getTimestamp', () => {
