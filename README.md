@@ -191,6 +191,7 @@ Convert value to string. Try `value.toString()` first, then `Object.prototype.to
 ```typescript
 import { toString } from '@modyqyw/utils';
 
+toString(undefined); // '[object Undefined]'
 toString(null); // '[object Null]'
 toString(0); // '0'
 toString(Symbol('test')); // 'Symbol(test)'

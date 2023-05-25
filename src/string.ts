@@ -32,6 +32,16 @@ export function upperCaseFirst(string: string) {
  * Convert value to string.
  *
  * Try `value.toString()` first, then `Object.prototype.toString.call(value)`.
+ *
+ * @example toString(undefined) => '[object Undefined]'
+ *
+ * @example toString(null) => '[object Null]'
+ *
+ * @example toString(0) => '0'
+ *
+ * @example toString(Symbol('test')) => 'Symbol(test)'
+ *
+ * @example toString([1,2,3]) => '1,2,3'
  */
 export function toString(v: any) {
   return (v?.toString() ?? Object.prototype.toString.call(v)) as string;
