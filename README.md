@@ -544,14 +544,6 @@ Reexported from [p-limit](https://github.com/sindresorhus/p-limit).
 
 Reexported from [p-retry](https://github.com/sindresorhus/p-retry).
 
-#### pDebounce
-
-Reexported from [p-debounce](https://github.com/sindresorhus/p-debounce).
-
-#### pThrottle
-
-Reexported from [p-throttle](https://github.com/sindresorhus/p-throttle).
-
 #### sleep
 
 Sleep 💤, then call `callback` if passed.

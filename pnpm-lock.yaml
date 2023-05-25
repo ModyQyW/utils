@@ -67,18 +67,12 @@ devDependencies:
   markdownlint-cli:
     specifier: ^0.34.0
     version: 0.34.0
-  p-debounce:
-    specifier: ^4.0.0
-    version: 4.0.0
   p-limit:
     specifier: ^4.0.0
     version: 4.0.0
   p-retry:
     specifier: ^5.1.2
     version: 5.1.2
-  p-throttle:
-    specifier: ^5.1.0
-    version: 5.1.0
   prettier:
     specifier: ^2.8.8
     version: 2.8.8
@@ -3355,11 +3349,11 @@ packages:
       eslint-import-resolver-node: 0.3.7
       eslint-module-utils: 2.7.4(@typescript-eslint/parser@5.59.7)(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5)(eslint@8.41.0)
       has: 1.0.3
-      is-core-module: 2.11.0
+      is-core-module: 2.12.1
       is-glob: 4.0.3
       minimatch: 3.1.2
       object.values: 1.1.6
-      resolve: 1.22.1
+      resolve: 1.22.2
       semver: 6.3.0
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
@@ -6254,11 +6248,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /p-debounce@4.0.0:
-    resolution: {integrity: sha512-4Ispi9I9qYGO4lueiLDhe4q4iK5ERK8reLsuzH6BPaXn53EGaua8H66PXIFGrW897hwjXp+pVLrm/DLxN0RF0A==}
-    engines: {node: '>=12'}
-    dev: true
-
   /p-limit@2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
     engines: {node: '>=6'}
@@ -6314,11 +6303,6 @@ packages:
     dependencies:
       '@types/retry': 0.12.1
       retry: 0.13.1
-    dev: true
-
-  /p-throttle@5.1.0:
-    resolution: {integrity: sha512-+N+s2g01w1Zch4D0K3OpnPDqLOKmLcQ4BvIFq3JC0K29R28vUOjWpO+OJZBNt8X9i3pFCksZJZ0YXkUGjaFE6g==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
   /p-try@2.2.0:
@@ -8017,7 +8001,7 @@ packages:
       '@types/node': 18.16.14
       esbuild: 0.16.17
       postcss: 8.4.23
-      resolve: 1.22.1
+      resolve: 1.22.2
       rollup: 3.23.0
     optionalDependencies:
       fsevents: 2.3.2

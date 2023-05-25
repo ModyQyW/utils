@@ -7,6 +7,8 @@
 - feat!: remove `uniqWith`, please use `uniq`
 - feat!: remove `unionWith`, please use `union`
 - feat!: remove `@sindresorhus/is`, please install manually for extra needs
+- feat!: remove `p-debounce`, please install manually for extra needs
+- feat!: remove `p-throttle`, please install manually for extra needs
 - feat: add `range`
 - feat: add `isString`
 - feat: add `isNumber`
