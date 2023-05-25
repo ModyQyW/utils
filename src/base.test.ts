@@ -15,7 +15,6 @@ describe('base', () => {
     expect(getType(null)).toBe('Null');
     // Undefined
     expect(getType()).toBe('Undefined');
-    // eslint-disable-next-line unicorn/no-useless-undefined
     expect(getType(undefined)).toBe('Undefined');
     // Boolean
     expect(getType(true)).toBe('Boolean');
@@ -68,7 +67,7 @@ describe('base', () => {
   it('isEqual', () => {
     expect(isEqual(null, null)).toBe(true);
     expect(isEqual(undefined, null)).toBe(false);
-    // eslint-disable-next-line unicorn/no-useless-undefined
+
     expect(isEqual(undefined, undefined)).toBe(true);
     expect(isEqual(true, true)).toBe(true);
     expect(isEqual(false, false)).toBe(true);
@@ -92,7 +91,7 @@ describe('base', () => {
   it('isDeepEqual', () => {
     expect(isDeepEqual(null, null)).toBe(true);
     expect(isDeepEqual(undefined, null)).toBe(false);
-    // eslint-disable-next-line unicorn/no-useless-undefined
+
     expect(isDeepEqual(undefined, undefined)).toBe(true);
     expect(isDeepEqual(true, true)).toBe(true);
     expect(isDeepEqual(false, false)).toBe(true);

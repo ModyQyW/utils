@@ -5,7 +5,6 @@ import { isDeepEqual } from './base';
 describe('array', () => {
   it('toArray', () => {
     expect(toArray()).toStrictEqual([]);
-    // eslint-disable-next-line unicorn/no-useless-undefined
     expect(toArray(undefined)).toStrictEqual([]);
     expect(toArray(null)).toStrictEqual([]);
     expect(toArray(1)).toStrictEqual([1]);
