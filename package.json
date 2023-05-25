@@ -1,6 +1,6 @@
 {
   "name": "@modyqyw/utils",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "private": false,
   "description": "Opinionated shareable utils for different JavaScript/TypeScript projects.",
   "keywords": [
