@@ -805,10 +805,9 @@ I have checked and learned from these libraries. Thanks a lot! Check them for mo
 
 - [lodash](https://lodash.com/)
 - [ramda](https://ramdajs.com/)
-- [rameda](https://remedajs.com/)
+- [remeda](https://remedajs.com/)
 - [fp-ts](https://gcanti.github.io/fp-ts/)
 - [io-ts](https://gcanti.github.io/io-ts/)
-- [zod](https://zod.dev/)
 - [change-case](https://github.com/blakeembrey/change-case)
 - [promise-fun](https://github.com/sindresorhus/promise-fun)
 - [rxjs](https://rxjs.dev/)
@@ -817,6 +816,9 @@ I have checked and learned from these libraries. Thanks a lot! Check them for mo
 - [local-pkg](https://github.com/antfu/local-pkg)
 - [type-fest](https://github.com/sindresorhus/type-fest)
 - [ts-essentials](https://github.com/ts-essentials/ts-essentials)
+- [joi](https://joi.dev/)
+- [zod](https://zod.dev/)
+- [yup](https://github.com/jquense/yup)
 
 ## [Sponsors](https://github.com/ModyQyW/sponsors)
 
