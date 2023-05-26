@@ -803,7 +803,7 @@ type AnyFn<T = any> = (...args: any[]) => T;
 type PromisifyAnyFn<T extends AnyFn> = (...args: Parameters<T>) => Promise<ReturnType<T>>;
 ```
 
-## Acknowledges
+## 致谢
 
 Inspired by [@antfu/utils](https://github.com/antfu/utils).
 
@@ -827,7 +827,7 @@ I have checked and learned from these libraries. Thanks a lot! Check them for mo
 - [zod](https://zod.dev/)
 - [yup](https://github.com/jquense/yup)
 
-## [Sponsors](https://github.com/ModyQyW/sponsors)
+## [赞助者们](https://github.com/ModyQyW/sponsors)
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/ModyQyW/sponsors/sponsorkit/sponsors.svg">
