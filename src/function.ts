@@ -86,6 +86,13 @@ export function debounce<Callback extends (...args: any) => any>(
   return throttleOrDebounce(callback, delay, { leading, trailing, mode: 'debounce' });
 }
 
+/**
+ * Performs left-to-right function composition.
+ *
+ * @example pipe((a: number, b: number) => a + b)(1, 1) => 2
+ *
+ * @example pipe((a: number, b: number) => a + b, (a) => Math.pow(a, 2))(1, 1) => 4
+ */
 export function pipe<Args extends any[], Result1>(
   fn1: (...args: Args) => Result1,
 ): (...args: Args) => Result1;
@@ -137,7 +144,6 @@ export function pipe<
   fn6: (arg: Result5) => Result6,
   fn7: (arg: Result6) => Result7,
 ): (...args: Args) => Result7;
-/** Performs left-to-right function composition. */
 export function pipe(...fns: Array<(...args: any) => any>) {
   return function (...args: any[]) {
     let result = fns[0](...args);

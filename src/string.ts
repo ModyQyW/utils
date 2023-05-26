@@ -31,7 +31,7 @@ export function upperCaseFirst(string: string) {
 /**
  * Convert value to string.
  *
- * Try `value.toString()` first, then `Object.prototype.toString.call(value)`.
+ * Try `value.toString()` first, then `Object#toString.call(value)`.
  *
  * @example toString(undefined) => '[object Undefined]'
  *

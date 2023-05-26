@@ -40,7 +40,7 @@ export function toArray<T>(value?: Optional<Arrayable<T>>) {
 
 /**
  * Find difference elements between two arrays. Pass a function to judge equation or fallback to
- * `Array.prototype.includes`. Return a new array.
+ * `Array#includes`. Return a new array.
  *
  * @example difference([1, '2'], [1]) => ['2']
  *
@@ -69,7 +69,7 @@ export function difference<T>(
 
 /**
  * Find same elements between two arrays. Pass a function to judge equation or fallback to
- * `Array.prototype.includes`. Return a new array.
+ * `Array#includes`. Return a new array.
  *
  * @example intersection([1, '2'], [1]) => [1]
  *
