@@ -4,11 +4,11 @@
 
 [![npm](https://img.shields.io/npm/v/@modyqyw/utils)](https://www.npmjs.com/package/@modyqyw/utils/)
 
-English | [简体中文](./README.zh-Hans.md)
+[English](./README.md) | 简体中文
 
-Opinionated shareable utils for different JavaScript/TypeScript projects. Requires `node >= 14.18`.
+开箱即用的工具方法，适用于不同的 JavaScript / TypeScript 项目。要求 `node >= 14.18`。
 
-## Installation
+## 安装
 
 ```shell
 npm install @modyqyw/utils
@@ -16,11 +16,11 @@ npm install @modyqyw/utils
 
 ## API
 
-### base
+### 基础
 
 ### getType
 
-Get value type name.
+获取值的类型名称。
 
 ```typescript
 import { getType } from '@modyqyw/utils';
@@ -38,7 +38,7 @@ getType([]); // Array
 
 #### isString
 
-Determine if a value is a string.
+判断一个值是否为 string。
 
 ```typescript
 import { isString } from '@modyqyw/utils';
@@ -55,11 +55,11 @@ isString(() => {}); // false
 isString([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isNumber
 
-Determine if a value is a number.
+判断一个值是否为 number。
 
 ```typescript
 import { isNumber } from '@modyqyw/utils';
@@ -76,11 +76,11 @@ isNumber(() => {}); // false
 isNumber([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isBigInt
 
-Determine if a value is a bigint.
+判断一个值是否为 bigint。
 
 ```typescript
 import { isBigInt } from '@modyqyw/utils';
@@ -97,11 +97,11 @@ isBigInt(() => {}); // false
 isBigInt([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isBoolean
 
-Determine if a value is a boolean.
+判断一个值是否为 boolean。
 
 ```typescript
 import { isBoolean } from '@modyqyw/utils';
@@ -118,11 +118,11 @@ isBoolean(() => {}); // false
 isBoolean([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isUndefined
 
-Determine if a value is undefined.
+判断一个值是否为 undefined。
 
 ```typescript
 import { isUndefined } from '@modyqyw/utils';
@@ -139,11 +139,11 @@ isUndefined(() => {}); // false
 isUndefined([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isNull
 
-Determine if a value is null.
+判断一个值是否为 null。
 
 ```typescript
 import { isNull } from '@modyqyw/utils';
@@ -160,11 +160,11 @@ isNull(() => {}); // false
 isNull([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isSymbol
 
-Determine if a value is a symbol.
+判断一个值是否为 symbol。
 
 ```typescript
 import { isSymbol } from '@modyqyw/utils';
@@ -181,11 +181,11 @@ isSymbol(() => {}); // false
 isSymbol([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isObject
 
-Determine if a value is a object.
+判断一个值是否为 object。
 
 ```typescript
 import { isObject } from '@modyqyw/utils';
@@ -202,11 +202,11 @@ isObject(() => {}); // false
 isObject([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isFunction
 
-Determine if a value is a function.
+判断一个值是否为 function。
 
 ```typescript
 import { isFunction } from '@modyqyw/utils';
@@ -223,11 +223,11 @@ isFunction(() => {}); // true
 isFunction([]); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isArray
 
-Determine if a value is an array.
+判断一个值是否为 array。
 
 ```typescript
 import { isArray } from '@modyqyw/utils';
@@ -244,7 +244,7 @@ isArray(() => {}); // false
 isArray([]); // true
 ```
 
-You may want to determine if a value is an array and all of its items are numbers. Here is an example.
+你可能想要判断一个值是否为 array 且所有元素是否为 number，以下是一个例子。
 
 ```typescript
 import { isArray, isNumber } from '@modyqyw/utils';
@@ -253,21 +253,21 @@ isArray([1, 2, 3], isNumber); // true
 isArray([1, 2, '3'], isNumber); // false
 ```
 
-You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
 #### isBlob
 
-Determine if a value is a blob.
+判断一个值是否为 blob。
 
 #### merge
 
-Reexported from [deepmerge](https://github.com/TehShrike/deepmerge).
+从 [deepmerge](https://github.com/TehShrike/deepmerge) 重新导出。
 
-You can use this for deep clone, or check [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone).
+你可以使用它做深拷贝，或者使用 [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)。
 
 #### getTimestamp
 
-Get millisecond-based timestamp.
+获取毫秒级时间戳。
 
 ```typescript
 import { getTimestamp } from '@modyqyw/utils';
@@ -277,7 +277,7 @@ const timestamp = getTimestamp();
 
 #### isEqual
 
-Use `Object.is` directly to determine if two values are equal. Use [isDeepEqual](#isdeepequal) if you need a deep comparison.
+直接使用 `Object.is` 来判断两个值是否相等。如果你需要深层比较，请使用 [isDeepEqual](#isdeepequal)。
 
 ```typescript
 import { isEqual } from '@modyqyw/utils';
@@ -302,7 +302,7 @@ isEqual([1, 2, 3, { a: 1, b: { c: true } }], [1, 2, 3, { a: 1, b: { c: false } }
 
 #### isDeepEqual
 
-Determine if two values are equal. For arrays, recursively determine the value corresponding to each index. For objects, recursively determine the value of each key. Other cases are determined with `Object.is`.
+判断两个值是否相等。对于数组，递归地判断每个下标的值。对于对象，递归地判断每个键对应的值。其它情况使用 `Object.is` 来判断。
 
 ```typescript
 import { isDeepEqual } from '@modyqyw/utils';
@@ -329,7 +329,7 @@ isDeepEqual([1, 2, 3, { a: 1, b: { c: true } }], [1, 2, 3, { a: 1, b: { c: false
 
 #### lowerCase
 
-Convert string to lower case.
+将字符串转换成小写。
 
 ```typescript
 import { lowerCase } from '@modyqyw/utils';
@@ -343,7 +343,7 @@ lowerCase('TEST STRING'); // 'test string'
 
 #### localeLowerCase
 
-Convert string to locale lower case.
+将字符串转换成本地小写。
 
 ```typescript
 import { localeLowerCase } from '@modyqyw/utils';
@@ -353,7 +353,7 @@ localeLowerCase('STRING', 'en-US'); // 'string'
 
 #### lowerCaseFirst
 
-Convert first char to lower case.
+将第一个字符转换成小写。
 
 ```typescript
 import { lowerCaseFirst } from '@modyqyw/utils';
@@ -367,7 +367,7 @@ lowerCaseFirst('TEST STRING'); // 'tEST STRING'
 
 #### upperCase
 
-Convert string to upper case.
+将字符串转换成大写。
 
 ```typescript
 import { upperCase } from '@modyqyw/utils';
@@ -381,7 +381,7 @@ upperCase('TEST STRING'); // 'TEST STRING'
 
 #### localeUpperCase
 
-Convert string to locale upper case.
+将字符串转换成本地大写。
 
 ```typescript
 import { localeLowerCase } from '@modyqyw/utils';
@@ -391,7 +391,7 @@ localeLowerCase('string', 'en-US'); // 'STRING'
 
 #### upperCaseFirst
 
-Convert first char to upper case.
+将第一个字符转换成大写。
 
 ```typescript
 import { lowerCaseFirst } from '@modyqyw/utils';
@@ -405,7 +405,7 @@ lowerCaseFirst('TEST STRING'); // 'tEST STRING'
 
 #### toString
 
-Convert value to string. Try `value.toString()` first, then `Object#toString.call(value)`.
+将值转换成字符串。首先尝试 `value.toString()`，然后再尝试 `Object#toString.call(value)`。
 
 ```typescript
 import { toString } from '@modyqyw/utils';
@@ -421,7 +421,7 @@ toString([1, 2, 3]); // '1,2,3'
 
 #### arrayIncludes
 
-Same as `Array#includes`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
+和 `Array#includes` 一致，但拥有更好的类型。来源于 [ts-extras](https://github.com/sindresorhus/ts-extras)。
 
 #### toArray
 
@@ -441,7 +441,7 @@ toArray([1, 2]); // [1, 2]
 
 #### difference
 
-Find difference elements between two arrays. Pass a function to judge equation or fallback to `Array#includes`. Return a new array.
+找到两个数组中不同的元素。内部默认使用 `Array#includes` 判断相等性，你也可以传入一个自定义方法。返回一个新数组。
 
 ```typescript
 import { difference, isDeepEqual } from '@modyqyw/utils';
@@ -455,7 +455,7 @@ difference([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual); //
 
 #### intersection
 
-Find same elements between two arrays. Pass a function to judge equation or fallback to `Array#includes`. Return a new array.
+找到两个数组中相同的元素。内部默认使用 `Array#includes` 判断相等性，你也可以传入一个自定义方法。返回一个新数组。
 
 ```typescript
 import { intersection, isDeepEqual } from '@modyqyw/utils';
@@ -470,7 +470,7 @@ intersection([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual); 
 
 #### uniq
 
-Find unique elements. Pass a function to judge equation or fallback to `Set`. Return a new array.
+数组去重。内部默认使用 `Array#includes` 判断相等性，你也可以传入一个自定义方法。返回一个新数组。
 
 ```typescript
 import { uniq, isDeepEqual } from '@modyqyw/utils';
@@ -482,7 +482,7 @@ uniq([1, '2', 2, 2, '2', {}, {}], isDeepEqual); // [1, '2', 2, {}]
 
 #### union
 
-Find all different elements in two arrays. Use `uniq` under the hood. Return a new array.
+找到两个数组所有不同元素。内部使用 `uniq`。返回一个新数组。
 
 ```typescript
 import { union, isDeepEqual } from '@modyqyw/utils';
@@ -496,13 +496,13 @@ union([1, '2', { a: { b: 'c' } }], [1, 3, { a: { b: 'c' } }], isDeepEqual); // [
 
 #### range
 
-Creates an array of numbers (positive and/or negative) progressing from `start` up to, but not including `end`.
+创建一个从 `start` 到不包括 `end` 的数组。
 
-`start` is set to 0 by default. You can pass `end` directly.
+`start` 默认设置为 0，你可以直接传入 `end`。
 
-`step` is set to 1 when `start` < `end` and -1 when `start` >= `end` by default.
+当 `start` < `end` 时，`step` 默认为 1，否则默认为 -1。
 
-Return a new array.
+返回一个新数组。
 
 ```typescript
 import { range } from '@modyqyw/utils';
@@ -520,35 +520,35 @@ range(0); // []
 
 #### objectKeys
 
-Same as `Object.keys`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
+和 `Object.keys` 一致，但拥有更好的类型。来源于 [ts-extras](https://github.com/sindresorhus/ts-extras)。
 
 #### objectEntries
 
-Same as `Object.entries`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
+和 `Object.entries` 一致，但拥有更好的类型。来源于 [ts-extras](https://github.com/sindresorhus/ts-extras)。
 
 #### objectFromEntries
 
-Same as `Object.fromEntries`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
+和 `Object.fromEntries` 一致，但拥有更好的类型。来源于 [ts-extras](https://github.com/sindresorhus/ts-extras)。
 
 ### set
 
 #### setHas
 
-Same as `Set#has`. With better types. From [ts-extras](https://github.com/sindresorhus/ts-extras).
+和 `Set#has` 一致，但拥有更好的类型。来源于 [ts-extras](https://github.com/sindresorhus/ts-extras)。
 
 ### promise
 
 #### pLimit
 
-Reexported from [p-limit](https://github.com/sindresorhus/p-limit).
+从 [p-limit](https://github.com/sindresorhus/p-limit) 重新导出。
 
 #### pRetry
 
-Reexported from [p-retry](https://github.com/sindresorhus/p-retry).
+从 [p-retry](https://github.com/sindresorhus/p-retry) 重新导出。
 
 #### sleep
 
-Sleep 💤, then call `callback` if passed.
+休眠 💤，之后如果传递了 `callback` 就会调用它。
 
 ```typescript
 import { sleep } from '@modyqyw/utils';
@@ -563,7 +563,7 @@ await sleep(1000, () => {
 
 #### throttle
 
-Creates a throttled function that only invokes `callback` at most once per every `delay` milliseconds.
+创建一个节流函数，每 `delay` 毫秒最多只调用一次 `callback`。
 
 ```typescript
 import { throttle } from '@modyqyw/utils';
@@ -576,7 +576,7 @@ throttled(); // called
 setTimeout(throttled, 1200); // called
 ```
 
-You can disable `leading` or `trailing` in the third param. Default `{ leading: true, trailing: true }`.
+你可以在第三个参数中禁用 `leading` 或 `trailing`，默认为 `{ leading: true, trailing: true }`。
 
 ```typescript
 import { throttle } from '@modyqyw/utils';
@@ -611,7 +611,7 @@ throttled();
 setTimeout(throttled, 1200);
 ```
 
-Use `.abort()` to abort next invocations. Pass `true` to abort the next invocation.
+使用 `.abort()` 中止下一次调用，传入 `true` 表示中止之后所有调用。
 
 ```typescript
 import { throttle } from '@modyqyw/utils';
@@ -626,11 +626,11 @@ throttled();
 throttled();
 ```
 
-See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/) for details over the differences between throttle and debounce.
+你可以在 [这里](https://css-tricks.com/debouncing-throttling-explained-examples/) 了解更多节流和防抖的区别。
 
 #### debounce
 
-Creates a debounced function that delays invoking `callback` until after `delay` milliseconds have elapsed since the last time the debounced function was invoked.
+创建一个防抖函数，自上次调用以来过去了 `delay` 毫秒再调用 `callback`。
 
 ```typescript
 import { debounce } from '@modyqyw/utils';
@@ -643,7 +643,7 @@ debounced(); // called
 setTimeout(debounced, 1200); // called
 ```
 
-You can disable `leading` or `trailing` in the third param. Default `{ leading: false, trailing: true }`.
+你可以在第三个参数中禁用 `leading` 或 `trailing`，默认为 `{ leading: false, trailing: true }`。
 
 ```typescript
 import { debounce } from '@modyqyw/utils';
@@ -678,7 +678,7 @@ debounced();
 setTimeout(debounced, 1200); // called
 ```
 
-Use `.abort()` to abort next invocations. Pass `true` to abort the next invocation.
+使用 `.abort()` 中止下一次调用，传入 `true` 表示中止之后所有调用。
 
 ```typescript
 import { debounce } from '@modyqyw/utils';
@@ -693,9 +693,11 @@ debounced();
 debounced();
 ```
 
+你可以在 [这里](https://css-tricks.com/debouncing-throttling-explained-examples/) 了解更多节流和防抖的区别。
+
 #### pipe
 
-Performs left-to-right function composition.
+执行从左到右的函数组合。
 
 ```typescript
 import { pipe } from '@modyqyw/utils';
@@ -712,7 +714,7 @@ fn(1, 1); // 1
 
 #### noop
 
-Empty function.
+空函数。
 
 ```typescript
 import { noop } from '@modyqyw/utils';
@@ -725,7 +727,7 @@ noop();
 
 #### `type-fest`
 
-Reexported all types from [type-fest](https://github.com/sindresorhus/type-fest).
+从 [type-fest](https://github.com/sindresorhus/type-fest) 重新导出。
 
 #### AnyRecord
 
