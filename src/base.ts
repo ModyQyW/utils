@@ -308,6 +308,9 @@ export function isBlob(value: unknown): value is Blob {
   return value instanceof Blob || getType(value) === 'Blob';
 }
 
+/** Determine if a value is a file. */
+export function isFile(value: unknown): value is File {
+  return value instanceof File || getType(value) === 'File';
 }
 
 /**
