@@ -259,6 +259,10 @@ You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra n
 
 Determine if a value is a blob.
 
+#### isFile
+
+Determine if a value is a file.
+
 #### merge
 
 Reexported from [deepmerge](https://github.com/TehShrike/deepmerge).

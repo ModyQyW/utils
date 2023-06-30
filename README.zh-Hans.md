@@ -259,6 +259,10 @@ isArray([1, 2, '3'], isNumber); // false
 
 判断一个值是否为 blob。
 
+#### isFile
+
+判断一个值是否为 file。
+
 #### merge
 
 从 [deepmerge](https://github.com/TehShrike/deepmerge) 重新导出。
