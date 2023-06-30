@@ -305,7 +305,9 @@ export function isArray<T = unknown>(
 
 /** Determine if a value is a blob. */
 export function isBlob(value: unknown): value is Blob {
-  return getType(value) === 'Blob';
+  return value instanceof Blob || getType(value) === 'Blob';
+}
+
 }
 
 /**
