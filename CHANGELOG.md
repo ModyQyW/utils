@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 7.1.0 (2023-06-30)
+
+- fix: fix `isBlob`
+- feat: add `isFile`
+
 ## 7.0.0 (2023-05-25)
 
 - feat!: remove `differenceWith`, please use `difference`
