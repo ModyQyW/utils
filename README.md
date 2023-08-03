@@ -468,8 +468,7 @@ intersection([1, '2'], [1]); // [1]
 intersection([1, '2', {}], [1, {}]); // [1]
 intersection([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }]); // [1]
 intersection([1, '2', {}], [1, {}], isDeepEqual); // [1, {}]
-intersection([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual); // [1, {
- * a: { b: 'c' } }]
+intersection([1, '2', { a: { b: 'c' } }], [1, { a: { b: 'c' } }], isDeepEqual); // [1, { a: { b: 'c' } }]
 ```
 
 #### uniq
@@ -727,9 +726,7 @@ noop();
 
 ### types
 
-#### `type-fest`
-
-Reexported all types from [type-fest](https://github.com/sindresorhus/type-fest).
+You can check [type-fest](https://github.com/sindresorhus/type-fest), [ts-toolbelt](https://github.com/millsp/ts-toolbelt) and [ts-essentials](https://github.com/ts-essentials/ts-essentials) for extra types.
 
 #### AnyRecord
 
@@ -743,12 +740,34 @@ type AnyRecord = Record<string, any>;
 type Falsy = false | 0 | 0n | '' | null | undefined;
 ```
 
+#### MaybePromise
+
+```typescript
+type MaybePromise<T> = T | Promise<T>;
+```
+
+#### MaybePromiseLike
+
+```typescript
+type MaybePromiseLike<T> = T | PromiseLike<T>;
+```
+
+#### Promisable
+
+```typescript
+type Promisable<T> = T | PromiseLike<T>;
+```
+
 #### Awaitable
 
 ```typescript
-import { Promisable } from 'type-fest';
+type Awaitable<T> = T | PromiseLike<T>;
+```
 
-type Awaitable<T> = Promisable<T>;
+#### MaybeNull
+
+```typescript
+type MaybeNull<T> = T | null;
 ```
 
 #### Nullable
@@ -757,19 +776,37 @@ type Awaitable<T> = Promisable<T>;
 type Nullable<T> = T | null;
 ```
 
-#### Undefinable
+#### MaybeUndefined
 
 ```typescript
-type Undefinable<T> = T | undefined;
+type MaybeUndefined<T> = T | undefined;
 ```
 
 #### Optional
 
 ```typescript
-type Optional<T> = T | null | undefined;
+type Optional<T> = T | undefined;
 ```
 
-#### Arrayble
+#### Undefinable
+
+```typescript
+type Undefinable<T> = Optional<T>;
+```
+
+#### Nullish
+
+```typescript
+type Nullish<T> = T | undefined | null;
+```
+
+#### MaybeArray
+
+```typescript
+type MaybeArray<T> = T | Array<T>;
+```
+
+#### Arrayable
 
 ```typescript
 type Arrayable<T> = T | Array<T>;
