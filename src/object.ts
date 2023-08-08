@@ -6,9 +6,7 @@ type ObjectKeys<T extends object> = `${Exclude<keyof T, symbol>}`;
  * @param o — Object that contains the properties and methods. This can be an object that you
  *   created or an existing Document Object Model (DOM) object.
  */
-export const objectKeys = Object.keys as <Type extends object>(
-  value: Type,
-) => Array<ObjectKeys<Type>>;
+export const objectKeys = Object.keys as <Type extends object>(value: Type) => ObjectKeys<Type>[];
 
 /**
  * Returns an array of key/values of the enumerable properties of an object.
@@ -18,7 +16,7 @@ export const objectKeys = Object.keys as <Type extends object>(
  */
 export const objectEntries = Object.entries as <Type extends Record<PropertyKey, unknown>>(
   value: Type,
-) => Array<[ObjectKeys<Type>, Type[ObjectKeys<Type>]]>;
+) => [ObjectKeys<Type>, Type[ObjectKeys<Type>]][];
 
 /**
  * Returns an object created by key-value entries for properties and methods.
@@ -27,7 +25,7 @@ export const objectEntries = Object.entries as <Type extends Record<PropertyKey,
  */
 export const objectFromEntries = Object.fromEntries as <
   Key extends PropertyKey,
-  Entries extends ReadonlyArray<readonly [Key, unknown]>,
+  Entries extends readonly (readonly [Key, unknown])[],
 >(
   values: Entries,
 ) => {

@@ -1,5 +1,4 @@
 /** Empty function. */
-// eslint-disable-next-line @typescript-eslint/no-empty-function
 export function noop() {}
 
 function throttleOrDebounce<Callback extends (...args: any) => any>(
@@ -144,7 +143,7 @@ export function pipe<
   fn6: (arg: Result5) => Result6,
   fn7: (arg: Result6) => Result7,
 ): (...args: Args) => Result7;
-export function pipe(...fns: Array<(...args: any) => any>) {
+export function pipe(...fns: ((...args: any) => any)[]) {
   return function (...args: any[]) {
     let result = fns[0](...args);
     for (const fn of fns.slice(1)) {
