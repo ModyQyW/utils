@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+- feat(types)!: remove `type-fest`
+- feat(types): add `MaybePromise`, `MaybePromiseLike`, `MaybeNull`, `NonNullable`, `MaybeUndefined`, `Undefinable`, `Nullish`, `NonNullish`, `MaybeArray`
+- feat(types)!: `Optional` updated, use `Nullish` for previous behavior
+
 ## 7.1.0 (2023-06-30)
 
 - fix: fix `isBlob`
