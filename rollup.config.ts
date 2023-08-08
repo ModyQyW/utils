@@ -54,11 +54,23 @@ export default defineConfig([
   },
   {
     input,
-    output: {
-      dir: './dist',
-      entryFileNames: '[name].d.ts',
-      format: 'esm',
-    },
+    output: [
+      {
+        dir: './dist',
+        entryFileNames: '[name].d.ts',
+        format: 'esm',
+      },
+      {
+        dir: './dist',
+        entryFileNames: '[name].d.mts',
+        format: 'esm',
+      },
+      {
+        dir: './dist',
+        entryFileNames: '[name].d.cts',
+        format: 'cjs',
+      },
+    ],
     plugins: [dts({ respectExternal: true })],
     external,
   },
