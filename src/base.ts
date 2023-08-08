@@ -413,8 +413,8 @@ export function isDeepEqual(value1: unknown, value2: unknown): boolean {
   const type2 = getType(value2);
   if (type1 !== type2) return false;
   if (type1 === 'Array') {
-    const v1 = value1 as Array<unknown>;
-    const v2 = value2 as Array<unknown>;
+    const v1 = value1 as unknown[];
+    const v2 = value2 as unknown[];
     if (v1.length !== v2.length) return false;
     return v1.every((item, index) => isDeepEqual(item, v2[index]));
   }
