@@ -188,6 +188,33 @@ export function isNull(value: unknown): value is null {
 }
 
 /**
+ * Determine if a value is null or undefined.
+ *
+ * @example isNullish('') => false
+ *
+ * @example isNullish(0) => false
+ *
+ * @example isNullish(0n) => false
+ *
+ * @example isNullish(true) => false
+ *
+ * @example isNullish(undefined) => true
+ *
+ * @example isNullish(null) => true
+ *
+ * @example isNullish(Symbol()) => false
+ *
+ * @example isNullish({}) => false
+ *
+ * @example isNullish(() => {}) => false
+ *
+ * @example isNullish([]) => false
+ */
+export function isNullish(value: unknown): value is null | undefined {
+  return value === null || value === undefined;
+}
+
+/**
  * Determine if a value is a symbol.
  *
  * @example isSymbol('') => false

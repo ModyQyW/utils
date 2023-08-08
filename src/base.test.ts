@@ -6,6 +6,7 @@ import {
   isBoolean,
   isUndefined,
   isNull,
+  isNullish,
   isSymbol,
   isObject,
   isFunction,
@@ -94,6 +95,19 @@ describe('base', () => {
     expect(isNull({})).toBe(false);
     expect(isNull(noop)).toBe(false);
     expect(isNull([])).toBe(false);
+  });
+
+  it('isNullish', () => {
+    expect(isNullish('')).toBe(false);
+    expect(isNullish(0)).toBe(false);
+    expect(isNullish(0n)).toBe(false);
+    expect(isNullish(true)).toBe(false);
+    expect(isNullish(undefined)).toBe(true);
+    expect(isNullish(null)).toBe(true);
+    expect(isNullish(Symbol())).toBe(false);
+    expect(isNullish({})).toBe(false);
+    expect(isNullish(noop)).toBe(false);
+    expect(isNullish([])).toBe(false);
   });
 
   it('isSymbol', () => {

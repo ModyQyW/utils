@@ -162,6 +162,27 @@ isNull([]); // false
 
 You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
 
+#### isNullish
+
+Determine if a value is null or undefined.
+
+```typescript
+import { isNullish } from '@modyqyw/utils';
+
+isNullish(''); // false
+isNullish(0); // false
+isNullish(0n); // false
+isNullish(true); // false
+isNullish(undefined); // true
+isNullish(null); // true
+isNullish(Symbol()); // false
+isNullish({}); // false
+isNullish(() => {}); // false
+isNullish([]); // false
+```
+
+You can check [@sindresorhus/is](https://github.com/sindresorhus/is) for extra needs, such as `is.xxx` and type assertions.
+
 #### isSymbol
 
 Determine if a value is a symbol.

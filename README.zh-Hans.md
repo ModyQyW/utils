@@ -162,6 +162,27 @@ isNull([]); // false
 
 如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
 
+#### isNullish
+
+判断一个值是否为 null 或 undefined。
+
+```typescript
+import { isNullish } from '@modyqyw/utils';
+
+isNullish(''); // false
+isNullish(0); // false
+isNullish(0n); // false
+isNullish(true); // false
+isNullish(undefined); // true
+isNullish(null); // true
+isNullish(Symbol()); // false
+isNullish({}); // false
+isNullish(() => {}); // false
+isNullish([]); // false
+```
+
+如果你有额外需求，比如 `ix.xxx` 和类型断言，请查看 [@sindresorhus/is](https://github.com/sindresorhus/is)。
+
 #### isSymbol
 
 判断一个值是否为 symbol。
