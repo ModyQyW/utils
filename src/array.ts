@@ -1,4 +1,4 @@
-import { Optional, Arrayable } from './types';
+import { Nullish, Arrayable } from './types';
 
 /**
  * Determines whether an array includes a certain element, returning true or false as appropriate.
@@ -33,7 +33,7 @@ export function arrayIncludes<Type extends SuperType, SuperType = unknown>(
  *
  * @param value - The value to convert.
  */
-export function toArray<T>(value?: Optional<Arrayable<T>>) {
+export function toArray<T>(value?: Nullish<Arrayable<T>>) {
   const v = value ?? [];
   return Array.isArray(v) ? v : [v];
 }
