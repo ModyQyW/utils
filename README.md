@@ -559,13 +559,7 @@ Same as `Set#has`. With better types. From [ts-extras](https://github.com/sindre
 
 ### promise
 
-#### pLimit
-
-Reexported from [p-limit](https://github.com/sindresorhus/p-limit).
-
-#### pRetry
-
-Reexported from [p-retry](https://github.com/sindresorhus/p-retry).
+You can check [promise-fun](https://github.com/sindresorhus/promise-fun) for extra needs.
 
 #### sleep
 
@@ -744,7 +738,7 @@ noop();
 
 ### types
 
-You can check [type-fest](https://github.com/sindresorhus/type-fest), [ts-toolbelt](https://github.com/millsp/ts-toolbelt) and [ts-essentials](https://github.com/ts-essentials/ts-essentials) for extra types.
+You can check [type-fest](https://github.com/sindresorhus/type-fest), [ts-toolbelt](https://github.com/millsp/ts-toolbelt) and [ts-essentials](https://github.com/ts-essentials/ts-essentials) for extra needs.
 
 #### AnyRecord
 
@@ -895,6 +889,7 @@ I have checked and learned from these libraries. Thanks a lot! Check them for mo
 - [local-pkg](https://github.com/antfu/local-pkg)
 - [type-fest](https://github.com/sindresorhus/type-fest)
 - [ts-essentials](https://github.com/ts-essentials/ts-essentials)
+- [ts-toolbelt](https://github.com/millsp/ts-toolbelt)
 - [throttle-debounce](https://github.com/niksy/throttle-debounce)
 - [joi](https://joi.dev/)
 - [zod](https://zod.dev/)

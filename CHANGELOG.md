@@ -4,6 +4,7 @@
 
 - feat(base): add `isNullish`
 - feat(base)!: remove `deepmerge`
+- feat(promise)!: remove `pLimit` and `pRetry`
 - feat(types)!: remove `type-fest`
 - feat(types): add `MaybePromise`, `MaybePromiseLike`, `MaybeNull`, `NonNullable`, `MaybeUndefined`, `Undefinable`, `Nullish`, `NonNullish`, `MaybeArray`
 - feat(types)!: `Optional` updated, use `Nullish` for previous behavior

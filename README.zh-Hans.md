@@ -559,13 +559,7 @@ range(0); // []
 
 ### promise
 
-#### pLimit
-
-从 [p-limit](https://github.com/sindresorhus/p-limit) 重新导出。
-
-#### pRetry
-
-从 [p-retry](https://github.com/sindresorhus/p-retry) 重新导出。
+如果你有额外需求，请查看 [promise-fun](https://github.com/sindresorhus/promise-fun)。
 
 #### sleep
 
@@ -746,7 +740,7 @@ noop();
 
 ### types
 
-如果你有额外类型需求，请查看 [type-fest](https://github.com/sindresorhus/type-fest)、[ts-toolbelt](https://github.com/millsp/ts-toolbelt) 和 [ts-essentials](https://github.com/ts-essentials/ts-essentials)。
+如果你有额外需求，请查看 [type-fest](https://github.com/sindresorhus/type-fest)、[ts-toolbelt](https://github.com/millsp/ts-toolbelt) 和 [ts-essentials](https://github.com/ts-essentials/ts-essentials)。
 
 #### AnyRecord
 
@@ -880,9 +874,9 @@ type PromisifyAnyFn<T extends AnyFn> = (...args: Parameters<T>) => Promise<Retur
 
 ## 致谢
 
-Inspired by [@antfu/utils](https://github.com/antfu/utils).
+灵感源自 [@antfu/utils](https://github.com/antfu/utils)。
 
-I have checked and learned from these libraries. Thanks a lot! Check them for more if you need.
+我已经查看并学习了这些库。非常感谢维护者们的付出！如果需要，请查看它们以了解更多信息。
 
 - [lodash](https://lodash.com/)
 - [ramda](https://ramdajs.com/)
@@ -897,6 +891,7 @@ I have checked and learned from these libraries. Thanks a lot! Check them for mo
 - [local-pkg](https://github.com/antfu/local-pkg)
 - [type-fest](https://github.com/sindresorhus/type-fest)
 - [ts-essentials](https://github.com/ts-essentials/ts-essentials)
+- [ts-toolbelt](https://github.com/millsp/ts-toolbelt)
 - [throttle-debounce](https://github.com/niksy/throttle-debounce)
 - [joi](https://joi.dev/)
 - [zod](https://zod.dev/)
