@@ -18,6 +18,9 @@ npm install @modyqyw/utils
 
 ### 基础
 
+- 如果你正在寻找一个关于合并 merge 的解决方案，请尝试 [deepmerge](https://github.com/TehShrike/deepmerge)、[deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts) 或 [ts-deepmerge](https://github.com/voodoocreation/ts-deepmerge)。
+- 如果你正在寻找一个关于克隆 clone 的解决方案，请尝试 [deepmerge](https://github.com/TehShrike/deepmerge)、[deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts)、[ts-deepmerge](https://github.com/voodoocreation/ts-deepmerge)、[clone](https://github.com/pvorb/clone) 或 [structuredClone](https://developer.mozilla.org/docs/Web/API/structuredClone)。
+
 ### getType
 
 获取值的类型名称。
@@ -283,12 +286,6 @@ isArray([1, 2, '3'], isNumber); // false
 #### isFile
 
 判断一个值是否为 file。
-
-#### merge
-
-从 [deepmerge](https://github.com/TehShrike/deepmerge) 重新导出。
-
-你可以使用它做深拷贝，或者使用 [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)。
 
 #### getTimestamp
 

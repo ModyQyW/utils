@@ -18,6 +18,9 @@ npm install @modyqyw/utils
 
 ### base
 
+- Try [deepmerge](https://github.com/TehShrike/deepmerge), [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts) or [ts-deepmerge](https://github.com/voodoocreation/ts-deepmerge) if you are looking for a merge solution.
+- Try [deepmerge](https://github.com/TehShrike/deepmerge), [deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts), [ts-deepmerge](https://github.com/voodoocreation/ts-deepmerge), [clone](https://github.com/pvorb/clone) or [structuredClone](https://developer.mozilla.org/docs/Web/API/structuredClone) if you are looking for a clone solution.
+
 ### getType
 
 Get value type name.
@@ -283,12 +286,6 @@ Determine if a value is a blob.
 #### isFile
 
 Determine if a value is a file.
-
-#### merge
-
-Reexported from [deepmerge](https://github.com/TehShrike/deepmerge).
-
-You can use this for deep clone, or check [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone).
 
 #### getTimestamp
 

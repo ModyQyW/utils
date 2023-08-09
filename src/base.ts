@@ -1,5 +1,3 @@
-export { default as merge } from 'deepmerge';
-
 /**
  * Get value type name.
  *
