@@ -3,8 +3,12 @@ import { Nullish, Arrayable } from './types';
 /**
  * Determines whether an array includes a certain element, returning true or false as appropriate.
  *
+ * 确定数组是否包含某个元素，返回 true 或 false。
+ *
  * @param searchElement - The element to search for.
+ * @param searchElement - 需要搜索的元素。
  * @param fromIndex - The position in this array at which to begin searching for searchElement.
+ * @param fromIndex - 开始搜索元素的位置。
  */
 export function arrayIncludes<Type extends SuperType, SuperType = unknown>(
   array: Type[] | readonly Type[],
@@ -16,6 +20,8 @@ export function arrayIncludes<Type extends SuperType, SuperType = unknown>(
 
 /**
  * Convert value to an array.
+ *
+ * 将值转换成数组。
  *
  * @example toArray() => []
  *
@@ -32,6 +38,7 @@ export function arrayIncludes<Type extends SuperType, SuperType = unknown>(
  * @example toArray([1, 2]) => [1, 2]
  *
  * @param value - The value to convert.
+ * @param value - 需要转换的值。
  */
 export function toArray<T>(value?: Nullish<Arrayable<T>>) {
   const v = value ?? [];
@@ -41,6 +48,8 @@ export function toArray<T>(value?: Nullish<Arrayable<T>>) {
 /**
  * Find difference elements between two arrays. Pass a function to judge equation or fallback to
  * `Array#includes`. Return a new array.
+ *
+ * 找到两个数组中不同的元素。内部默认使用 `Array#includes` 判断相等性，你也可以传入一个自定义方法。返回一个新数组。
  *
  * @example difference([1, '2'], [1]) => ['2']
  *
@@ -71,6 +80,8 @@ export function difference<T>(
  * Find same elements between two arrays. Pass a function to judge equation or fallback to
  * `Array#includes`. Return a new array.
  *
+ * 找到两个数组中相同的元素。内部默认使用 `Array#includes` 判断相等性，你也可以传入一个自定义方法。返回一个新数组。
+ *
  * @example intersection([1, '2'], [1]) => [1]
  *
  * @example intersection([1, '2', {}], [1, {}]) => [1]
@@ -99,6 +110,8 @@ export function intersection<T>(
 /**
  * Find unique elements. Pass a function to judge equation or fallback to `Set`. Return a new array.
  *
+ * 数组去重。内部默认使用 `Array#includes` 判断相等性，你也可以传入一个自定义方法。返回一个新数组。
+ *
  * @example uniq([1, '2', 2, 2, '2']) => [1, '2', 2]
  *
  * @example uniq([1, '2', 2, 2, '2', {}, {}] => [1, '2', 2, {}, {}]
@@ -117,6 +130,8 @@ export function uniq<T>(array: T[], equalFn?: (value1: T, value2: T) => boolean)
 
 /**
  * Find all elements in two arrays. Use `uniq` under the hood. Return a new array.
+ *
+ * 找到两个数组所有不同元素。内部使用 `uniq`。返回一个新数组。
  *
  * @example union([1, '2'], [1, 3]) => [1, '2', 3]
  *
@@ -146,6 +161,14 @@ export function range(start: number, end: number, step: number): number[];
  * `step` is set to 1 when `start` < `end` and -1 when `start` >= `end` by default.
  *
  * Return a new array.
+ *
+ * 创建一个从 `start` 到不包括 `end` 的数组。
+ *
+ * `start` 默认设置为 0，你可以直接传入 `end`。
+ *
+ * 当 `start` < `end` 时，`step` 默认为 1，否则默认为 -1。
+ *
+ * 返回一个新数组。
  *
  * @example range(4) => [0, 1, 2, 3]
  *

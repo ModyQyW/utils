@@ -1,4 +1,8 @@
-/** Empty function. */
+/**
+ * Empty function.
+ *
+ * 空函数。
+ */
 export function noop() {}
 
 function throttleOrDebounce<Callback extends (...args: any) => any>(
@@ -53,11 +57,18 @@ function throttleOrDebounce<Callback extends (...args: any) => any>(
  * Creates a throttled function that only invokes `callback` at most once per every `delay`
  * milliseconds.
  *
+ * 创建一个节流函数，每 `delay` 毫秒最多只调用一次 `callback`。
+ *
  * @param callback function to throttle
+ * @param callback 需要节流的方法
  * @param delay milliseconds to throttle
+ * @param delay 节流的毫秒数
  * @param options options object, default `{}`
+ * @param options 选项 object，默认为 `{}`
  * @param options.leading specify invoking on the leading edge of the timeout, default `true`
+ * @param options.leading 是否在超时前沿调用，默认 `true`
  * @param options.trailing specify invoking on the trailing edge of the timeout, default `true`
+ * @param options.leading 是否在超时后沿调用，默认 `true`
  */
 export function throttle<Callback extends (...args: any) => any>(
   callback: Callback,
@@ -71,11 +82,18 @@ export function throttle<Callback extends (...args: any) => any>(
  * Creates a debounced function that delays invoking `callback` until after `delay` milliseconds
  * have elapsed since the last time the debounced function was invoked.
  *
+ * 创建一个防抖函数，自上次调用以来过去了 `delay` 毫秒再调用 `callback`。。
+ *
  * @param callback function to throttle
+ * @param callback 需要防抖的方法
  * @param delay milliseconds to debounce
+ * @param delay 防抖的毫秒数
  * @param options options object, default `{}`
+ * @param options 选项 object，默认为 `{}`
  * @param options.leading specify invoking on the leading edge of the timeout, default `false`
+ * @param options.leading 是否在超时前沿调用，默认 `false`
  * @param options.trailing specify invoking on the trailing edge of the timeout, default `true`
+ * @param options.leading 是否在超时后沿调用，默认 `true`
  */
 export function debounce<Callback extends (...args: any) => any>(
   callback: Callback,
@@ -87,6 +105,8 @@ export function debounce<Callback extends (...args: any) => any>(
 
 /**
  * Performs left-to-right function composition.
+ *
+ * 执行从左到右的函数组合。
  *
  * @example pipe((a: number, b: number) => a + b)(1, 1) => 2
  *

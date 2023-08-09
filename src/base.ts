@@ -1,6 +1,8 @@
 /**
  * Get value type name.
  *
+ * 获取值的类型名称。
+ *
  * @example getType(null) => 'Null'
  *
  * @example getType() => 'Undefined'
@@ -25,6 +27,8 @@ export function getType(value?: unknown) {
 
 /**
  * Determine if a value is a string.
+ *
+ * 判断一个值是否为 string。
  *
  * @example isString('') => true
  *
@@ -53,6 +57,8 @@ export function isString(value: unknown): value is string {
 /**
  * Determine if a value is a number.
  *
+ * 判断一个值是否为 number。
+ *
  * @example isNumber('') => false
  *
  * @example isNumber(0) => true
@@ -79,6 +85,8 @@ export function isNumber(value: unknown): value is number {
 
 /**
  * Determine if a value is a bigint.
+ *
+ * 判断一个值是否为 bigint。
  *
  * @example isBigInt('') => false
  *
@@ -107,6 +115,8 @@ export function isBigInt(value: unknown): value is bigint {
 /**
  * Determine if a value is a boolean.
  *
+ * 判断一个值是否为 boolean。
+ *
  * @example isBoolean('') => false
  *
  * @example isBoolean(0) => false
@@ -133,6 +143,8 @@ export function isBoolean(value: unknown): value is boolean {
 
 /**
  * Determine if a value is undefined.
+ *
+ * 判断一个值是否为 undefined。
  *
  * @example isUndefined('') => false
  *
@@ -161,6 +173,8 @@ export function isUndefined(value: unknown): value is undefined {
 /**
  * Determine if a value is null.
  *
+ * 判断一个值是否为 null。
+ *
  * @example isNull('') => false
  *
  * @example isNull(0) => false
@@ -187,6 +201,8 @@ export function isNull(value: unknown): value is null {
 
 /**
  * Determine if a value is null or undefined.
+ *
+ * 判断一个值是否为 null 或 undefined。
  *
  * @example isNullish('') => false
  *
@@ -215,6 +231,8 @@ export function isNullish(value: unknown): value is null | undefined {
 /**
  * Determine if a value is a symbol.
  *
+ * 判断一个值是否为 symbol。
+ *
  * @example isSymbol('') => false
  *
  * @example isSymbol(0) => false
@@ -241,6 +259,8 @@ export function isSymbol(value: unknown): value is symbol {
 
 /**
  * Determine if a value is a object.
+ *
+ * 判断一个值是否为 object。
  *
  * @example isObject('') => false
  *
@@ -269,6 +289,8 @@ export function isObject(value: unknown): value is object {
 /**
  * Determine if a value is a function.
  *
+ * 判断一个值是否为 function。
+ *
  * @example isFunction('') => false
  *
  * @example isFunction(0) => false
@@ -296,6 +318,8 @@ export function isFunction(value: unknown): value is Function {
 
 /**
  * Determine if a value is a array.
+ *
+ * 判断一个值是否为 array。
  *
  * @example isArray('') => false
  *
@@ -328,18 +352,28 @@ export function isArray<T = unknown>(
   return value.every((element) => assertion(element));
 }
 
-/** Determine if a value is a blob. */
+/**
+ * Determine if a value is a blob.
+ *
+ * 判断一个值是否为 blob。
+ */
 export function isBlob(value: unknown): value is Blob {
   return value instanceof Blob || getType(value) === 'Blob';
 }
 
-/** Determine if a value is a file. */
+/**
+ * Determine if a value is a file.
+ *
+ * 判断一个值是否为 file。
+ */
 export function isFile(value: unknown): value is File {
   return value instanceof File || getType(value) === 'File';
 }
 
 /**
  * Get millisecond-based timestamp.
+ *
+ * 获取毫秒级时间戳。
  *
  * @example getTimestamp() => 13 digits number
  */
@@ -351,6 +385,10 @@ export function getTimestamp() {
  * Use `Object.is` directly to determine if two values are equal.
  *
  * Use `isDeepEqual` If you need a deep comparison.
+ *
+ * 直接使用 `Object.is` 来判断两个值是否相等。
+ *
+ * 如果你需要深层比较，请使用 `isDeepEqual`。
  *
  * @example isEqual(null, null) => true
  *
@@ -393,11 +431,19 @@ export function isEqual(value1: unknown, value2: unknown) {
 /**
  * Determine if two values are equal.
  *
- * For arrays, recursively determine the value corresponding to each subscript.
+ * For arrays, recursively determine the value corresponding to each index.
  *
  * For objects, recursively determine the value of each key.
  *
  * Other cases are determined with `Object.is`.
+ *
+ * 判断两个值是否相等。
+ *
+ * 对于数组，递归地判断每个下标的值。
+ *
+ * 对于对象，递归地判断每个键对应的值。
+ *
+ * 其它情况使用 `Object.is` 来判断。
  *
  * @example isDeepEqual(null, null) => true
  *

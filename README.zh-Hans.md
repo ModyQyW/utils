@@ -16,7 +16,7 @@ npm install @modyqyw/utils
 
 ## API
 
-### 基础
+### base
 
 - 如果你正在寻找一个关于合并 merge 的解决方案，请尝试 [deepmerge](https://github.com/TehShrike/deepmerge)、[deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts) 或 [ts-deepmerge](https://github.com/voodoocreation/ts-deepmerge)。
 - 如果你正在寻找一个关于克隆 clone 的解决方案，请尝试 [deepmerge](https://github.com/TehShrike/deepmerge)、[deepmerge-ts](https://github.com/RebeccaStevens/deepmerge-ts)、[ts-deepmerge](https://github.com/voodoocreation/ts-deepmerge)、[clone](https://github.com/pvorb/clone) 或 [structuredClone](https://developer.mozilla.org/docs/Web/API/structuredClone)。
@@ -447,7 +447,7 @@ toString([1, 2, 3]); // '1,2,3'
 
 #### toArray
 
-Convert value to an array.
+将值转换成数组。
 
 ```typescript
 import { toArray } from '@modyqyw/utils';
