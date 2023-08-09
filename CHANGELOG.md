@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 8.0.0 (2023-08-09)
 
 - feat(base): add `isNullish`
 - feat(base)!: remove `deepmerge`
