@@ -893,6 +893,7 @@ type PromisifyAnyFn<T extends AnyFn> = (...args: Parameters<T>) => Promise<Retur
 - [ts-essentials](https://github.com/ts-essentials/ts-essentials)
 - [ts-toolbelt](https://github.com/millsp/ts-toolbelt)
 - [throttle-debounce](https://github.com/niksy/throttle-debounce)
+- [js-sdsl](https://js-sdsl.org/)
 - [joi](https://joi.dev/)
 - [zod](https://zod.dev/)
 - [yup](https://github.com/jquense/yup)
